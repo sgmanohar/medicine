@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+	xmlns:android = "http://schemas.android.com/apk/res/android" 
+    id          = "org.homphysiology"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>MediLink</name>
+
+  <description>
+      The whole of medicine linked together.
+  </description>
+
+  <author href="http://www.smanohar.com" email="sanjay@springfield8.org">
+      Prof. Sanjay Manohar
+  </author>
+	<platform name="ios" />
+	<platform name="android" />
+	<platform name="winphone" />
+</widget>

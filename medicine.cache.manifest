@@ -1,0 +1,19 @@
+CACHE MANIFEST
+#2018-02-06
+
+CACHE:
+/favicon.ico
+/medicine/?entity=*
+/medicine/index.html
+/medicine/medicine.css
+/medicine/medicine.js
+/medicine/jquery*
+/medicine/pt-sans*
+/medicine/font*
+/medicine/fa-*
+
+
+
+NETWORK:
+/medicine?entity=count
+

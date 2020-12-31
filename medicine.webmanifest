@@ -1,0 +1,16 @@
+{
+    "background_color": "white",
+    "description": "Manohar medical lists browser",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "/medicine/medicalicon.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }
+    ],
+    "name": "Medical Lists",
+    "short_name": "Med Lists",
+    "start_url": "/medicine/index.html",
+    "theme_color":"#66a"
+  }

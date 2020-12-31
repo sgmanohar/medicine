@@ -1,0 +1,2937 @@
+<LOG ------------------------------------------------------------->
+<TIME>Wed Aug  1 18:30:50 2012</TIME>
+<HOST>87.194.81.94</HOST>
+<EMAIL>
+	m@k.o
+</EMAIL>
+<TRIED>
+	ac
+</TRIED>
+<EXPECTED>
+	bc
+</EXPECTED>
+<HAPPENED>
+	cc
+</HAPPENED>
+<COMMENTS>
+	dd
+</COMMENTS>
+<SCRIPT>
+	// Variable script: 02 August 2012 01:30:16
+body.CVS.heart.rate	=	72.0;
+body.CVS.heart.SV	=	0.075;
+body.CVS.heart.CO	=	5.3999999999999995;
+body.CVS.AP	=	0.086;
+body.CVS.DiaBP	=	0.06933333333333333;
+body.CVS.SysBP	=	0.11933333333333332;
+body.CVS.heart.CI	=	2.9999999999999996;
+body.CVS.heart.left.atrialP	=	0.0050;
+body.CVS.heart.left.diaV	=	0.09;
+body.CVS.heart.left.diaP	=	0.0020;
+body.CVS.heart.left.sysV	=	0.02;
+body.CVS.heart.left.sysP	=	0.12;
+body.CVS.heart.left.power	=	0.0;
+body.CVS.heart.left.SW	=	-0.0173319078933;
+body.CVS.heart.right.atrialP	=	0.0050;
+body.CVS.heart.right.diaV	=	0.09;
+body.CVS.heart.right.diaP	=	0.00235;
+body.CVS.heart.right.sysV	=	0.02;
+body.CVS.heart.right.sysP	=	0.02;
+body.CVS.heart.right.power	=	0.0;
+body.CVS.heart.right.SW	=	-0.020364991774627497;
+body.CVS.heart.left.EF	=	0.7777777777777777;
+body.CVS.heart.right.EF	=	0.7777777777777777;
+body.CVS.heart.VO2	=	0.0136;
+body.CVS.heart.LVH	=	0.0;
+body.CVS.heart.pericVol	=	0.0050;
+body.CVS.pulsePressure	=	0.05;
+body.CVS.heart.aorticStenosis	=	0.0;
+body.CVS.heart.aorticRegurg	=	0.0;
+body.CVS.heart.mitralStenosis	=	0.0;
+body.CVS.heart.mitralRegurg	=	0.0;
+body.CVS.PR	=	0.01724608253586424;
+body.kidney.resistance	=	0.08299999999999999;
+body.kidney.flow	=	1.036144578313253;
+body.muscle.resistance	=	0.09;
+body.muscle.flow	=	0.9555555555555555;
+body.skin.resistance	=	0.216;
+body.skin.flow	=	0.39814814814814814;
+body.viscera.resistance	=	0.056;
+body.viscera.flow	=	1.5357142857142856;
+body.brain.resistance	=	0.114;
+body.brain.flow	=	0.7543859649122806;
+body.CVS.heart.resistance	=	0.34;
+body.CVS.heart.flow	=	0.25294117647058817;
+body.Fat.resistance	=	1.6;
+body.Fat.flow	=	0.05374999999999999;
+body.CVS.heart.ischaemia	=	0.0;
+body.CVS.MPAP	=	0.011;
+body.CVS.DiaPAP	=	0.00775;
+body.CVS.SysPAP	=	0.019799999999999998;
+body.CVS.PVR	=	0.0024;
+body.CVS.Pcap	=	0.0173;
+body.CVS.ICOP	=	0.00670455;
+body.CVS.PCOP	=	0.024725999999999995;
+body.blood.PPr	=	0.0012999999999999997;
+body.blood.PAlb	=	41.98999999999999;
+body.CVS.Oedema	=	0.0;
+body.blood.Hct	=	0.44;
+body.blood.Eryth	=	1.0;
+body.blood.Visc	=	1.0;
+body.blood.volume	=	5.0;
+body.H2O	=	45.0;
+body.blood.PNa	=	0.1414285714285714;
+body.blood.PK	=	0.004321428571428571;
+body.blood.POsm	=	0.30080018908928563;
+body.blood.glucose	=	0.00400015;
+body.blood.PBic	=	0.023571428571428566;
+body.blood.pH	=	7.407942265438268;
+body.blood.PCl	=	0.12217857142857141;
+body.blood.PGlu	=	0.007143124999999999;
+body.blood.Ca	=	0.0024;
+body.ecf.volume	=	15.0;
+body.ecf.Na	=	0.14400000000000002;
+body.ecf.K	=	0.004399999999999999;
+body.ecf.bicarb	=	0.023999999999999997;
+body.ecf.prot	=	3.525E-4;
+body.ecf.Osm	=	0.3089255398107171;
+body.ecf.glucose	=	0.0045;
+body.ecf.urea	=	0.007273;
+body.ecf.Cl	=	0.12440000000000001;
+body.ecf.H	=	3.981071705534969E-8;
+body.ecf.pH	=	7.3999999999999995;
+body.CVS.lymphaticPressure	=	0.0;
+body.blood.arterial.PO2	=	0.16245942045454553;
+body.blood.arterial.O2	=	0.19894;
+body.blood.arterial.PCO2	=	0.03921730681818183;
+body.blood.arterial.CO2	=	0.48400000000000004;
+body.blood.venous.PO2	=	0.037838011363636355;
+body.blood.venous.O2	=	0.1421;
+body.blood.venous.PCO2	=	0.04446998863636364;
+body.blood.venous.CO2	=	0.526;
+body.lungs.expired.CO2	=	0.031108597285067874;
+body.lungs.expired.O2	=	0.16229260935143286;
+body.lungs.expired.CO	=	0.0;
+body.CVS.InterstitialP.CO2	=	0.04604579318181818;
+body.CVS.InterstitialP.O2	=	4.5158863636360347E-4;
+body.muscle.CO2	=	0.48400000000000004;
+body.muscle.O2Use	=	0.05499999999999999;
+body.NMO2Use	=	0.25;
+body.O2Use	=	0.25;
+body.CO2Production	=	0.20625;
+body.blood.baseExcess	=	-6.945707071400915E-4;
+body.blood.SatO2	=	1.0;
+body.blood.arterial.SatO2	=	1.0;
+body.blood.venous.SatO2	=	0.7159090909090908;
+body.lungs.alvP.O2	=	0.108;
+body.lungs.alvP.CO2	=	0.034;
+body.lungs.alvBlood.O2	=	0.195;
+body.lungs.alvBlood.CO2	=	0.484;
+body.lungs.alvV.CO2	=	0.24;
+body.lungs.alvV.O2	=	0.766;
+environment.air.CO	=	0.0;
+body.blood.CO	=	0.0;
+body.RQ	=	0.825;
+body.muscle.O2Debt	=	0.0;
+body.lungs.RespR	=	13.0;
+body.brain.respiratoryDrive	=	1.0;
+body.lungs.TidV	=	0.51;
+body.lungs.Vent	=	6.63;
+body.lungs.AVent	=	4.68;
+body.lungs.Oedema	=	0.01;
+body.lungs.Pairway	=	0.0050;
+body.lungs.lungVolume	=	3.0;
+body.lungs.compliance	=	140.0;
+body.lungs.airwayResistance	=	2.9999999999999997E-5;
+body.lungs.flow	=	0.0;
+body.lungs.FRC	=	3.0;
+body.lungs.FVC	=	5.5;
+body.lungs.TLV	=	6.0;
+body.lungs.ITP	=	-0.0050;
+body.lungs.DdSp	=	0.15;
+body.lungs.H2Oloss	=	2.431E-4;
+body.lungs.IEratio	=	0.333;
+body.skin.Temp	=	24.0;
+body.MBR	=	2000000.0;
+body.Temp	=	37.0;
+body.skin.SwR	=	6.94E-5;
+body.Fat.mass	=	10500.0;
+body.Mass	=	72500.0;
+body.muscle.Cal	=	0.0;
+body.muscle.O2Req	=	0.0;
+body.Cals	=	1388.888888888889;
+body.Glycogen	=	2000.0;
+body.gitract.glucoseTolerance	=	1.0;
+body.gitract.stomach.volume	=	0.0;
+body.gitract.stomachCapacity	=	1.5;
+body.gitract.stomach.pH	=	3.999999999999999;
+body.gitract.stomach.carbohydrate	=	20.0;
+body.gitract.stomach.Na	=	0.0;
+body.gitract.colonSecretion	=	0.0;
+body.kidney.GFR	=	0.125;
+body.kidney.urineFlow	=	0.0010;
+body.kidney.urine.K	=	0.06;
+body.kidney.urine.Na	=	0.11800000000000001;
+body.kidney.urine.Osm	=	0.5683010000000001;
+body.kidney.urine.pH	=	5.999999999999999;
+body.kidney.urine.prot	=	3.0E-4;
+body.kidney.urine.urea	=	0.21200000000000002;
+body.blood.creat	=	3.85E-5;
+body.blood.PCreat	=	6.874999999999999E-5;
+body.NaQ	=	2.806;
+body.KQ	=	3.4531;
+body.blood.NH3	=	4.1E-5;
+body.kidney.glomerulus.bicarb	=	0.024;
+body.kidney.glomerulus.pH	=	7.3999999999999995;
+body.kidney.glomerulus.glucose	=	0.0070;
+body.kidney.glomerulus.urea	=	0.0060;
+body.kidney.glomerulus.prot	=	0.0;
+body.kidney.glomerulus.Na	=	0.14;
+body.kidney.glomerulus.K	=	0.0040;
+body.kidney.glomerulus.Cl	=	0.12000000000000002;
+body.kidney.glomerulus.Osm	=	0.3010000398107171;
+body.kidney.PCT.bicarb	=	0.024;
+body.kidney.PCT.pH	=	7.369999999999999;
+body.kidney.PCT.glucose	=	0.0;
+body.kidney.PCT.urea	=	0.01;
+body.kidney.PCT.prot	=	0.0;
+body.kidney.PCT.Na	=	0.14;
+body.kidney.PCT.K	=	0.0040;
+body.kidney.PCT.Cl	=	0.12000000000000002;
+body.kidney.PCT.Osm	=	0.29800004265795194;
+body.kidney.Loop.bicarb	=	0.09;
+body.kidney.Loop.pH	=	6.799999999999999;
+body.kidney.Loop.glucose	=	0.0;
+body.kidney.Loop.urea	=	0.033;
+body.kidney.Loop.prot	=	0.0;
+body.kidney.Loop.Na	=	0.14;
+body.kidney.Loop.K	=	0.0040;
+body.kidney.Loop.Cl	=	0.05400000000000002;
+body.kidney.Loop.Osm	=	0.3210001584893193;
+body.kidney.DCT.bicarb	=	0.024;
+body.kidney.DCT.pH	=	6.599999999999999;
+body.kidney.DCT.glucose	=	0.0;
+body.kidney.DCT.urea	=	0.05;
+body.kidney.DCT.prot	=	0.0;
+body.kidney.DCT.Na	=	0.06;
+body.kidney.DCT.K	=	0.019;
+body.kidney.DCT.Cl	=	0.055;
+body.kidney.DCT.Osm	=	0.20800025118864315;
+body.blood.Aldo	=	8.0E-11;
+body.blood.AngII	=	6.0E-12;
+body.blood.ADH	=	4.0E-12;
+body.blood.Thyr	=	1.6E-11;
+body.brain.Symp	=	0.5;
+body.blood.Insul	=	2.4E-11;
+body.blood.LH	=	2.4999999999999998E-5;
+body.blood.FSH	=	1.4199999999999998E-4;
+body.blood.oestrogen	=	5.6000000000000005E-8;
+body.blood.progesterone	=	4.68E-7;
+body.blood.inhibin	=	297.0;
+body.gonads.poolLH	=	0.0;
+body.gonads.poolFSH	=	0.0;
+body.blood.prot	=	7.279999999999999E-4;
+body.blood.Na	=	0.07919999999999999;
+body.blood.K	=	0.00242;
+body.blood.Osm	=	0.17020817188999998;
+body.blood.H	=	2.1890000000000006E-8;
+body.blood.bicarb	=	0.013199999999999998;
+body.blood.urea	=	0.0022400000000000002;
+body.blood.ketones	=	1.5E-4;
+body.blood.PHy	=	3.908928571428572E-8;
+body.blood.lactate	=	0.0010;
+body.blood.RCM	=	2.2;
+body.blood.PV	=	2.8000000000000003;
+body.BMR	=	2000000.0;
+body.CVS.APL	=	0.086;
+body.CVS.VCT	=	0.5;
+body.CVS.Venoconstriction	=	600.0;
+body.CVS.Hard	=	0.25;
+environment.H2OX	=	8.036E-4;
+body.kidney.overallRenalFunction	=	1.0;
+body.kidney.tubularFunction	=	1.0;
+body.brain.greed	=	1.0;
+body.brain.thirstiness	=	1.0;
+body.lungs.Shunt	=	0.02;
+body.skin.area	=	1.8;
+body.icf.volume	=	25.0;
+body.icf.Na	=	0.01;
+body.icf.K	=	0.135;
+body.icf.glucose	=	0.0050;
+body.icf.Cl	=	0.137;
+body.icf.prot	=	0.0070;
+body.icf.H	=	7.244359600749906E-8;
+body.icf.bicarb	=	0.0080;
+body.icf.urea	=	0.007273;
+body.icf.Osm	=	0.30927307244359603;
+body.icf.pH	=	7.139999999999999;
+body.DOsm	=	3.475326328789552E-4;
+body.blood.Hb	=	150.0;
+body.kidney.urine.H	=	1.0000000000000002E-6;
+body.kidney.urine.bicarb	=	0.024;
+body.blood.PUN	=	0.0040;
+body.kidney.urine.glucose	=	0.0;
+body.kidney.MacDn	=	0.13;
+body.kidney.glomerularLeak	=	0.0;
+body.kidney.urinaryKetones	=	0.0;
+body.brain.pain	=	0.0;
+body.brain.Consc	=	1.0;
+body.brain.O2Supply	=	0.15;
+body.brain.hypoxia	=	0.0;
+body.brain.fever	=	0.0;
+body.brain.ICP	=	0.0090;
+body.brain.O2drive	=	1.0;
+body.brain.CO2drive	=	1.0;
+body.brain.pHdrive	=	1.0;
+environment.BarP	=	0.76;
+environment.air.O2	=	0.19999999999999998;
+environment.air.CO2	=	0.0;
+environment.airP.O2	=	0.152;
+environment.airP.CO2	=	0.0;
+environment.Temp	=	20.0;
+environment.Hum	=	0.0;
+environment.Uprt	=	1.0;
+environment.Togs	=	0.5;
+environment.actions.fright	=	0.2;
+environment.actions.amountAmylNitrite	=	0.1;
+environment.actions.drinkVolume	=	0.5;
+environment.Exer	=	0.0;
+environment.Hyperv	=	0.0;
+environment.bleedingRate	=	0.0;
+environment.pain	=	0.0;
+environment.food.glucose	=	0.4;
+environment.food.bicarb	=	0.0072;
+environment.food.prot	=	0.0050;
+environment.food.Osm	=	2.2938889188888894;
+environment.food.K	=	0.06;
+environment.food.Na	=	0.5;
+environment.food.solids	=	0.7;
+environment.food.pH	=	7.0;
+environment.food.carbohydrate	=	173.0;
+environment.stool.solids	=	0.99;
+environment.stool.volume	=	0.6;
+environment.stool.Na	=	0.0030;
+environment.stool.K	=	3.0E-4;
+environment.stool.bicarb	=	0.0030;
+environment.stool.prot	=	0.0020;
+environment.stool.Osm	=	0.0086;
+body.brain.hunger	=	0.0;
+body.brain.thirst	=	0.0;
+body.brain.sedation	=	0.0;
+body.brain.nausea	=	0.0;
+// End of variables
+
+</SCRIPT>
+<LOG>
+	Restarted
+
+</LOG>
+<CONTEXT>
+	<HOM_VERSION> 1.52</HOM_VERSION>
+<VERSION>
+	<HTML><head>	<LINK rel="StyleSheet" href=styles.css>	<title>HOM Version</title></head><BODY><TABLE width='80%'><TR>	<Th>Version</Th> <TD> 1.52 </TD></TR><TR>	<Th>Build date</Th> <TD> 11 June 2012 </TD></TR><TR>	<Th>Date Jar sealed</Th> <TD> 31 July 2012 </TD></TR><TR>	<Th>Date requested</Th> <TD> 31 July 2012 </TD></TR><TR>	<Th>Owner</Th> <TD> ttuhsc Student </TD></TR><TR>	<Th>Institution</th> <TD> ttuhsc  </TD></TR></TABLE></BODY></HTML>
+</VERSION>
+	<java_version> 1.6.0_31 </java_version>
+	<java_vm_name> Java HotSpot(TM) Client VM </java_vm_name>
+	<java_vm_version> 20.6-b01 </java_vm_version>
+	<os_arch> x86 </os_arch>
+	<os_name> Windows XP </os_name>
+	<os_version> 5.1 </os_version>
+	<user_home> C:\Documents and Settings\Sanjay Manohar </user_home>
+	<user_dir> E:\Java\eclipse\phic\CLASSES </user_dir>
+</CONTEXT>
+
+
+
+</LOG ------------------------------------------------------------>
+<LOG ------------------------------------------------------------->
+<TIME>Wed Aug  1 19:23:42 2012</TIME>
+<HOST>87.194.81.94</HOST>
+<REPORT><OWNER>
+	ttuhsc Student
+</OWNER>
+<INSTITUTION>
+	ttuhsc
+</INSTITUTION>
+<EMAIL>
+	j@i
+</EMAIL>
+<TRIED>
+	ab
+</TRIED>
+<EXPECTED>
+	cd
+</EXPECTED>
+<HAPPENED>
+	ef
+</HAPPENED>
+<COMMENTS>
+	hgh
+</COMMENTS>
+<SCRIPT>
+	// Variable script: 02 August 2012 18:06:17
+body.CVS.heart.rate	=	67.26200215441445;
+body.CVS.heart.SV	=	0.08929060747328282;
+body.CVS.heart.CO	=	6.005865032236924;
+body.CVS.AP	=	0.09107020087184728;
+body.CVS.DiaBP	=	0.07480722174252075;
+body.CVS.SysBP	=	0.12359615913050034;
+body.CVS.heart.CI	=	3.336591684576069;
+body.CVS.heart.left.atrialP	=	0.005674594242572024;
+body.CVS.heart.left.diaV	=	0.10493916541610308;
+body.CVS.heart.left.diaP	=	0.001364217044896203;
+body.CVS.heart.left.sysV	=	0.01564855794282026;
+body.CVS.heart.left.sysP	=	0.1103537135093753;
+body.CVS.heart.left.power	=	1.2153563443781468;
+body.CVS.heart.left.SW	=	1.067899077360559;
+body.CVS.heart.right.atrialP	=	0.00567443421064214;
+body.CVS.heart.right.diaV	=	0.1049358435958505;
+body.CVS.heart.right.diaP	=	0.001364058862979413;
+body.CVS.heart.right.sysV	=	0.01564523612256767;
+body.CVS.heart.right.sysP	=	0.022856313544426677;
+body.CVS.heart.right.power	=	0.1694575869883348;
+body.CVS.heart.right.SW	=	0.13492359678374913;
+body.CVS.heart.left.EF	=	0.8508797179702082;
+body.CVS.heart.right.EF	=	0.8509066531849339;
+body.CVS.heart.VO2	=	0.0246182750435765;
+body.CVS.heart.LVH	=	1.8543294682586502E-4;
+body.CVS.heart.pericVol	=	0.0050;
+body.CVS.pulsePressure	=	0.04878893738797958;
+body.CVS.heart.aorticStenosis	=	0.0;
+body.CVS.heart.aorticRegurg	=	0.0;
+body.CVS.heart.mitralStenosis	=	0.0;
+body.CVS.heart.mitralRegurg	=	0.0;
+body.CVS.PR	=	0.01516338155218247;
+body.kidney.resistance	=	0.07004718885866369;
+body.kidney.flow	=	1.3001264198567961;
+body.muscle.resistance	=	0.09000014215064074;
+body.muscle.flow	=	1.0118895225678144;
+body.skin.resistance	=	0.22789122033376422;
+body.skin.flow	=	0.3996213664504844;
+body.viscera.resistance	=	0.04074855851424056;
+body.viscera.flow	=	2.2349306133128763;
+body.brain.resistance	=	0.11169302264384051;
+body.brain.flow	=	0.8153615930177308;
+body.CVS.heart.resistance	=	0.48679523013655246;
+body.CVS.heart.flow	=	0.18708112823188694;
+body.Fat.resistance	=	1.6;
+body.Fat.flow	=	0.056918875544904546;
+body.CVS.heart.ischaemia	=	0.0;
+body.CVS.MPAP	=	0.012697951969125931;
+body.CVS.DiaPAP	=	0.008849082234853506;
+body.CVS.SysPAP	=	0.022856313544426677;
+body.CVS.PVR	=	0.0021142361943283245;
+body.CVS.Pcap	=	0.019166987923863718;
+body.CVS.ICOP	=	0.006648651706653347;
+body.CVS.PCOP	=	0.024714180526941406;
+body.blood.PPr	=	0.0012993785766004945;
+body.blood.PAlb	=	41.96992802419597;
+body.CVS.Oedema	=	0.0013204357124779395;
+body.blood.Hct	=	0.42035661543787967;
+body.blood.Eryth	=	1.222443661687873;
+body.blood.Visc	=	1.0;
+body.blood.volume	=	5.314379080587649;
+body.H2O	=	45.253218850388166;
+body.blood.PNa	=	0.14373233336370475;
+body.blood.PK	=	0.004384369043944794;
+body.blood.POsm	=	0.3086150960861993;
+body.blood.glucose	=	0.004152126889245906;
+body.blood.PBic	=	0.023871741908217867;
+body.blood.pH	=	7.39823828565089;
+body.blood.PCl	=	0.12424496049943168;
+body.blood.PGlu	=	0.007163243814785439;
+body.blood.Ca	=	0.0024;
+body.ecf.volume	=	15.126111945277533;
+body.ecf.Na	=	0.14547925905145587;
+body.ecf.K	=	0.00441584250948197;
+body.ecf.bicarb	=	0.02393553378833033;
+body.ecf.prot	=	3.4956107816263654E-4;
+body.ecf.Osm	=	0.3112119178246354;
+body.ecf.glucose	=	0.004158471149879401;
+body.ecf.urea	=	0.006913642175208114;
+body.ecf.Cl	=	0.1259595677726075;
+body.ecf.H	=	4.029950960972823E-8;
+body.ecf.pH	=	7.394700238600449;
+body.CVS.lymphaticPressure	=	0.0;
+body.blood.arterial.PO2	=	0.10400539560599173;
+body.blood.arterial.O2	=	0.18328038931480972;
+body.blood.arterial.PCO2	=	0.03545405339399398;
+body.blood.arterial.CO2	=	0.46560059782523666;
+body.blood.venous.PO2	=	0.03979983169616328;
+body.blood.venous.O2	=	0.1392467215938087;
+body.blood.venous.PCO2	=	0.03994051549535386;
+body.blood.venous.CO2	=	0.504971374377524;
+body.lungs.expired.CO2	=	0.03412769214452844;
+body.lungs.expired.O2	=	0.16183137647646026;
+body.lungs.expired.CO	=	0.0;
+body.CVS.InterstitialP.CO2	=	0.04128645412576182;
+body.CVS.InterstitialP.O2	=	0.020538162523214745;
+body.muscle.CO2	=	0.46560059782523666;
+body.muscle.O2Use	=	0.0;
+body.NMO2Use	=	0.2644618083083943;
+body.O2Use	=	0.2644615597862275;
+body.CO2Production	=	0.23646288137375202;
+body.blood.baseExcess	=	-3.942582536021824E-4;
+body.blood.SatO2	=	0.9665283294652475;
+body.blood.arterial.SatO2	=	0.9665283294652475;
+body.blood.venous.SatO2	=	0.7343169758026112;
+body.lungs.alvP.O2	=	0.11013714480935999;
+body.lungs.alvP.CO2	=	0.03436053191511383;
+body.lungs.alvBlood.O2	=	0.1841810888704212;
+body.lungs.alvBlood.CO2	=	0.46482957156765786;
+body.lungs.alvV.CO2	=	0.2362670318922541;
+body.lungs.alvV.O2	=	0.7573158753618979;
+environment.air.CO	=	0.0;
+body.blood.CO	=	0.0;
+body.RQ	=	0.8941294967967833;
+body.muscle.O2Debt	=	0.0;
+body.lungs.RespR	=	13.289682838065083;
+body.brain.respiratoryDrive	=	1.0222483250054617;
+body.lungs.TidV	=	0.5213644805702456;
+body.lungs.Vent	=	6.92876858981111;
+body.lungs.AVent	=	4.935316164101347;
+body.lungs.Oedema	=	1.1287549884560937E-59;
+body.lungs.Pairway	=	0.00124010265735637;
+body.lungs.lungVolume	=	3.260682240285123;
+body.lungs.compliance	=	140.0;
+body.lungs.airwayResistance	=	2.9999999999999997E-5;
+body.lungs.flow	=	0.0;
+body.lungs.FRC	=	3.0;
+body.lungs.FVC	=	5.5;
+body.lungs.TLV	=	6.0;
+body.lungs.ITP	=	-0.00624010265735637;
+body.lungs.DdSp	=	0.15;
+body.lungs.H2Oloss	=	1.1604497536528568E-4;
+body.lungs.IEratio	=	0.333;
+body.skin.Temp	=	27.20610710599482;
+body.MBR	=	2115694.466467154;
+body.Temp	=	36.053748961125336;
+body.skin.SwR	=	1.0E-4;
+body.Fat.mass	=	10587.767984343083;
+body.Mass	=	73520.38610195206;
+body.muscle.Cal	=	0.0;
+body.muscle.O2Req	=	0.0;
+body.Cals	=	1469.2322683799682;
+body.Glycogen	=	1976.1124249825223;
+body.gitract.glucoseTolerance	=	1.0;
+body.gitract.stomach.volume	=	0.4876365170724057;
+body.gitract.stomachCapacity	=	1.5;
+body.gitract.stomach.pH	=	4.411329098740179;
+body.gitract.stomach.carbohydrate	=	2.109017644373183;
+body.gitract.stomach.Na	=	0.07411078194076906;
+body.gitract.colonSecretion	=	0.0;
+body.kidney.GFR	=	0.14275147114851724;
+body.kidney.urineFlow	=	0.0012999264297433805;
+body.kidney.urine.K	=	0.04431898093330567;
+body.kidney.urine.Na	=	1.0109188037278518;
+body.kidney.urine.Osm	=	2.6641527829613616;
+body.kidney.urine.pH	=	5.631744802649243;
+body.kidney.urine.prot	=	0.0;
+body.kidney.urine.urea	=	0.5536748788094096;
+body.blood.creat	=	2.9010536202175043E-5;
+body.blood.PCreat	=	5.0048938666125655E-5;
+body.NaQ	=	2.893295059368318;
+body.KQ	=	3.455523614291669;
+body.blood.NH3	=	4.1E-5;
+body.kidney.glomerulus.bicarb	=	0.0238714625858974;
+body.kidney.glomerulus.pH	=	7.39733649316883;
+body.kidney.glomerulus.glucose	=	0.007161515833665906;
+body.kidney.glomerulus.urea	=	0.006930238377806636;
+body.kidney.glomerulus.prot	=	0.0;
+body.kidney.glomerulus.Na	=	0.14373619791759562;
+body.kidney.glomerulus.K	=	0.004384412146652969;
+body.kidney.glomerulus.Cl	=	0.1242491474783512;
+body.kidney.glomerulus.Osm	=	0.3103330143955942;
+body.kidney.PCT.bicarb	=	0.02375651727396903;
+body.kidney.PCT.pH	=	7.394968229547646;
+body.kidney.PCT.glucose	=	0.0;
+body.kidney.PCT.urea	=	0.009550620644814585;
+body.kidney.PCT.prot	=	0.0;
+body.kidney.PCT.Na	=	0.14350029142014772;
+body.kidney.PCT.K	=	0.004728174886265681;
+body.kidney.PCT.Cl	=	0.12447194903244437;
+body.kidney.PCT.Osm	=	0.30600759353229096;
+body.kidney.Loop.bicarb	=	0.08951478550459618;
+body.kidney.Loop.pH	=	6.818856226552865;
+body.kidney.Loop.glucose	=	0.0;
+body.kidney.Loop.urea	=	0.0359868304234751;
+body.kidney.Loop.prot	=	0.0;
+body.kidney.Loop.Na	=	0.1081420956098081;
+body.kidney.Loop.K	=	7.126323374612811E-4;
+body.kidney.Loop.Cl	=	0.019339942442673203;
+body.kidney.Loop.Osm	=	0.25369643807328096;
+body.kidney.DCT.bicarb	=	2.4840684446327634E-5;
+body.kidney.DCT.pH	=	6.631769381157408;
+body.kidney.DCT.glucose	=	0.0;
+body.kidney.DCT.urea	=	0.05536435449610114;
+body.kidney.DCT.prot	=	0.0;
+body.kidney.DCT.Na	=	0.10108615933003046;
+body.kidney.DCT.K	=	0.004431647281115154;
+body.kidney.DCT.Cl	=	0.10549296592669928;
+body.kidney.DCT.Osm	=	0.2664002011881426;
+body.blood.Aldo	=	5.016043806497559E-11;
+body.blood.AngII	=	4.7463014521074265E-12;
+body.blood.ADH	=	8.106468035602666E-12;
+body.blood.Thyr	=	1.6031991840668158E-11;
+body.brain.Symp	=	0.49997120775772214;
+body.blood.Insul	=	2.025459149525769E-11;
+body.blood.LH	=	2.2962602011295335E-5;
+body.blood.FSH	=	1.4554105474072222E-5;
+body.blood.oestrogen	=	4.800972857381175E-8;
+body.blood.progesterone	=	7.016586490990698E-18;
+body.blood.inhibin	=	270.00136898017394;
+body.gonads.poolLH	=	4.890026352777009E-4;
+body.gonads.poolFSH	=	1.0601347517915463E-4;
+body.blood.prot	=	7.531761959682209E-4;
+body.blood.Na	=	0.08331349618194879;
+body.blood.K	=	0.0025413705118015476;
+body.blood.Osm	=	0.18063207282840057;
+body.blood.H	=	2.3169816698204563E-8;
+body.blood.bicarb	=	0.013837097275072813;
+body.blood.urea	=	0.004017013185869063;
+body.blood.ketones	=	4.513957607949805E-5;
+body.blood.PHy	=	3.9972537106945035E-8;
+body.blood.lactate	=	0.0010;
+body.blood.RCM	=	2.233934403469695;
+body.blood.PV	=	3.080444677117954;
+body.BMR	=	2115694.466467154;
+body.CVS.APL	=	0.09098219995535274;
+body.CVS.VCT	=	0.4898346289321701;
+body.CVS.Venoconstriction	=	600.0;
+body.CVS.Hard	=	0.25;
+environment.H2OX	=	8.036E-4;
+body.kidney.overallRenalFunction	=	1.0;
+body.kidney.tubularFunction	=	1.0;
+body.brain.greed	=	1.0;
+body.brain.thirstiness	=	1.0;
+body.lungs.Shunt	=	0.02;
+body.skin.area	=	1.8;
+body.icf.volume	=	24.81272782452298;
+body.icf.Na	=	0.010075474239189402;
+body.icf.K	=	0.13602790083163607;
+body.icf.glucose	=	0.005037737119594701;
+body.icf.Cl	=	0.13804299567947395;
+body.icf.prot	=	0.00705283196743257;
+body.icf.H	=	7.299351749180485E-8;
+body.icf.bicarb	=	0.008060379391351518;
+body.icf.urea	=	0.00732789241416246;
+body.icf.Osm	=	0.3116252846363582;
+body.icf.pH	=	7.136715707585676;
+body.DOsm	=	4.133668117227707E-4;
+body.blood.Hb	=	143.30339162654988;
+body.kidney.urine.H	=	2.33482963694839E-6;
+body.kidney.urine.bicarb	=	2.4842090322450697E-4;
+body.blood.PUN	=	0.006930145832516717;
+body.kidney.urine.glucose	=	0.0;
+body.kidney.MacDn	=	0.10814209558106719;
+body.kidney.glomerularLeak	=	0.0;
+body.kidney.urinaryKetones	=	0.0;
+body.brain.pain	=	0.0;
+body.brain.Consc	=	0.99959;
+body.brain.O2Supply	=	0.1494411456874049;
+body.brain.hypoxia	=	0.0;
+body.brain.fever	=	0.0;
+body.brain.ICP	=	0.0090;
+body.brain.O2drive	=	1.0065615949112352;
+body.brain.CO2drive	=	0.9886331278961313;
+body.brain.pHdrive	=	1.0171994977355272;
+environment.BarP	=	0.76;
+environment.air.O2	=	0.19999999999999998;
+environment.air.CO2	=	0.0;
+environment.airP.O2	=	0.152;
+environment.airP.CO2	=	0.0;
+environment.Temp	=	20.0;
+environment.Hum	=	0.0;
+environment.Uprt	=	1.0;
+environment.Togs	=	0.5;
+environment.actions.fright	=	0.2;
+environment.actions.amountAmylNitrite	=	0.1;
+environment.actions.drinkVolume	=	0.5;
+environment.Exer	=	0.0;
+environment.Hyperv	=	0.0;
+environment.bleedingRate	=	0.0;
+environment.pain	=	0.0;
+environment.food.glucose	=	0.4;
+environment.food.bicarb	=	0.0072;
+environment.food.prot	=	0.0050;
+environment.food.Osm	=	2.2938889188888894;
+environment.food.K	=	0.06;
+environment.food.Na	=	0.5;
+environment.food.solids	=	0.7;
+environment.food.pH	=	7.0;
+environment.food.carbohydrate	=	173.0;
+environment.stool.solids	=	0.9793566236691129;
+environment.stool.volume	=	0.7102896233969992;
+environment.stool.Na	=	0.006995404454779393;
+environment.stool.K	=	8.742065304720235E-4;
+environment.stool.bicarb	=	1.0073382414882321E-4;
+environment.stool.prot	=	6.995404454779414E-5;
+environment.stool.Osm	=	0.032772818800425346;
+body.brain.hunger	=	0.42627145567298985;
+body.brain.thirst	=	0.03898550013024312;
+body.brain.sedation	=	4.1E-4;
+body.brain.nausea	=	0.0;
+// End of variables
+
+</SCRIPT>
+<LOG>
+	Restarted
+
+04:26:56: Eaten 607.962 mL
+05:52:15: Drank 326.36 mL
+08:42:50: Eaten 802.193 mL
+09:21:17: Defaecated
+09:59:45: Drank 311.97 mL
+10:33:28: Urinated 526.243 mL
+13:28:47: Drank 305.632 mL
+14:04:26: Eaten 791.63 mL
+15:25:00: Defaecated
+17:34:26: Drank 310.836 mL
+18:03:28: Urinated 604.278 mL
+</LOG>
+<CONTEXT>
+	<HOM_VERSION> 1.52</HOM_VERSION>
+<VERSION>
+	<HTML><head>	<LINK rel="StyleSheet" href=styles.css>	<title>HOM Version</title></head><BODY><TABLE width='80%'><TR>	<Th>Version</Th> <TD> 1.52 </TD></TR><TR>	<Th>Build date</Th> <TD> 11 June 2012 </TD></TR><TR>	<Th>Date Jar sealed</Th> <TD> 31 July 2012 </TD></TR><TR>	<Th>Date requested</Th> <TD> 31 July 2012 </TD></TR><TR>	<Th>Owner</Th> <TD> ttuhsc Student </TD></TR><TR>	<Th>Institution</th> <TD> ttuhsc  </TD></TR></TABLE></BODY></HTML>
+</VERSION>
+	<java_version> 1.6.0_03 </java_version>
+	<java_vm_name> Java HotSpot(TM) Client VM </java_vm_name>
+	<java_vm_version> 1.6.0_03-b05 </java_vm_version>
+	<os_arch> x86 </os_arch>
+	<os_name> Windows XP </os_name>
+	<os_version> 5.1 </os_version>
+	<user_home> C:\Documents and Settings\Sanjay Manohar </user_home>
+	<user_dir> E:\Java\eclipse\phic </user_dir>
+</CONTEXT>
+</REPORT>
+
+
+</LOG ------------------------------------------------------------>
+<LOG ------------------------------------------------------------->
+<TIME>Thu Jun 27 14:16:22 2013</TIME>
+<HOST>88.105.159.217</HOST>
+<REPORT><OWNER>
+	Ben Pearson
+</OWNER>
+<INSTITUTION>
+	UCL
+</INSTITUTION>
+<EMAIL>
+	
+</EMAIL>
+<TRIED>
+	
+</TRIED>
+<EXPECTED>
+	
+</EXPECTED>
+<HAPPENED>
+	
+</HAPPENED>
+<COMMENTS>
+	
+</COMMENTS>
+<SCRIPT>
+	// Variable script: 19 July 2013 15:13:59
+body.CVS.heart.rate	=	170.99733498707485;
+body.CVS.heart.SV	=	0.005;
+body.CVS.heart.CO	=	0.8549866749353743;
+body.CVS.AP	=	0.020091838701566105;
+body.CVS.DiaBP	=	0.017915222842229777;
+body.CVS.SysBP	=	0.02444507042023876;
+body.CVS.heart.CI	=	0.45236148523567477;
+body.CVS.heart.left.atrialP	=	0.017831450002173215;
+body.CVS.heart.left.diaV	=	0.0020610212265018777;
+body.CVS.heart.left.diaP	=	-0.007;
+body.CVS.heart.left.sysV	=	0.0;
+body.CVS.heart.left.sysP	=	0.021825955732356035;
+body.CVS.heart.left.power	=	0.03815543525462434;
+body.CVS.heart.left.SW	=	0.01805974050137246;
+body.CVS.heart.right.atrialP	=	0.017821607180128676;
+body.CVS.heart.right.diaV	=	0.0023288521501043406;
+body.CVS.heart.right.diaP	=	-0.007;
+body.CVS.heart.right.sysV	=	0.0;
+body.CVS.heart.right.sysP	=	0.00538421268000678;
+body.CVS.heart.right.power	=	0.005680498251625169;
+body.CVS.heart.right.SW	=	0.006660271745799048;
+body.CVS.heart.left.EF	=	1.0;
+body.CVS.heart.right.EF	=	1.0;
+body.CVS.heart.VO2	=	9.390545180404648E-5;
+body.CVS.heart.LVH	=	0.005600934599485958;
+body.CVS.heart.pericVol	=	0.08016759207847991;
+body.CVS.pulsePressure	=	0.0065298475780089845;
+body.CVS.heart.aorticStenosis	=	0.0;
+body.CVS.heart.aorticRegurg	=	0.0;
+body.CVS.heart.mitralStenosis	=	0.0;
+body.CVS.heart.mitralRegurg	=	0.0;
+body.CVS.PR	=	0.023499592789659303;
+body.kidney.resistance	=	0.08095779749751067;
+body.kidney.flow	=	0.24817669603948772;
+body.muscle.resistance	=	0.15;
+body.muscle.flow	=	0.13394559134377404;
+body.skin.resistance	=	0.5853108395927841;
+body.skin.flow	=	0.03432678389408356;
+body.viscera.resistance	=	0.2899639076541782;
+body.viscera.flow	=	0.06929082610353142;
+body.brain.resistance	=	0.06688031601834359;
+body.brain.flow	=	0.3004148290216724;
+body.CVS.heart.resistance	=	0.3570324229275173;
+body.CVS.heart.flow	=	0.05627454934434634;
+body.Fat.resistance	=	1.6;
+body.Fat.flow	=	0.012557399188478814;
+body.CVS.heart.ischaemia	=	0.0;
+body.CVS.MPAP	=	0.0029924343406483715;
+body.CVS.DiaPAP	=	0.01857955858733531;
+body.CVS.SysPAP	=	0.005386381813167068;
+body.CVS.PVR	=	0.003499977752138137;
+body.CVS.Pcap	=	0.018165190974741792;
+body.CVS.ICOP	=	0.007159019223887729;
+body.CVS.PCOP	=	0.023031657479331877;
+body.blood.PPr	=	0.0012109178485453142;
+body.blood.PAlb	=	39.11264650801365;
+body.CVS.Oedema	=	-0.0027682895023540895;
+body.blood.Hct	=	0.4177172079681634;
+body.blood.Eryth	=	1.00165805605537;
+body.blood.Visc	=	1.0;
+body.blood.volume	=	4.800593376124819;
+body.H2O	=	44.118820577407405;
+body.blood.PNa	=	0.14274270143574624;
+body.blood.PK	=	0.004739383112317538;
+body.blood.POsm	=	0.30929428595628383;
+body.blood.glucose	=	0.004801224173089867;
+body.blood.PBic	=	0.02370302409476603;
+body.blood.pH	=	7.427171420887728;
+body.blood.PCl	=	0.12377906045329773;
+body.blood.PGlu	=	0.008245519597679194;
+body.blood.Ca	=	0.0024;
+body.ecf.volume	=	14.047769234211206;
+body.ecf.Na	=	0.1420694658965996;
+body.ecf.K	=	0.0046364216336808855;
+body.ecf.bicarb	=	0.023727201441334323;
+body.ecf.prot	=	3.7639428096149994E-4;
+body.ecf.Osm	=	0.3063656250541833;
+body.ecf.glucose	=	0.005076545072409311;
+body.ecf.urea	=	0.007500871325161441;
+body.ecf.Cl	=	0.12297868608894617;
+body.ecf.H	=	3.9315090076437604E-8;
+body.ecf.pH	=	7.405440724966432;
+body.CVS.lymphaticPressure	=	0.004596361851836489;
+body.blood.arterial.PO2	=	0.09550122252798558;
+body.blood.arterial.O2	=	0.18080058386580788;
+body.blood.arterial.PCO2	=	0.015206644475378561;
+body.blood.arterial.CO2	=	0.3134828814041005;
+body.blood.venous.PO2	=	-0.013745814898052402;
+body.blood.venous.O2	=	-0.08640909658131585;
+body.blood.venous.PCO2	=	0.03700928227217705;
+body.blood.venous.CO2	=	0.5595961314278375;
+body.lungs.expired.CO2	=	0.01571956775092234;
+body.lungs.expired.O2	=	0.18292889649974023;
+body.lungs.expired.CO	=	0.0;
+body.CVS.InterstitialP.CO2	=	0.04355007361121659;
+body.CVS.InterstitialP.O2	=	-0.046519926125863795;
+body.muscle.CO2	=	0.3134828814041005;
+body.muscle.O2Use	=	0.0;
+body.NMO2Use	=	0.2284771981192886;
+body.O2Use	=	0.22847748651312427;
+body.CO2Production	=	0.21038870326975953;
+body.blood.baseExcess	=	-5.629734908120902E-4;
+body.blood.SatO2	=	0.9594756068901489;
+body.blood.arterial.SatO2	=	0.9594756068901489;
+body.blood.venous.SatO2	=	-0.4585572602172694;
+body.lungs.alvP.O2	=	0.13322345880299574;
+body.lungs.alvP.CO2	=	0.014181339094215139;
+body.lungs.alvBlood.O2	=	0.18614279008794554;
+body.lungs.alvBlood.CO2	=	0.3082294215735303;
+body.lungs.alvV.CO2	=	0.21061688369882356;
+body.lungs.alvV.O2	=	1.9785938085431904;
+environment.air.CO	=	0.0;
+body.blood.CO	=	0.0;
+body.RQ	=	0.9208290343200809;
+body.muscle.O2Debt	=	0.0;
+body.lungs.RespR	=	18.47045085985678;
+body.brain.respiratoryDrive	=	1.4209615538156002;
+body.lungs.TidV	=	0.7246099952713044;
+body.lungs.Vent	=	13.383873310219682;
+body.lungs.AVent	=	10.613305681241163;
+body.lungs.Oedema	=	0.23936758231040073;
+body.lungs.Pairway	=	0.0024621951880137182;
+body.lungs.lungVolume	=	2.462304997635652;
+body.lungs.compliance	=	98.0;
+body.lungs.airwayResistance	=	0.003;
+body.lungs.flow	=	0.0;
+body.lungs.FRC	=	2.0999999999999996;
+body.lungs.FVC	=	3.8499999999999996;
+body.lungs.TLV	=	6.0;
+body.lungs.ITP	=	-0.007462195188013719;
+body.lungs.DdSp	=	0.15;
+body.lungs.H2Oloss	=	2.2415689432325067E-4;
+body.lungs.IEratio	=	0.333;
+body.skin.Temp	=	22.692996509608466;
+body.MBR	=	1827817.5849543088;
+body.Temp	=	37.408670204436554;
+body.skin.SwR	=	5.251216039758908E-7;
+body.Fat.mass	=	4796.300450160465;
+body.Mass	=	66652.26293706291;
+body.muscle.Cal	=	0.0;
+body.muscle.O2Req	=	0.0;
+body.Cals	=	1269.317767329381;
+body.Glycogen	=	2003.182237262805;
+body.gitract.glucoseTolerance	=	1.0;
+body.gitract.stomach.volume	=	0.47354586553506156;
+body.gitract.stomachCapacity	=	1.5;
+body.gitract.stomach.pH	=	4.348141206897462;
+body.gitract.stomach.carbohydrate	=	7.553747308041069;
+body.gitract.stomach.Na	=	0.14465860659921453;
+body.gitract.colonSecretion	=	0.0;
+body.kidney.GFR	=	0.0;
+body.kidney.urineFlow	=	0.0;
+body.kidney.urine.K	=	0.0;
+body.kidney.urine.Na	=	0.0;
+body.kidney.urine.Osm	=	0.0;
+body.kidney.urine.pH	=	0.0;
+body.kidney.urine.prot	=	0.0;
+body.kidney.urine.urea	=	0.0;
+body.blood.creat	=	3.514871828388141E-5;
+body.blood.PCreat	=	6.0363656224894314E-5;
+body.NaQ	=	2.6447681614842393;
+body.KQ	=	3.4544313221082263;
+body.blood.NH3	=	4.1E-5;
+body.kidney.glomerulus.bicarb	=	0.0;
+body.kidney.glomerulus.pH	=	0.0;
+body.kidney.glomerulus.glucose	=	0.0;
+body.kidney.glomerulus.urea	=	0.0;
+body.kidney.glomerulus.prot	=	0.0;
+body.kidney.glomerulus.Na	=	0.0;
+body.kidney.glomerulus.K	=	0.0;
+body.kidney.glomerulus.Cl	=	0.0;
+body.kidney.glomerulus.Osm	=	0.0;
+body.kidney.PCT.bicarb	=	0.0;
+body.kidney.PCT.pH	=	0.0;
+body.kidney.PCT.glucose	=	0.0;
+body.kidney.PCT.urea	=	0.0;
+body.kidney.PCT.prot	=	0.0;
+body.kidney.PCT.Na	=	0.0;
+body.kidney.PCT.K	=	0.0;
+body.kidney.PCT.Cl	=	0.0;
+body.kidney.PCT.Osm	=	0.0;
+body.kidney.Loop.bicarb	=	0.0;
+body.kidney.Loop.pH	=	0.0;
+body.kidney.Loop.glucose	=	0.0;
+body.kidney.Loop.urea	=	0.0;
+body.kidney.Loop.prot	=	0.0;
+body.kidney.Loop.Na	=	0.0;
+body.kidney.Loop.K	=	0.0;
+body.kidney.Loop.Cl	=	0.0;
+body.kidney.Loop.Osm	=	0.0;
+body.kidney.DCT.bicarb	=	0.0;
+body.kidney.DCT.pH	=	0.0;
+body.kidney.DCT.glucose	=	0.0;
+body.kidney.DCT.urea	=	0.0;
+body.kidney.DCT.prot	=	0.0;
+body.kidney.DCT.Na	=	0.0;
+body.kidney.DCT.K	=	0.0;
+body.kidney.DCT.Cl	=	0.0;
+body.kidney.DCT.Osm	=	0.0;
+body.blood.Aldo	=	1.5992607262064774E-10;
+body.blood.AngII	=	4.856528732697212E-12;
+body.blood.ADH	=	5.9178551042433525E-12;
+body.blood.Thyr	=	1.7015738169482524E-11;
+body.brain.Symp	=	0.9858430778654933;
+body.blood.Insul	=	3.132622335658075E-11;
+body.blood.LH	=	4.006866028123045E-5;
+body.blood.FSH	=	1.7578030839198816E-5;
+body.blood.oestrogen	=	4.8362807651062745E-8;
+body.blood.progesterone	=	1.8271205178874563E-12;
+body.blood.inhibin	=	270.6181177780263;
+body.gonads.poolLH	=	6.471528968638061E-4;
+body.gonads.poolFSH	=	1.00360538482873E-4;
+body.blood.prot	=	7.050966257721501E-4;
+body.blood.Na	=	0.08311661873417316;
+body.blood.K	=	0.002759661231148791;
+body.blood.Osm	=	0.18210229434253056;
+body.blood.H	=	2.177521916782519E-8;
+body.blood.bicarb	=	0.013801863049498259;
+body.blood.urea	=	0.004843391837805476;
+body.blood.ketones	=	0.0;
+body.blood.PHy	=	3.739629517788433E-8;
+body.blood.lactate	=	0.001;
+body.blood.RCM	=	2.005290461665319;
+body.blood.PV	=	2.7953029144595;
+body.BMR	=	1827817.5849543088;
+body.CVS.APL	=	0.022945526441161213;
+body.CVS.VCT	=	0.6559955378048451;
+body.CVS.Venoconstriction	=	600.0;
+body.CVS.Hard	=	0.25;
+environment.H2OX	=	8.036E-4;
+body.kidney.overallRenalFunction	=	1.646107584035073;
+body.kidney.tubularFunction	=	1.0;
+body.brain.greed	=	1.0;
+body.brain.thirstiness	=	1.0;
+body.lungs.Shunt	=	0.02;
+body.skin.area	=	1.8900518785102511;
+body.icf.volume	=	25.27045796707138;
+body.icf.Na	=	0.009892974647541696;
+body.icf.K	=	0.13359678458927532;
+body.icf.glucose	=	0.004946487323770848;
+body.icf.Cl	=	0.13557537951878362;
+body.icf.prot	=	0.006925082253279131;
+body.icf.H	=	7.167136760397618E-8;
+body.icf.bicarb	=	0.007914379718033382;
+body.icf.urea	=	0.00719516046115678;
+body.icf.Osm	=	0.3060463201832084;
+body.icf.pH	=	7.144654308420181;
+body.DOsm	=	-3.1930487097492355E-4;
+body.blood.Hb	=	142.40359362551027;
+body.kidney.urine.H	=	0.0;
+body.kidney.urine.bicarb	=	0.0;
+body.blood.PUN	=	0.008317937442225944;
+body.kidney.urine.glucose	=	0.0;
+body.kidney.MacDn	=	0.0;
+body.kidney.glomerularLeak	=	0.0;
+body.kidney.urinaryKetones	=	0.0;
+body.brain.pain	=	0.0;
+body.brain.Consc	=	3.278867666496612E-142;
+body.brain.O2Supply	=	0.054316966938100626;
+body.brain.hypoxia	=	0.0;
+body.brain.fever	=	0.0;
+body.brain.ICP	=	0.009;
+body.brain.O2drive	=	1.2354459483067701;
+body.brain.CO2drive	=	0.9380280014791617;
+body.brain.pHdrive	=	1.0;
+environment.BarP	=	0.76;
+environment.air.O2	=	0.19999999999999998;
+environment.air.CO2	=	0.0;
+environment.airP.O2	=	0.152;
+environment.airP.CO2	=	0.0;
+environment.Temp	=	20.0;
+environment.Hum	=	0.0;
+environment.Uprt	=	0.5;
+environment.Togs	=	0.5;
+environment.actions.fright	=	0.2;
+environment.actions.amountAmylNitrite	=	0.1;
+environment.actions.drinkVolume	=	0.5;
+environment.Exer	=	0.0;
+environment.Hyperv	=	0.0;
+environment.bleedingRate	=	0.0;
+environment.pain	=	0.0;
+environment.food.glucose	=	0.4;
+environment.food.bicarb	=	0.0072;
+environment.food.prot	=	0.005;
+environment.food.Osm	=	2.2938889188888894;
+environment.food.K	=	0.06;
+environment.food.Na	=	0.5;
+environment.food.solids	=	0.7;
+environment.food.pH	=	7.0;
+environment.food.carbohydrate	=	173.0;
+environment.stool.solids	=	0.9828228427001493;
+environment.stool.volume	=	0.5110375493259893;
+environment.stool.Na	=	0.007020163162143991;
+environment.stool.K	=	8.751449202618614E-4;
+environment.stool.bicarb	=	1.0109034953487294E-4;
+environment.stool.prot	=	7.020163162143956E-5;
+environment.stool.Osm	=	0.031418035592404504;
+body.brain.hunger	=	0.2154569957468026;
+body.brain.thirst	=	0.12752496185440054;
+body.brain.sedation	=	4.1E-4;
+body.brain.nausea	=	5.284574242971223E-46;
+// End of variables
+
+</SCRIPT>
+<LOG>
+	nk 455.267 mL
+23:28:02: Defaecated
+23:56:17: Eaten 745.153 mL
+01:11:43: Urinated 564.159 mL
+04:24:40: Drank 437.259 mL
+04:31:49: Defaecated
+04:44:03: Eaten 602.697 mL
+07:20:32: Urinated 706.969 mL
+09:02:57: Drank 397.198 mL
+09:08:07: Eaten 660.97 mL
+09:27:19: Defaecated
+11:53:21: Urinated 527.486 mL
+12:13:13: Drank 303.76 mL
+15:19:27: Urinated 531.009 mL
+15:26:50: Eaten 1.11 L
+15:42:58: Defaecated
+17:17:35: Drank 307.874 mL
+18:21:01: Defaecated
+19:39:55: Urinated 506.787 mL
+20:29:17: Drank 302.362 mL
+00:08:43: Eaten 1.286 L
+00:12:26: Urinated 817.214 mL
+02:22:56: Defaecated
+02:41:43: Drank 421.845 mL
+05:42:44: Urinated 570.313 mL
+06:06:19: Drank 326.252 mL
+07:08:25: Eaten 972.359 mL
+07:57:15: Defaecated
+10:06:51: Drank 325.735 mL
+10:49:27: Urinated 575.509 mL
+13:36:19: Eaten 900.386 mL
+14:57:15: Drank 308.958 mL
+15:05:46: Urinated 500.062 mL
+15:11:43: Defaecated
+18:44:07: Drank 369.18 mL
+19:40:27: Eaten 871.506 mL
+20:44:53: Defaecated
+21:57:37: Urinated 721.645 mL
+22:56:10: Drank 349.681 mL
+01:21:40: Eaten 757.746 mL
+02:04:31: Defaecated
+02:12:40: Urinated 505.898 mL
+03:39:47: Drank 325.616 mL
+06:04:27: Eaten 659.745 mL
+06:53:14: Defaecated
+07:15:40: Urinated 532.942 mL
+09:20:07: Drank 445.284 mL
+10:38:53: Eaten 714.765 mL
+12:01:34: Defaecated
+12:31:34: Urinated 557.322 mL
+14:13:34: Drank 359.749 mL
+15:28:59: Eaten 690.36 mL
+17:11:50: Defaecated
+17:20:25: Urinated 547.073 mL
+18:59:50: Drank 349.503 mL
+19:51:26: Eaten 613.292 mL
+21:55:45: Urinated 504.082 mL
+22:37:02: Defaecated
+22:55:45: Drank 304.929 mL
+23:58:16: Eaten 603.937 mL
+02:25:56: Urinated 508.142 mL
+03:46:02: Drank 366.749 mL
+04:38:35: Eaten 774.265 mL
+05:18:47: Defaecated
+07:47:03: Drank 322.99 mL
+08:38:43: Urinated 708.082 mL
+09:25:31: Eaten 610.681 mL
+10:02:35: Defaecated
+12:20:03: Drank 320.864 mL
+12:57:37: Urinated 510.657 mL
+13:37:09: Eaten 669.177 mL
+14:35:35: Defaecated
+16:36:15: Drank 304.718 mL
+17:40:45: Urinated 531.183 mL
+18:45:55: Disease Pneumothorax: lungs.compliance = lungs.compliance * 0.7; lungs.FRC = lungs.FRC * 0.7; lungs.FVC = lungs.FVC * 0.7
+19:18:08: Eaten 990.636 mL
+20:40:09: Defaecated
+21:33:55: Drank 325.081 mL
+22:17:39: Urinated 545.881 mL
+00:42:47: Eaten 619.64 mL
+02:06:04: Drank 322.453 mL
+02:06:44: Defaecated
+03:39:55: Urinated 620.23 mL
+04:56:46: Eaten 688.697 mL
+06:53:53: Defaecated
+08:10:13: Drank 488.15 mL
+09:03:04: Urinated 563.401 mL
+09:12:51: Eaten 602.605 mL
+12:09:11: Defaecated
+12:42:11: Drank 334.373 mL
+13:52:38: Eaten 747.48 mL
+14:42:33: Urinated 670.22 mL
+16:46:41: Defaecated
+18:27:44: Drank 447.159 mL
+18:41:03: Eaten 670.626 mL
+19:40:13: Urinated 544.579 mL
+22:05:53: Defaecated
+22:54:51: Drank 404.209 mL
+23:37:49: Eaten 721.462 mL
+00:27:40: Urinated 572.435 mL
+03:01:56: Drank 331.642 mL
+03:19:16: Defaecated
+04:47:10: Eaten 762.901 mL
+05:57:01: Urinated 672.556 mL
+08:43:59: Drank 412.14 mL
+08:47:39: Defaecated
+09:32:32: Eaten 658.886 mL
+10:36:22: Urinated 516.974 mL
+13:01:56: Drank 338.971 mL
+14:41:03: Defaecated
+14:43:38: Eaten 842.491 mL
+16:08:07: Urinated 674.883 mL
+17:43:20: Drank 316.954 mL
+18:52:41: Defaecated
+20:28:02: Eaten 836.128 mL
+20:31:02: Urinated 530.92 mL
+21:05:57: Disease Tamponade: actions.startGradualChange("CVS.heart.pericVol", 0.150, 0.005)
+22:24:19: Drank 307.897 mL
+22:37:20: Jason is feeling faint
+22:58:38: Defaecated
+22:59:21: Jason has fainted and is unconscious
+23:00:04: Jason is feeling faint
+23:01:34: Jason has fainted and is unconscious
+</LOG>
+<EXTRA>
+	java.lang.IllegalStateException: Noninvertible twogradient function
+	at phic.common.Curve$TwoGradients.getInverse(Curve.java:90)
+	at phic.Chamber.tick(Chamber.java:61)
+	at phic.Heart.calculateSV(Heart.java:294)
+	at phic.Heart.tick(Heart.java:59)
+	at phic.common.CommonThread.tickFor(CommonThread.java:188)
+	at phic.common.CommonThread.tickOnce(CommonThread.java:161)
+	at phic.common.CommonThread.run(CommonThread.java:109)
+
+</EXTRA>
+<CONTEXT>
+	<HOM_VERSION> 1.61</HOM_VERSION>
+<VERSION>
+	<HTML><head>	<LINK rel="StyleSheet" href=styles.css>	<title>HOM Version</title></head><BODY><TABLE width='80%'><TR>	<Th>Version</Th> <TD> 1.61 </TD></TR><TR>	<Th>Build date</Th> <TD> 2 March 2013 </TD></TR><TR>	<Th>Date Jar sealed</Th> <TD> 2 March 2013 </TD></TR><TR>	<Th>Date requested</Th> <TD> 12 Apr 2013 </TD></TR><TR>	<Th>Owner</Th> <TD> Ben Pearson </TD></TR><TR>	<Th>Institution</th> <TD> UCL </TD></TR></TABLE></BODY></HTML>
+</VERSION>
+	<java_version> 1.7.0_21 </java_version>
+	<java_vm_name> Java HotSpot(TM) Client VM </java_vm_name>
+	<java_vm_version> 23.21-b01 </java_vm_version>
+	<os_arch> x86 </os_arch>
+	<os_name> Windows 7 </os_name>
+	<os_version> 6.1 </os_version>
+	<user_home> C:\Users\Hercule </user_home>
+	<user_dir> C:\Users\Hercule\Downloads\HOM </user_dir>
+</CONTEXT>
+</REPORT>
+
+
+</LOG ------------------------------------------------------------>
+<LOG ------------------------------------------------------------->
+<TIME>Thu Jun 27 14:16:31 2013</TIME>
+<HOST>88.105.159.217</HOST>
+<REPORT><OWNER>
+	Ben Pearson
+</OWNER>
+<INSTITUTION>
+	UCL
+</INSTITUTION>
+<EMAIL>
+	
+</EMAIL>
+<TRIED>
+	
+</TRIED>
+<EXPECTED>
+	
+</EXPECTED>
+<HAPPENED>
+	
+</HAPPENED>
+<COMMENTS>
+	
+</COMMENTS>
+<SCRIPT>
+	// Variable script: 19 July 2013 18:57:33
+body.CVS.heart.rate	=	171.10515699275604;
+body.CVS.heart.SV	=	0.005;
+body.CVS.heart.CO	=	0.8555257849637802;
+body.CVS.AP	=	0.020098907830750065;
+body.CVS.DiaBP	=	0.017921526149085473;
+body.CVS.SysBP	=	0.024453671194079245;
+body.CVS.heart.CI	=	0.45264672080753154;
+body.CVS.heart.left.atrialP	=	0.017872484860943914;
+body.CVS.heart.left.diaV	=	0.001889871703834525;
+body.CVS.heart.left.diaP	=	-0.007;
+body.CVS.heart.left.sysV	=	0.0;
+body.CVS.heart.left.sysP	=	0.02183363499471361;
+body.CVS.heart.left.power	=	0.03816885989459341;
+body.CVS.heart.left.SW	=	0.01806445286659947;
+body.CVS.heart.right.atrialP	=	0.017862596836708777;
+body.CVS.heart.right.diaV	=	0.0023288521501043406;
+body.CVS.heart.right.diaP	=	-0.007;
+body.CVS.heart.right.sysV	=	0.0;
+body.CVS.heart.right.sysP	=	0.00538421268000678;
+body.CVS.heart.right.power	=	0.005680498251625169;
+body.CVS.heart.right.SW	=	0.006660271745799048;
+body.CVS.heart.left.EF	=	1.0;
+body.CVS.heart.right.EF	=	1.0;
+body.CVS.heart.VO2	=	9.27068230963179E-5;
+body.CVS.heart.LVH	=	0.005600932793986516;
+body.CVS.heart.pericVol	=	0.08028033801843602;
+body.CVS.pulsePressure	=	0.006532145044993771;
+body.CVS.heart.aorticStenosis	=	0.0;
+body.CVS.heart.aorticRegurg	=	0.0;
+body.CVS.heart.mitralStenosis	=	0.0;
+body.CVS.heart.mitralRegurg	=	0.0;
+body.CVS.PR	=	0.023493047414814013;
+body.kidney.resistance	=	0.08092235394596504;
+body.kidney.flow	=	0.24837275302410106;
+body.muscle.resistance	=	0.15;
+body.muscle.flow	=	0.1339927188716671;
+body.skin.resistance	=	0.5842023950662648;
+body.skin.flow	=	0.03440401477380162;
+body.viscera.resistance	=	0.28998298837841613;
+body.viscera.flow	=	0.06931064454209224;
+body.brain.resistance	=	0.06686497258874706;
+body.brain.flow	=	0.30058948732946283;
+body.CVS.heart.resistance	=	0.3570324229275173;
+body.CVS.heart.flow	=	0.05629434902843664;
+body.Fat.resistance	=	1.6;
+body.Fat.flow	=	0.01256181739421879;
+body.CVS.heart.ischaemia	=	0.0;
+body.CVS.MPAP	=	0.002994323281051544;
+body.CVS.DiaPAP	=	0.018621065681206802;
+body.CVS.SysPAP	=	0.00538978190589278;
+body.CVS.PVR	=	0.0034999801685443215;
+body.CVS.Pcap	=	0.01819805081736374;
+body.CVS.ICOP	=	0.0071588706106930945;
+body.CVS.PCOP	=	0.02302499065215667;
+body.blood.PPr	=	0.0012105673318694359;
+body.blood.PAlb	=	39.101324819382775;
+body.CVS.Oedema	=	-0.002724187199204101;
+body.blood.Hct	=	0.4176467781906063;
+body.blood.Eryth	=	1.0019315731191198;
+body.blood.Visc	=	1.0;
+body.blood.volume	=	4.80140240932578;
+body.H2O	=	44.118747909744215;
+body.blood.PNa	=	0.1427018042879295;
+body.blood.PK	=	0.004732728743873032;
+body.blood.POsm	=	0.30902489537533656;
+body.blood.glucose	=	0.004680742795524601;
+body.blood.PBic	=	0.023705162025651302;
+body.blood.pH	=	7.42787547552778;
+body.blood.PCl	=	0.12372937100615125;
+body.blood.PGlu	=	0.00803763527053453;
+body.blood.Ca	=	0.0024;
+body.ecf.volume	=	14.048060856169041;
+body.ecf.Na	=	0.1420664310442274;
+body.ecf.K	=	0.004637152248900445;
+body.ecf.bicarb	=	0.023724917681722225;
+body.ecf.prot	=	3.7638646743917427E-4;
+body.ecf.Osm	=	0.30641181018728364;
+body.ecf.glucose	=	0.005117341718730475;
+body.ecf.urea	=	0.007510876129911912;
+body.ecf.Cl	=	0.12297866561140561;
+body.ecf.H	=	3.928494641672422E-8;
+body.ecf.pH	=	7.405773834880976;
+body.CVS.lymphaticPressure	=	0.0045983926840743655;
+body.blood.arterial.PO2	=	0.0954593819714133;
+body.blood.arterial.O2	=	0.18075961583216663;
+body.blood.arterial.PCO2	=	0.01519646664268931;
+body.blood.arterial.CO2	=	0.31339025292004696;
+body.blood.venous.PO2	=	-0.013716867966955142;
+body.blood.venous.O2	=	-0.0862553266232482;
+body.blood.venous.PCO2	=	0.03694936100734007;
+body.blood.venous.CO2	=	0.5593324833441882;
+body.lungs.expired.CO2	=	0.015710146774524515;
+body.lungs.expired.O2	=	0.1829391274720996;
+body.lungs.expired.CO	=	0.0;
+body.CVS.InterstitialP.CO2	=	0.0434752293167353;
+body.CVS.InterstitialP.O2	=	-0.046469742948465675;
+body.muscle.CO2	=	0.31339025292004696;
+body.muscle.O2Use	=	0.0;
+body.NMO2Use	=	0.22845542121444884;
+body.O2Use	=	0.22845581367568238;
+body.CO2Production	=	0.21036874629178692;
+body.blood.baseExcess	=	-5.608354993510874E-4;
+body.blood.SatO2	=	0.9594199613404405;
+body.blood.arterial.SatO2	=	0.9594199613404405;
+body.blood.venous.SatO2	=	-0.45781842229140973;
+body.lungs.alvP.O2	=	0.13323297453613353;
+body.lungs.alvP.CO2	=	0.014171449522602362;
+body.lungs.alvBlood.O2	=	0.18611531607439896;
+body.lungs.alvBlood.CO2	=	0.3081526653879715;
+body.lungs.alvV.CO2	=	0.21059299470557058;
+body.lungs.alvV.O2	=	1.979891404640377;
+environment.air.CO	=	0.0;
+body.blood.CO	=	0.0;
+body.RQ	=	0.9208290343200809;
+body.muscle.O2Debt	=	0.0;
+body.lungs.RespR	=	18.475111845005376;
+body.brain.respiratoryDrive	=	1.4214103422816522;
+body.lungs.TidV	=	0.7247928493040571;
+body.lungs.Vent	=	13.39062895535258;
+body.lungs.AVent	=	10.619362178601774;
+body.lungs.Oedema	=	0.2416822694017722;
+body.lungs.Pairway	=	0.002462816518553582;
+body.lungs.lungVolume	=	2.4623964246520282;
+body.lungs.compliance	=	98.0;
+body.lungs.airwayResistance	=	0.003;
+body.lungs.flow	=	0.0;
+body.lungs.FRC	=	2.0999999999999996;
+body.lungs.FVC	=	3.8499999999999996;
+body.lungs.TLV	=	6.0;
+body.lungs.ITP	=	-0.007462816518553583;
+body.lungs.DdSp	=	0.15;
+body.lungs.H2Oloss	=	2.242700397780111E-4;
+body.lungs.IEratio	=	0.333;
+body.skin.Temp	=	22.68538418884441;
+body.MBR	=	1827643.3697155907;
+body.Temp	=	37.41292587827317;
+body.skin.SwR	=	5.075860197352206E-7;
+body.Fat.mass	=	4796.300450160465;
+body.Mass	=	66652.19026939973;
+body.muscle.Cal	=	0.0;
+body.muscle.O2Req	=	0.0;
+body.Cals	=	1269.196784524716;
+body.Glycogen	=	2003.182237262805;
+body.gitract.glucoseTolerance	=	1.0;
+body.gitract.stomach.volume	=	0.47354586553506156;
+body.gitract.stomachCapacity	=	1.5;
+body.gitract.stomach.pH	=	4.348141206897462;
+body.gitract.stomach.carbohydrate	=	7.553747308041069;
+body.gitract.stomach.Na	=	0.14465860659921453;
+body.gitract.colonSecretion	=	0.0;
+body.kidney.GFR	=	0.0;
+body.kidney.urineFlow	=	0.0;
+body.kidney.urine.K	=	0.0;
+body.kidney.urine.Na	=	0.0;
+body.kidney.urine.Osm	=	0.0;
+body.kidney.urine.pH	=	0.0;
+body.kidney.urine.prot	=	0.0;
+body.kidney.urine.urea	=	0.0;
+body.blood.creat	=	3.484214373340372E-5;
+body.blood.PCreat	=	5.9829914952900674E-5;
+body.NaQ	=	2.644768119476014;
+body.KQ	=	3.4544313208447237;
+body.blood.NH3	=	4.1E-5;
+body.kidney.glomerulus.bicarb	=	0.0;
+body.kidney.glomerulus.pH	=	0.0;
+body.kidney.glomerulus.glucose	=	0.0;
+body.kidney.glomerulus.urea	=	0.0;
+body.kidney.glomerulus.prot	=	0.0;
+body.kidney.glomerulus.Na	=	0.0;
+body.kidney.glomerulus.K	=	0.0;
+body.kidney.glomerulus.Cl	=	0.0;
+body.kidney.glomerulus.Osm	=	0.0;
+body.kidney.PCT.bicarb	=	0.0;
+body.kidney.PCT.pH	=	0.0;
+body.kidney.PCT.glucose	=	0.0;
+body.kidney.PCT.urea	=	0.0;
+body.kidney.PCT.prot	=	0.0;
+body.kidney.PCT.Na	=	0.0;
+body.kidney.PCT.K	=	0.0;
+body.kidney.PCT.Cl	=	0.0;
+body.kidney.PCT.Osm	=	0.0;
+body.kidney.Loop.bicarb	=	0.0;
+body.kidney.Loop.pH	=	0.0;
+body.kidney.Loop.glucose	=	0.0;
+body.kidney.Loop.urea	=	0.0;
+body.kidney.Loop.prot	=	0.0;
+body.kidney.Loop.Na	=	0.0;
+body.kidney.Loop.K	=	0.0;
+body.kidney.Loop.Cl	=	0.0;
+body.kidney.Loop.Osm	=	0.0;
+body.kidney.DCT.bicarb	=	0.0;
+body.kidney.DCT.pH	=	0.0;
+body.kidney.DCT.glucose	=	0.0;
+body.kidney.DCT.urea	=	0.0;
+body.kidney.DCT.prot	=	0.0;
+body.kidney.DCT.Na	=	0.0;
+body.kidney.DCT.K	=	0.0;
+body.kidney.DCT.Cl	=	0.0;
+body.kidney.DCT.Osm	=	0.0;
+body.blood.Aldo	=	1.5992854130557426E-10;
+body.blood.AngII	=	4.8489899361404554E-12;
+body.blood.ADH	=	5.920604029751068E-12;
+body.blood.Thyr	=	1.7015733006700165E-11;
+body.brain.Symp	=	0.9866184378764307;
+body.blood.Insul	=	3.132622335658075E-11;
+body.blood.LH	=	4.006866028123045E-5;
+body.blood.FSH	=	1.7578030839198816E-5;
+body.blood.oestrogen	=	4.8362807651062745E-8;
+body.blood.progesterone	=	1.8271205178874563E-12;
+body.blood.inhibin	=	270.6181177780263;
+body.gonads.poolLH	=	6.471528968638061E-4;
+body.gonads.poolFSH	=	1.00360538482873E-4;
+body.blood.prot	=	7.049777859313675E-4;
+body.blood.Na	=	0.08310285548508929;
+body.blood.K	=	0.002756119831944385;
+body.blood.Osm	=	0.1819165405892278;
+body.blood.H	=	2.17425765093272E-8;
+body.blood.bicarb	=	0.013804777479151728;
+body.blood.urea	=	0.004812847631127951;
+body.blood.ketones	=	0.0;
+body.blood.PHy	=	3.7335719448365354E-8;
+body.blood.lactate	=	0.001;
+body.blood.RCM	=	2.005290247051527;
+body.blood.PV	=	2.796112162274253;
+body.BMR	=	1827643.3697155907;
+body.CVS.APL	=	0.02285040179259196;
+body.CVS.VCT	=	0.6560107124196035;
+body.CVS.Venoconstriction	=	600.0;
+body.CVS.Hard	=	0.25;
+environment.H2OX	=	8.036E-4;
+body.kidney.overallRenalFunction	=	1.646107584035073;
+body.kidney.tubularFunction	=	1.0;
+body.brain.greed	=	1.0;
+body.brain.thirstiness	=	1.0;
+body.lungs.Shunt	=	0.02;
+body.skin.area	=	1.8900518785102511;
+body.icf.volume	=	25.269284644249396;
+body.icf.Na	=	0.009893434005734643;
+body.icf.K	=	0.13360311267140124;
+body.icf.glucose	=	0.004946717002867322;
+body.icf.Cl	=	0.13558179947254814;
+body.icf.prot	=	0.006925403804014195;
+body.icf.H	=	7.167469550393364E-8;
+body.icf.bicarb	=	0.00791474720458774;
+body.icf.urea	=	0.0071954945523705115;
+body.icf.Osm	=	0.30606078038821927;
+body.icf.pH	=	7.144634143393578;
+body.DOsm	=	-3.5102979906437293E-4;
+body.blood.Hb	=	142.37958347407033;
+body.kidney.urine.H	=	0.0;
+body.kidney.urine.bicarb	=	0.0;
+body.blood.PUN	=	0.00826448184861801;
+body.kidney.urine.glucose	=	0.0;
+body.kidney.MacDn	=	0.0;
+body.kidney.glomerularLeak	=	0.0;
+body.kidney.urinaryKetones	=	0.0;
+body.brain.pain	=	0.0;
+body.brain.Consc	=	8.19716916624153E-143;
+body.brain.O2Supply	=	0.05432927023146346;
+body.brain.hypoxia	=	0.0;
+body.brain.fever	=	0.0;
+body.brain.ICP	=	0.009;
+body.brain.O2drive	=	1.2369686788569016;
+body.brain.CO2drive	=	0.9380043128563154;
+body.brain.pHdrive	=	1.0;
+environment.BarP	=	0.76;
+environment.air.O2	=	0.19999999999999998;
+environment.air.CO2	=	0.0;
+environment.airP.O2	=	0.152;
+environment.airP.CO2	=	0.0;
+environment.Temp	=	20.0;
+environment.Hum	=	0.0;
+environment.Uprt	=	0.5;
+environment.Togs	=	0.5;
+environment.actions.fright	=	0.2;
+environment.actions.amountAmylNitrite	=	0.1;
+environment.actions.drinkVolume	=	0.5;
+environment.Exer	=	0.0;
+environment.Hyperv	=	0.0;
+environment.bleedingRate	=	0.0;
+environment.pain	=	0.0;
+environment.food.glucose	=	0.4;
+environment.food.bicarb	=	0.0072;
+environment.food.prot	=	0.005;
+environment.food.Osm	=	2.2938889188888894;
+environment.food.K	=	0.06;
+environment.food.Na	=	0.5;
+environment.food.solids	=	0.7;
+environment.food.pH	=	7.0;
+environment.food.carbohydrate	=	173.0;
+environment.stool.solids	=	0.9828228427001493;
+environment.stool.volume	=	0.5110375493259893;
+environment.stool.Na	=	0.007020163162143991;
+environment.stool.K	=	8.751449202618614E-4;
+environment.stool.bicarb	=	1.0109034953487294E-4;
+environment.stool.prot	=	7.020163162143956E-5;
+environment.stool.Osm	=	0.031418035592404504;
+body.brain.hunger	=	0.2161970214009287;
+body.brain.thirst	=	0.12813676332252083;
+body.brain.sedation	=	4.1E-4;
+body.brain.nausea	=	5.232940340822838E-46;
+// End of variables
+
+</SCRIPT>
+<LOG>
+	nk 455.267 mL
+23:28:02: Defaecated
+23:56:17: Eaten 745.153 mL
+01:11:43: Urinated 564.159 mL
+04:24:40: Drank 437.259 mL
+04:31:49: Defaecated
+04:44:03: Eaten 602.697 mL
+07:20:32: Urinated 706.969 mL
+09:02:57: Drank 397.198 mL
+09:08:07: Eaten 660.97 mL
+09:27:19: Defaecated
+11:53:21: Urinated 527.486 mL
+12:13:13: Drank 303.76 mL
+15:19:27: Urinated 531.009 mL
+15:26:50: Eaten 1.11 L
+15:42:58: Defaecated
+17:17:35: Drank 307.874 mL
+18:21:01: Defaecated
+19:39:55: Urinated 506.787 mL
+20:29:17: Drank 302.362 mL
+00:08:43: Eaten 1.286 L
+00:12:26: Urinated 817.214 mL
+02:22:56: Defaecated
+02:41:43: Drank 421.845 mL
+05:42:44: Urinated 570.313 mL
+06:06:19: Drank 326.252 mL
+07:08:25: Eaten 972.359 mL
+07:57:15: Defaecated
+10:06:51: Drank 325.735 mL
+10:49:27: Urinated 575.509 mL
+13:36:19: Eaten 900.386 mL
+14:57:15: Drank 308.958 mL
+15:05:46: Urinated 500.062 mL
+15:11:43: Defaecated
+18:44:07: Drank 369.18 mL
+19:40:27: Eaten 871.506 mL
+20:44:53: Defaecated
+21:57:37: Urinated 721.645 mL
+22:56:10: Drank 349.681 mL
+01:21:40: Eaten 757.746 mL
+02:04:31: Defaecated
+02:12:40: Urinated 505.898 mL
+03:39:47: Drank 325.616 mL
+06:04:27: Eaten 659.745 mL
+06:53:14: Defaecated
+07:15:40: Urinated 532.942 mL
+09:20:07: Drank 445.284 mL
+10:38:53: Eaten 714.765 mL
+12:01:34: Defaecated
+12:31:34: Urinated 557.322 mL
+14:13:34: Drank 359.749 mL
+15:28:59: Eaten 690.36 mL
+17:11:50: Defaecated
+17:20:25: Urinated 547.073 mL
+18:59:50: Drank 349.503 mL
+19:51:26: Eaten 613.292 mL
+21:55:45: Urinated 504.082 mL
+22:37:02: Defaecated
+22:55:45: Drank 304.929 mL
+23:58:16: Eaten 603.937 mL
+02:25:56: Urinated 508.142 mL
+03:46:02: Drank 366.749 mL
+04:38:35: Eaten 774.265 mL
+05:18:47: Defaecated
+07:47:03: Drank 322.99 mL
+08:38:43: Urinated 708.082 mL
+09:25:31: Eaten 610.681 mL
+10:02:35: Defaecated
+12:20:03: Drank 320.864 mL
+12:57:37: Urinated 510.657 mL
+13:37:09: Eaten 669.177 mL
+14:35:35: Defaecated
+16:36:15: Drank 304.718 mL
+17:40:45: Urinated 531.183 mL
+18:45:55: Disease Pneumothorax: lungs.compliance = lungs.compliance * 0.7; lungs.FRC = lungs.FRC * 0.7; lungs.FVC = lungs.FVC * 0.7
+19:18:08: Eaten 990.636 mL
+20:40:09: Defaecated
+21:33:55: Drank 325.081 mL
+22:17:39: Urinated 545.881 mL
+00:42:47: Eaten 619.64 mL
+02:06:04: Drank 322.453 mL
+02:06:44: Defaecated
+03:39:55: Urinated 620.23 mL
+04:56:46: Eaten 688.697 mL
+06:53:53: Defaecated
+08:10:13: Drank 488.15 mL
+09:03:04: Urinated 563.401 mL
+09:12:51: Eaten 602.605 mL
+12:09:11: Defaecated
+12:42:11: Drank 334.373 mL
+13:52:38: Eaten 747.48 mL
+14:42:33: Urinated 670.22 mL
+16:46:41: Defaecated
+18:27:44: Drank 447.159 mL
+18:41:03: Eaten 670.626 mL
+19:40:13: Urinated 544.579 mL
+22:05:53: Defaecated
+22:54:51: Drank 404.209 mL
+23:37:49: Eaten 721.462 mL
+00:27:40: Urinated 572.435 mL
+03:01:56: Drank 331.642 mL
+03:19:16: Defaecated
+04:47:10: Eaten 762.901 mL
+05:57:01: Urinated 672.556 mL
+08:43:59: Drank 412.14 mL
+08:47:39: Defaecated
+09:32:32: Eaten 658.886 mL
+10:36:22: Urinated 516.974 mL
+13:01:56: Drank 338.971 mL
+14:41:03: Defaecated
+14:43:38: Eaten 842.491 mL
+16:08:07: Urinated 674.883 mL
+17:43:20: Drank 316.954 mL
+18:52:41: Defaecated
+20:28:02: Eaten 836.128 mL
+20:31:02: Urinated 530.92 mL
+21:05:57: Disease Tamponade: actions.startGradualChange("CVS.heart.pericVol", 0.150, 0.005)
+22:24:19: Drank 307.897 mL
+22:37:20: Jason is feeling faint
+22:58:38: Defaecated
+22:59:21: Jason has fainted and is unconscious
+23:00:04: Jason is feeling faint
+23:01:34: Jason has fainted and is unconscious
+</LOG>
+<EXTRA>
+	java.lang.IllegalStateException: Noninvertible twogradient function
+	at phic.common.Curve$TwoGradients.getInverse(Curve.java:90)
+	at phic.Chamber.tick(Chamber.java:61)
+	at phic.Heart.calculateSV(Heart.java:294)
+	at phic.Heart.tick(Heart.java:59)
+	at phic.common.CommonThread.tickFor(CommonThread.java:188)
+	at phic.common.CommonThread.tickOnce(CommonThread.java:161)
+	at phic.common.CommonThread.run(CommonThread.java:109)
+
+</EXTRA>
+<CONTEXT>
+	<HOM_VERSION> 1.61</HOM_VERSION>
+<VERSION>
+	<HTML><head>	<LINK rel="StyleSheet" href=styles.css>	<title>HOM Version</title></head><BODY><TABLE width='80%'><TR>	<Th>Version</Th> <TD> 1.61 </TD></TR><TR>	<Th>Build date</Th> <TD> 2 March 2013 </TD></TR><TR>	<Th>Date Jar sealed</Th> <TD> 2 March 2013 </TD></TR><TR>	<Th>Date requested</Th> <TD> 12 Apr 2013 </TD></TR><TR>	<Th>Owner</Th> <TD> Ben Pearson </TD></TR><TR>	<Th>Institution</th> <TD> UCL </TD></TR></TABLE></BODY></HTML>
+</VERSION>
+	<java_version> 1.7.0_21 </java_version>
+	<java_vm_name> Java HotSpot(TM) Client VM </java_vm_name>
+	<java_vm_version> 23.21-b01 </java_vm_version>
+	<os_arch> x86 </os_arch>
+	<os_name> Windows 7 </os_name>
+	<os_version> 6.1 </os_version>
+	<user_home> C:\Users\Hercule </user_home>
+	<user_dir> C:\Users\Hercule\Downloads\HOM </user_dir>
+</CONTEXT>
+</REPORT>
+
+
+</LOG ------------------------------------------------------------>
+<LOG ------------------------------------------------------------->
+<TIME>Thu Jun 27 14:16:34 2013</TIME>
+<HOST>88.105.159.217</HOST>
+<REPORT><OWNER>
+	Ben Pearson
+</OWNER>
+<INSTITUTION>
+	UCL
+</INSTITUTION>
+<EMAIL>
+	
+</EMAIL>
+<TRIED>
+	
+</TRIED>
+<EXPECTED>
+	
+</EXPECTED>
+<HAPPENED>
+	
+</HAPPENED>
+<COMMENTS>
+	
+</COMMENTS>
+<SCRIPT>
+	// Variable script: 19 July 2013 19:57:51
+body.CVS.heart.rate	=	171.17488111461893;
+body.CVS.heart.SV	=	0.005;
+body.CVS.heart.CO	=	0.8558744055730947;
+body.CVS.AP	=	0.02010408579499604;
+body.CVS.DiaBP	=	0.0179261431672048;
+body.CVS.SysBP	=	0.024459971050578514;
+body.CVS.heart.CI	=	0.45283117109340904;
+body.CVS.heart.left.atrialP	=	0.017894174867353327;
+body.CVS.heart.left.diaV	=	0.001796870372754968;
+body.CVS.heart.left.diaP	=	-0.007;
+body.CVS.heart.left.sysV	=	0.0;
+body.CVS.heart.left.sysP	=	0.021839259866587957;
+body.CVS.heart.left.power	=	0.038178693115060315;
+body.CVS.heart.left.SW	=	0.018067904558883546;
+body.CVS.heart.right.atrialP	=	0.017884262423034192;
+body.CVS.heart.right.diaV	=	0.0023288521501043406;
+body.CVS.heart.right.diaP	=	-0.007;
+body.CVS.heart.right.sysV	=	0.0;
+body.CVS.heart.right.sysP	=	0.00538421268000678;
+body.CVS.heart.right.power	=	0.005680498251625169;
+body.CVS.heart.right.SW	=	0.006660271745799048;
+body.CVS.heart.left.EF	=	1.0;
+body.CVS.heart.right.EF	=	1.0;
+body.CVS.heart.VO2	=	9.208478542909273E-5;
+body.CVS.heart.LVH	=	0.005600931810259109;
+body.CVS.heart.pericVol	=	0.08034169109616664;
+body.CVS.pulsePressure	=	0.006533827883373713;
+body.CVS.heart.aorticStenosis	=	0.0;
+body.CVS.heart.aorticRegurg	=	0.0;
+body.CVS.heart.mitralStenosis	=	0.0;
+body.CVS.heart.mitralRegurg	=	0.0;
+body.CVS.PR	=	0.02348952797757086;
+body.kidney.resistance	=	0.08090309077413328;
+body.kidney.flow	=	0.2484958930817982;
+body.muscle.resistance	=	0.15;
+body.muscle.flow	=	0.13402723863330693;
+body.skin.resistance	=	0.583598248222788;
+body.skin.flow	=	0.03444850264067503;
+body.viscera.resistance	=	0.28999421485512905;
+body.viscera.flow	=	0.06932581674099718;
+body.brain.resistance	=	0.06685694029066136;
+body.brain.flow	=	0.30070304904162953;
+body.CVS.heart.resistance	=	0.3570324229275173;
+body.CVS.heart.flow	=	0.05630885181281549;
+body.Fat.resistance	=	1.6;
+body.Fat.flow	=	0.012565053621872524;
+body.CVS.heart.ischaemia	=	0.0;
+body.CVS.MPAP	=	0.002995544476939637;
+body.CVS.DiaPAP	=	0.018643060986588238;
+body.CVS.SysPAP	=	0.0053919800584913465;
+body.CVS.PVR	=	0.0034999813727737495;
+body.CVS.Pcap	=	0.018216752092118163;
+body.CVS.ICOP	=	0.0071587647972280715;
+body.CVS.PCOP	=	0.023021411414658157;
+body.blood.PPr	=	0.001210379149035655;
+body.blood.PAlb	=	39.095246513851656;
+body.CVS.Oedema	=	-0.0026997300115813136;
+body.blood.Hct	=	0.4176089619169304;
+body.blood.Eryth	=	1.0020808076863288;
+body.blood.Visc	=	1.0;
+body.blood.volume	=	4.801837008287189;
+body.H2O	=	44.11870833816901;
+body.blood.PNa	=	0.1426805623478123;
+body.blood.PK	=	0.004729306489876127;
+body.blood.POsm	=	0.30888632795033505;
+body.blood.glucose	=	0.0046190698668494325;
+body.blood.PBic	=	0.02370620480314614;
+body.blood.pH	=	7.4283098187533545;
+body.blood.PCl	=	0.12370366403454229;
+body.blood.PGlu	=	0.007931217283241556;
+body.blood.Ca	=	0.0024;
+body.ecf.volume	=	14.048268500090602;
+body.ecf.Na	=	0.14206414294582181;
+body.ecf.K	=	0.0046374964099113155;
+body.ecf.bicarb	=	0.02372362584885039;
+body.ecf.prot	=	3.763809041655138E-4;
+body.ecf.Osm	=	0.30643385995420036;
+body.ecf.glucose	=	0.0051382016668416524;
+body.ecf.urea	=	0.007515959403589266;
+body.ecf.Cl	=	0.12297801350688274;
+body.ecf.H	=	3.926813766446823E-8;
+body.ecf.pH	=	7.405959695144753;
+body.CVS.lymphaticPressure	=	0.004600082223663506;
+body.blood.arterial.PO2	=	0.09544481110169395;
+body.blood.arterial.O2	=	0.1807395980962439;
+body.blood.arterial.PCO2	=	0.015191019684172344;
+body.blood.arterial.CO2	=	0.3133398757227877;
+body.blood.venous.PO2	=	-0.013697394061467867;
+body.blood.venous.O2	=	-0.0861538783450336;
+body.blood.venous.PCO2	=	0.03691353357310109;
+body.blood.venous.CO2	=	0.5591719502617054;
+body.lungs.expired.CO2	=	0.015703884911421863;
+body.lungs.expired.O2	=	0.18294592771717144;
+body.lungs.expired.CO	=	0.0;
+body.CVS.InterstitialP.CO2	=	0.043430287739779715;
+body.CVS.InterstitialP.O2	=	-0.046440055610416406;
+body.muscle.CO2	=	0.3133398757227877;
+body.muscle.O2Use	=	0.0;
+body.NMO2Use	=	0.22844400203431256;
+body.O2Use	=	0.22844442816834892;
+body.CO2Production	=	0.21035826218606382;
+body.blood.baseExcess	=	-5.59792684535005E-4;
+body.blood.SatO2	=	0.9594005829162109;
+body.blood.arterial.SatO2	=	0.9594005829162109;
+body.blood.venous.SatO2	=	-0.4573213727116022;
+body.lungs.alvP.O2	=	0.13323949514613034;
+body.lungs.alvP.CO2	=	0.014165183910569083;
+body.lungs.alvBlood.O2	=	0.18609966144977816;
+body.lungs.alvBlood.CO2	=	0.30810459652766625;
+body.lungs.alvV.CO2	=	0.2105844796932121;
+body.lungs.alvV.O2	=	1.9807840079646999;
+environment.air.CO	=	0.0;
+body.blood.CO	=	0.0;
+body.RQ	=	0.9208290343200809;
+body.muscle.O2Debt	=	0.0;
+body.lungs.RespR	=	18.478334449661478;
+body.brain.respiratoryDrive	=	1.4216952458216938;
+body.lungs.TidV	=	0.7249192745636426;
+body.lungs.Vent	=	13.395300804392964;
+body.lungs.AVent	=	10.623550636943742;
+body.lungs.Oedema	=	0.24293733098178094;
+body.lungs.Pairway	=	0.002463246106425439;
+body.lungs.lungVolume	=	2.462459637281821;
+body.lungs.compliance	=	98.0;
+body.lungs.airwayResistance	=	0.003;
+body.lungs.flow	=	0.0;
+body.lungs.FRC	=	2.0999999999999996;
+body.lungs.FVC	=	3.8499999999999996;
+body.lungs.TLV	=	6.0;
+body.lungs.ITP	=	-0.007463246106425439;
+body.lungs.DdSp	=	0.15;
+body.lungs.H2Oloss	=	2.2434828522664666E-4;
+body.lungs.IEratio	=	0.333;
+body.skin.Temp	=	22.681313875332094;
+body.MBR	=	1827552.0162745004;
+body.Temp	=	37.41524293029936;
+body.skin.SwR	=	4.982794501515221E-7;
+body.Fat.mass	=	4796.300450160465;
+body.Mass	=	66652.15069782453;
+body.muscle.Cal	=	0.0;
+body.muscle.O2Req	=	0.0;
+body.Cals	=	1269.1333446350698;
+body.Glycogen	=	2003.182237262805;
+body.gitract.glucoseTolerance	=	1.0;
+body.gitract.stomach.volume	=	0.47354586553506156;
+body.gitract.stomachCapacity	=	1.5;
+body.gitract.stomach.pH	=	4.348141206897462;
+body.gitract.stomach.carbohydrate	=	7.553747308041069;
+body.gitract.stomach.Na	=	0.14465860659921453;
+body.gitract.colonSecretion	=	0.0;
+body.kidney.GFR	=	0.0;
+body.kidney.urineFlow	=	0.0;
+body.kidney.urine.K	=	0.0;
+body.kidney.urine.Na	=	0.0;
+body.kidney.urine.Osm	=	0.0;
+body.kidney.urine.pH	=	0.0;
+body.kidney.urine.prot	=	0.0;
+body.kidney.urine.urea	=	0.0;
+body.blood.creat	=	3.4685231595979784E-5;
+body.blood.PCreat	=	5.95566025709215E-5;
+body.NaQ	=	2.644768100095949;
+body.KQ	=	3.4544313202711425;
+body.blood.NH3	=	4.1E-5;
+body.kidney.glomerulus.bicarb	=	0.0;
+body.kidney.glomerulus.pH	=	0.0;
+body.kidney.glomerulus.glucose	=	0.0;
+body.kidney.glomerulus.urea	=	0.0;
+body.kidney.glomerulus.prot	=	0.0;
+body.kidney.glomerulus.Na	=	0.0;
+body.kidney.glomerulus.K	=	0.0;
+body.kidney.glomerulus.Cl	=	0.0;
+body.kidney.glomerulus.Osm	=	0.0;
+body.kidney.PCT.bicarb	=	0.0;
+body.kidney.PCT.pH	=	0.0;
+body.kidney.PCT.glucose	=	0.0;
+body.kidney.PCT.urea	=	0.0;
+body.kidney.PCT.prot	=	0.0;
+body.kidney.PCT.Na	=	0.0;
+body.kidney.PCT.K	=	0.0;
+body.kidney.PCT.Cl	=	0.0;
+body.kidney.PCT.Osm	=	0.0;
+body.kidney.Loop.bicarb	=	0.0;
+body.kidney.Loop.pH	=	0.0;
+body.kidney.Loop.glucose	=	0.0;
+body.kidney.Loop.urea	=	0.0;
+body.kidney.Loop.prot	=	0.0;
+body.kidney.Loop.Na	=	0.0;
+body.kidney.Loop.K	=	0.0;
+body.kidney.Loop.Cl	=	0.0;
+body.kidney.Loop.Osm	=	0.0;
+body.kidney.DCT.bicarb	=	0.0;
+body.kidney.DCT.pH	=	0.0;
+body.kidney.DCT.glucose	=	0.0;
+body.kidney.DCT.urea	=	0.0;
+body.kidney.DCT.prot	=	0.0;
+body.kidney.DCT.Na	=	0.0;
+body.kidney.DCT.K	=	0.0;
+body.kidney.DCT.Cl	=	0.0;
+body.kidney.DCT.Osm	=	0.0;
+body.blood.Aldo	=	1.599298514979085E-10;
+body.blood.AngII	=	4.844912857910873E-12;
+body.blood.ADH	=	5.921991780756277E-12;
+body.blood.Thyr	=	1.7015730193755236E-11;
+body.brain.Symp	=	0.9869179205699664;
+body.blood.Insul	=	3.132622335658075E-11;
+body.blood.LH	=	4.006866028123045E-5;
+body.blood.FSH	=	1.7578030839198816E-5;
+body.blood.oestrogen	=	4.8362807651062745E-8;
+body.blood.progesterone	=	1.8271205178874563E-12;
+body.blood.inhibin	=	270.6181177780263;
+body.gonads.poolLH	=	6.471528968638061E-4;
+body.gonads.poolFSH	=	1.00360538482873E-4;
+body.blood.prot	=	7.049139690809775E-4;
+body.blood.Na	=	0.08309588082001854;
+body.blood.K	=	0.0027543057160519554;
+body.blood.Osm	=	0.18182159415677984;
+body.blood.H	=	2.1722252849047048E-8;
+body.blood.bicarb	=	0.013806281224314132;
+body.blood.urea	=	0.004797215526455616;
+body.blood.ketones	=	0.0;
+body.blood.PHy	=	3.729839820431558E-8;
+body.blood.lactate	=	0.001;
+body.blood.RCM	=	2.0052901683251116;
+body.blood.PV	=	2.796546839962077;
+body.BMR	=	1827552.0162745004;
+body.CVS.APL	=	0.02280004819746382;
+body.CVS.VCT	=	0.6560190538407974;
+body.CVS.Venoconstriction	=	600.0;
+body.CVS.Hard	=	0.25;
+environment.H2OX	=	8.036E-4;
+body.kidney.overallRenalFunction	=	1.646107584035073;
+body.kidney.tubularFunction	=	1.0;
+body.brain.greed	=	1.0;
+body.brain.thirstiness	=	1.0;
+body.lungs.Shunt	=	0.02;
+body.skin.area	=	1.8900518785102511;
+body.icf.volume	=	25.268602829791217;
+body.icf.Na	=	0.009893700957033518;
+body.icf.K	=	0.13360678550998942;
+body.icf.glucose	=	0.004946850478516759;
+body.icf.Cl	=	0.1355855257013961;
+body.icf.prot	=	0.006925590669923406;
+body.icf.H	=	7.167662947883559E-8;
+body.icf.bicarb	=	0.00791496076562684;
+body.icf.urea	=	0.007195688706050183;
+body.icf.Osm	=	0.3060691744651657;
+body.icf.pH	=	7.144622425125495;
+body.DOsm	=	-3.6468548903467735E-4;
+body.blood.Hb	=	142.36669156258992;
+body.kidney.urine.H	=	0.0;
+body.kidney.urine.bicarb	=	0.0;
+body.blood.PUN	=	0.008237103960674895;
+body.kidney.urine.glucose	=	0.0;
+body.kidney.MacDn	=	0.0;
+body.kidney.glomerularLeak	=	0.0;
+body.kidney.urinaryKetones	=	0.0;
+body.brain.pain	=	0.0;
+body.brain.Consc	=	4.098584583120765E-143;
+body.brain.O2Supply	=	0.05434096807807368;
+body.brain.hypoxia	=	0.0;
+body.brain.fever	=	0.0;
+body.brain.ICP	=	0.009;
+body.brain.O2drive	=	1.2377082428395436;
+body.brain.CO2drive	=	0.9379911666903779;
+body.brain.pHdrive	=	1.0;
+environment.BarP	=	0.76;
+environment.air.O2	=	0.19999999999999998;
+environment.air.CO2	=	0.0;
+environment.airP.O2	=	0.152;
+environment.airP.CO2	=	0.0;
+environment.Temp	=	20.0;
+environment.Hum	=	0.0;
+environment.Uprt	=	0.5;
+environment.Togs	=	0.5;
+environment.actions.fright	=	0.2;
+environment.actions.amountAmylNitrite	=	0.1;
+environment.actions.drinkVolume	=	0.5;
+environment.Exer	=	0.0;
+environment.Hyperv	=	0.0;
+environment.bleedingRate	=	0.0;
+environment.pain	=	0.0;
+environment.food.glucose	=	0.4;
+environment.food.bicarb	=	0.0072;
+environment.food.prot	=	0.005;
+environment.food.Osm	=	2.2938889188888894;
+environment.food.K	=	0.06;
+environment.food.Na	=	0.5;
+environment.food.solids	=	0.7;
+environment.food.pH	=	7.0;
+environment.food.carbohydrate	=	173.0;
+environment.stool.solids	=	0.9828228427001493;
+environment.stool.volume	=	0.5110375493259893;
+environment.stool.Na	=	0.007020163162143991;
+environment.stool.K	=	8.751449202618614E-4;
+environment.stool.bicarb	=	1.0109034953487294E-4;
+environment.stool.prot	=	7.020163162143956E-5;
+environment.stool.Osm	=	0.031418035592404504;
+body.brain.hunger	=	0.21659381711768663;
+body.brain.thirst	=	0.1284688689020695;
+body.brain.sedation	=	4.1E-4;
+body.brain.nausea	=	5.2050202099642176E-46;
+// End of variables
+
+</SCRIPT>
+<LOG>
+	nk 455.267 mL
+23:28:02: Defaecated
+23:56:17: Eaten 745.153 mL
+01:11:43: Urinated 564.159 mL
+04:24:40: Drank 437.259 mL
+04:31:49: Defaecated
+04:44:03: Eaten 602.697 mL
+07:20:32: Urinated 706.969 mL
+09:02:57: Drank 397.198 mL
+09:08:07: Eaten 660.97 mL
+09:27:19: Defaecated
+11:53:21: Urinated 527.486 mL
+12:13:13: Drank 303.76 mL
+15:19:27: Urinated 531.009 mL
+15:26:50: Eaten 1.11 L
+15:42:58: Defaecated
+17:17:35: Drank 307.874 mL
+18:21:01: Defaecated
+19:39:55: Urinated 506.787 mL
+20:29:17: Drank 302.362 mL
+00:08:43: Eaten 1.286 L
+00:12:26: Urinated 817.214 mL
+02:22:56: Defaecated
+02:41:43: Drank 421.845 mL
+05:42:44: Urinated 570.313 mL
+06:06:19: Drank 326.252 mL
+07:08:25: Eaten 972.359 mL
+07:57:15: Defaecated
+10:06:51: Drank 325.735 mL
+10:49:27: Urinated 575.509 mL
+13:36:19: Eaten 900.386 mL
+14:57:15: Drank 308.958 mL
+15:05:46: Urinated 500.062 mL
+15:11:43: Defaecated
+18:44:07: Drank 369.18 mL
+19:40:27: Eaten 871.506 mL
+20:44:53: Defaecated
+21:57:37: Urinated 721.645 mL
+22:56:10: Drank 349.681 mL
+01:21:40: Eaten 757.746 mL
+02:04:31: Defaecated
+02:12:40: Urinated 505.898 mL
+03:39:47: Drank 325.616 mL
+06:04:27: Eaten 659.745 mL
+06:53:14: Defaecated
+07:15:40: Urinated 532.942 mL
+09:20:07: Drank 445.284 mL
+10:38:53: Eaten 714.765 mL
+12:01:34: Defaecated
+12:31:34: Urinated 557.322 mL
+14:13:34: Drank 359.749 mL
+15:28:59: Eaten 690.36 mL
+17:11:50: Defaecated
+17:20:25: Urinated 547.073 mL
+18:59:50: Drank 349.503 mL
+19:51:26: Eaten 613.292 mL
+21:55:45: Urinated 504.082 mL
+22:37:02: Defaecated
+22:55:45: Drank 304.929 mL
+23:58:16: Eaten 603.937 mL
+02:25:56: Urinated 508.142 mL
+03:46:02: Drank 366.749 mL
+04:38:35: Eaten 774.265 mL
+05:18:47: Defaecated
+07:47:03: Drank 322.99 mL
+08:38:43: Urinated 708.082 mL
+09:25:31: Eaten 610.681 mL
+10:02:35: Defaecated
+12:20:03: Drank 320.864 mL
+12:57:37: Urinated 510.657 mL
+13:37:09: Eaten 669.177 mL
+14:35:35: Defaecated
+16:36:15: Drank 304.718 mL
+17:40:45: Urinated 531.183 mL
+18:45:55: Disease Pneumothorax: lungs.compliance = lungs.compliance * 0.7; lungs.FRC = lungs.FRC * 0.7; lungs.FVC = lungs.FVC * 0.7
+19:18:08: Eaten 990.636 mL
+20:40:09: Defaecated
+21:33:55: Drank 325.081 mL
+22:17:39: Urinated 545.881 mL
+00:42:47: Eaten 619.64 mL
+02:06:04: Drank 322.453 mL
+02:06:44: Defaecated
+03:39:55: Urinated 620.23 mL
+04:56:46: Eaten 688.697 mL
+06:53:53: Defaecated
+08:10:13: Drank 488.15 mL
+09:03:04: Urinated 563.401 mL
+09:12:51: Eaten 602.605 mL
+12:09:11: Defaecated
+12:42:11: Drank 334.373 mL
+13:52:38: Eaten 747.48 mL
+14:42:33: Urinated 670.22 mL
+16:46:41: Defaecated
+18:27:44: Drank 447.159 mL
+18:41:03: Eaten 670.626 mL
+19:40:13: Urinated 544.579 mL
+22:05:53: Defaecated
+22:54:51: Drank 404.209 mL
+23:37:49: Eaten 721.462 mL
+00:27:40: Urinated 572.435 mL
+03:01:56: Drank 331.642 mL
+03:19:16: Defaecated
+04:47:10: Eaten 762.901 mL
+05:57:01: Urinated 672.556 mL
+08:43:59: Drank 412.14 mL
+08:47:39: Defaecated
+09:32:32: Eaten 658.886 mL
+10:36:22: Urinated 516.974 mL
+13:01:56: Drank 338.971 mL
+14:41:03: Defaecated
+14:43:38: Eaten 842.491 mL
+16:08:07: Urinated 674.883 mL
+17:43:20: Drank 316.954 mL
+18:52:41: Defaecated
+20:28:02: Eaten 836.128 mL
+20:31:02: Urinated 530.92 mL
+21:05:57: Disease Tamponade: actions.startGradualChange("CVS.heart.pericVol", 0.150, 0.005)
+22:24:19: Drank 307.897 mL
+22:37:20: Jason is feeling faint
+22:58:38: Defaecated
+22:59:21: Jason has fainted and is unconscious
+23:00:04: Jason is feeling faint
+23:01:34: Jason has fainted and is unconscious
+</LOG>
+<EXTRA>
+	java.lang.IllegalStateException: Noninvertible twogradient function
+	at phic.common.Curve$TwoGradients.getInverse(Curve.java:90)
+	at phic.Chamber.tick(Chamber.java:61)
+	at phic.Heart.calculateSV(Heart.java:294)
+	at phic.Heart.tick(Heart.java:59)
+	at phic.common.CommonThread.tickFor(CommonThread.java:188)
+	at phic.common.CommonThread.tickOnce(CommonThread.java:161)
+	at phic.common.CommonThread.run(CommonThread.java:109)
+
+</EXTRA>
+<CONTEXT>
+	<HOM_VERSION> 1.61</HOM_VERSION>
+<VERSION>
+	<HTML><head>	<LINK rel="StyleSheet" href=styles.css>	<title>HOM Version</title></head><BODY><TABLE width='80%'><TR>	<Th>Version</Th> <TD> 1.61 </TD></TR><TR>	<Th>Build date</Th> <TD> 2 March 2013 </TD></TR><TR>	<Th>Date Jar sealed</Th> <TD> 2 March 2013 </TD></TR><TR>	<Th>Date requested</Th> <TD> 12 Apr 2013 </TD></TR><TR>	<Th>Owner</Th> <TD> Ben Pearson </TD></TR><TR>	<Th>Institution</th> <TD> UCL </TD></TR></TABLE></BODY></HTML>
+</VERSION>
+	<java_version> 1.7.0_21 </java_version>
+	<java_vm_name> Java HotSpot(TM) Client VM </java_vm_name>
+	<java_vm_version> 23.21-b01 </java_vm_version>
+	<os_arch> x86 </os_arch>
+	<os_name> Windows 7 </os_name>
+	<os_version> 6.1 </os_version>
+	<user_home> C:\Users\Hercule </user_home>
+	<user_dir> C:\Users\Hercule\Downloads\HOM </user_dir>
+</CONTEXT>
+</REPORT>
+
+
+</LOG ------------------------------------------------------------>
+<LOG ------------------------------------------------------------->
+<TIME>Tue Jan  7 16:51:44 2014</TIME>
+<HOST>213.140.92.96</HOST>
+<REPORT><OWNER>
+	James Cullen
+</OWNER>
+<INSTITUTION>
+	University of Cambridge
+</INSTITUTION>
+<EMAIL>
+	
+</EMAIL>
+<TRIED>
+	
+</TRIED>
+<EXPECTED>
+	
+</EXPECTED>
+<HAPPENED>
+	
+</HAPPENED>
+<COMMENTS>
+	
+</COMMENTS>
+<SCRIPT>
+	// Variable script: 8. januar 2014 07:45:48
+body.CVS.heart.rate	=	182.95309726824837;
+body.CVS.heart.SV	=	0.005;
+body.CVS.heart.CO	=	0.9147654863412419;
+body.CVS.AP	=	0.023850435439148165;
+body.CVS.DiaBP	=	0.02126663826657378;
+body.CVS.SysBP	=	0.029018029784296934;
+body.CVS.heart.CI	=	0.5082030479673566;
+body.CVS.heart.left.atrialP	=	0.014675614075659154;
+body.CVS.heart.left.diaV	=	0.0022044580055958028;
+body.CVS.heart.left.diaP	=	-0.007;
+body.CVS.heart.left.sysV	=	0.0;
+body.CVS.heart.left.sysP	=	0.025908955164550832;
+body.CVS.heart.left.power	=	0.048518744932126136;
+body.CVS.heart.left.SW	=	0.020565265596135154;
+body.CVS.heart.right.atrialP	=	0.014669836006594678;
+body.CVS.heart.right.diaV	=	0.002258667367351581;
+body.CVS.heart.right.diaP	=	-0.007;
+body.CVS.heart.right.sysV	=	0.0;
+body.CVS.heart.right.sysP	=	0.005682095422787593;
+body.CVS.heart.right.power	=	0.006421688917765639;
+body.CVS.heart.right.SW	=	0.006770589614621284;
+body.CVS.heart.left.EF	=	1.0;
+body.CVS.heart.right.EF	=	1.0;
+body.CVS.heart.VO2	=	4.0318228427391553E-4;
+body.CVS.heart.LVH	=	1.5490610061641547E-4;
+body.CVS.heart.pericVol	=	0.0800422520254825;
+body.CVS.pulsePressure	=	0.007751391517723154;
+body.CVS.heart.aorticStenosis	=	0.0;
+body.CVS.heart.aorticRegurg	=	0.0;
+body.CVS.heart.mitralStenosis	=	0.0;
+body.CVS.heart.mitralRegurg	=	0.0;
+body.CVS.PR	=	0.02607273207753168;
+body.kidney.resistance	=	0.0982109110295661;
+body.kidney.flow	=	0.2428491415986159;
+body.muscle.resistance	=	0.14999999999999997;
+body.muscle.flow	=	0.15900290292765448;
+body.skin.resistance	=	0.5906277986955994;
+body.skin.flow	=	0.04038149828338899;
+body.viscera.resistance	=	0.29511912144210717;
+body.viscera.flow	=	0.08081629994899145;
+body.brain.resistance	=	0.07716337441756911;
+body.brain.flow	=	0.30909010419997557;
+body.CVS.heart.resistance	=	0.35219701073088894;
+body.CVS.heart.flow	=	0.06771901723314767;
+body.Fat.resistance	=	1.6;
+body.Fat.flow	=	0.014906522149467603;
+body.CVS.heart.ischaemia	=	0.0;
+body.CVS.MPAP	=	0.0031562664088069046;
+body.CVS.DiaPAP	=	0.01546468067786088;
+body.CVS.SysPAP	=	0.005681279535852428;
+body.CVS.PVR	=	0.0034503558080562504;
+body.CVS.Pcap	=	0.016118957434959492;
+body.CVS.ICOP	=	0.006466224174113138;
+body.CVS.PCOP	=	0.023674625116051052;
+body.blood.PPr	=	0.001244722666459046;
+body.blood.PAlb	=	40.20454212662718;
+body.CVS.Oedema	=	-0.005809296338285462;
+body.blood.Hct	=	0.4562645096385066;
+body.blood.Eryth	=	0.9332394401502293;
+body.blood.Visc	=	1.0;
+body.blood.volume	=	4.813134337420296;
+body.H2O	=	44.67757689656411;
+body.blood.PNa	=	0.14923822745637558;
+body.blood.PK	=	0.00549344474186109;
+body.blood.POsm	=	0.3271484953044621;
+body.blood.glucose	=	0.005793122848565618;
+body.blood.PBic	=	0.023306326708110257;
+body.blood.pH	=	7.392391198363859;
+body.blood.PCl	=	0.1314253454901264;
+body.blood.PGlu	=	0.010654303335458493;
+body.blood.Ca	=	0.0024;
+body.ecf.volume	=	15.552855467432643;
+body.ecf.Na	=	0.14643250223748813;
+body.ecf.K	=	0.005156516348344654;
+body.ecf.bicarb	=	0.02325024160511373;
+body.ecf.prot	=	3.3996972524254145E-4;
+body.ecf.Osm	=	0.31905047280998966;
+body.ecf.glucose	=	0.00588209797802792;
+body.ecf.urea	=	0.009650330936890526;
+body.ecf.Cl	=	0.12833877698071905;
+body.ecf.H	=	3.699816309057698E-8;
+body.ecf.pH	=	7.431819837539212;
+body.CVS.lymphaticPressure	=	0.0035279545127417508;
+body.blood.arterial.PO2	=	0.09597997428771282;
+body.blood.arterial.O2	=	0.1976160685544916;
+body.blood.arterial.PCO2	=	0.018053033116356546;
+body.blood.arterial.CO2	=	0.34048443474903756;
+body.blood.venous.PO2	=	-0.009292119279861843;
+body.blood.venous.O2	=	-0.07098561286589722;
+body.blood.venous.PCO2	=	0.03947842962052728;
+body.blood.venous.CO2	=	0.5630929320337843;
+body.lungs.expired.CO2	=	0.017355072886024767;
+body.lungs.expired.O2	=	0.1790385164178115;
+body.lungs.expired.CO	=	0.0;
+body.CVS.InterstitialP.CO2	=	0.0459060485717785;
+body.CVS.InterstitialP.O2	=	-0.04087374735013424;
+body.muscle.CO2	=	0.34048443474903756;
+body.muscle.O2Use	=	0.0;
+body.NMO2Use	=	0.24571396099643864;
+body.O2Use	=	0.24571411966180093;
+body.CO2Production	=	0.20343915253591716;
+body.blood.baseExcess	=	-9.596739955157856E-4;
+body.blood.SatO2	=	0.9601123193774176;
+body.blood.arterial.SatO2	=	0.9601123193774176;
+body.blood.venous.SatO2	=	-0.3448816784466638;
+body.lungs.alvP.O2	=	0.12937704810884415;
+body.lungs.alvP.CO2	=	0.016314970824599463;
+body.lungs.alvBlood.O2	=	0.2029189022744073;
+body.lungs.alvBlood.CO2	=	0.3306237443984338;
+body.lungs.alvV.CO2	=	0.20840169369687273;
+body.lungs.alvV.O2	=	1.652616865899105;
+environment.air.CO	=	0.0;
+body.blood.CO	=	0.0;
+body.RQ	=	0.8279505989152324;
+body.muscle.O2Debt	=	0.0;
+body.lungs.RespR	=	17.285845865577855;
+body.brain.respiratoryDrive	=	1.330259661063737;
+body.lungs.TidV	=	0.6781370301111312;
+body.lungs.Vent	=	11.722172178241744;
+body.lungs.AVent	=	9.129295298405065;
+body.lungs.Oedema	=	0.1156225074212034;
+body.lungs.Pairway	=	0.0016129973644786195;
+body.lungs.lungVolume	=	3.3390685150555655;
+body.lungs.compliance	=	140.0;
+body.lungs.airwayResistance	=	3.0000000000000004E-5;
+body.lungs.flow	=	0.0;
+body.lungs.FRC	=	3.0;
+body.lungs.FVC	=	5.5;
+body.lungs.TLV	=	6.0;
+body.lungs.ITP	=	-0.00661299736447862;
+body.lungs.DdSp	=	0.15;
+body.lungs.H2Oloss	=	1.9632625393955965E-4;
+body.lungs.IEratio	=	0.333;
+body.skin.Temp	=	22.996486325736992;
+body.MBR	=	1965711.687971509;
+body.Temp	=	37.3746136938072;
+body.skin.SwR	=	5.246859981952795E-6;
+body.Fat.mass	=	10495.271859090208;
+body.Mass	=	73131.13562365665;
+body.muscle.Cal	=	0.0;
+body.muscle.O2Req	=	0.0;
+body.Cals	=	1365.0775610913258;
+body.Glycogen	=	1968.9910378005193;
+body.gitract.glucoseTolerance	=	1.0;
+body.gitract.stomach.volume	=	0.4940642176396723;
+body.gitract.stomachCapacity	=	1.5;
+body.gitract.stomach.pH	=	4.223553133035967;
+body.gitract.stomach.carbohydrate	=	54.795736177407875;
+body.gitract.stomach.Na	=	0.3460510027181059;
+body.gitract.colonSecretion	=	0.0;
+body.kidney.GFR	=	0.0;
+body.kidney.urineFlow	=	0.0;
+body.kidney.urine.K	=	0.0;
+body.kidney.urine.Na	=	0.0;
+body.kidney.urine.Osm	=	0.0;
+body.kidney.urine.pH	=	0.0;
+body.kidney.urine.prot	=	0.0;
+body.kidney.urine.urea	=	0.0;
+body.blood.creat	=	3.6341696643685694E-5;
+body.blood.PCreat	=	6.683708767938714E-5;
+body.NaQ	=	2.9180107233409487;
+body.KQ	=	3.4728297348652735;
+body.blood.NH3	=	4.1E-5;
+body.kidney.glomerulus.bicarb	=	0.0;
+body.kidney.glomerulus.pH	=	0.0;
+body.kidney.glomerulus.glucose	=	0.0;
+body.kidney.glomerulus.urea	=	0.0;
+body.kidney.glomerulus.prot	=	0.0;
+body.kidney.glomerulus.Na	=	0.0;
+body.kidney.glomerulus.K	=	0.0;
+body.kidney.glomerulus.Cl	=	0.0;
+body.kidney.glomerulus.Osm	=	0.0;
+body.kidney.PCT.bicarb	=	0.0;
+body.kidney.PCT.pH	=	0.0;
+body.kidney.PCT.glucose	=	0.0;
+body.kidney.PCT.urea	=	0.0;
+body.kidney.PCT.prot	=	0.0;
+body.kidney.PCT.Na	=	0.0;
+body.kidney.PCT.K	=	0.0;
+body.kidney.PCT.Cl	=	0.0;
+body.kidney.PCT.Osm	=	0.0;
+body.kidney.Loop.bicarb	=	0.0;
+body.kidney.Loop.pH	=	0.0;
+body.kidney.Loop.glucose	=	0.0;
+body.kidney.Loop.urea	=	0.0;
+body.kidney.Loop.prot	=	0.0;
+body.kidney.Loop.Na	=	0.0;
+body.kidney.Loop.K	=	0.0;
+body.kidney.Loop.Cl	=	0.0;
+body.kidney.Loop.Osm	=	0.0;
+body.kidney.DCT.bicarb	=	0.0;
+body.kidney.DCT.pH	=	0.0;
+body.kidney.DCT.glucose	=	0.0;
+body.kidney.DCT.urea	=	0.0;
+body.kidney.DCT.prot	=	0.0;
+body.kidney.DCT.Na	=	0.0;
+body.kidney.DCT.K	=	0.0;
+body.kidney.DCT.Cl	=	0.0;
+body.kidney.DCT.Osm	=	0.0;
+body.blood.Aldo	=	1.5995940141605176E-10;
+body.blood.AngII	=	7.111482168662048E-12;
+body.blood.ADH	=	9.082846791922736E-12;
+body.blood.Thyr	=	1.6006223922402926E-11;
+body.brain.Symp	=	0.9838149881897492;
+body.blood.Insul	=	5.045562087271994E-11;
+body.blood.LH	=	9.997981541305625E-6;
+body.blood.FSH	=	4.3037756941817706E-5;
+body.blood.oestrogen	=	4.800095255997135E-8;
+body.blood.progesterone	=	2.276359433385979E-22;
+body.blood.inhibin	=	270.000020003072;
+body.gonads.poolLH	=	1.8782461402478255E-4;
+body.gonads.poolFSH	=	5.267399137357168E-5;
+body.blood.prot	=	6.767998894111749E-4;
+body.blood.Na	=	0.08114612078667247;
+body.blood.K	=	0.0029869808704896072;
+body.blood.Osm	=	0.18052544387117286;
+body.blood.H	=	2.202908621171503E-8;
+body.blood.bicarb	=	0.012672476981159501;
+body.blood.urea	=	0.005789295789785696;
+body.blood.ketones	=	0.0;
+body.blood.PHy	=	4.051434309919583E-8;
+body.blood.lactate	=	0.001;
+body.blood.RCM	=	2.19606237828733;
+body.blood.PV	=	2.617071959132966;
+body.BMR	=	1965711.687971509;
+body.CVS.APL	=	0.03358463070990956;
+body.CVS.VCT	=	0.6609951874753497;
+body.CVS.Venoconstriction	=	600.0;
+body.CVS.Hard	=	0.25;
+environment.H2OX	=	8.036E-4;
+body.kidney.overallRenalFunction	=	1.0;
+body.kidney.tubularFunction	=	1.0;
+body.brain.greed	=	1.0;
+body.brain.thirstiness	=	1.0;
+body.lungs.Shunt	=	0.02;
+body.skin.area	=	1.8;
+body.icf.volume	=	24.311587091711175;
+body.icf.Na	=	0.010283162471331868;
+body.icf.K	=	0.1389565571530635;
+body.icf.glucose	=	0.005141581235665934;
+body.icf.Cl	=	0.14101318964732984;
+body.icf.prot	=	0.0071982137299323465;
+body.icf.H	=	7.449492677526319E-8;
+body.icf.bicarb	=	0.008226529977065517;
+body.icf.urea	=	0.007478944065399758;
+body.icf.Osm	=	0.3182982527747155;
+body.icf.pH	=	7.127873302399762;
+body.DOsm	=	-7.522200352741426E-4;
+body.blood.Hb	=	155.54471919494543;
+body.kidney.urine.H	=	0.0;
+body.kidney.urine.bicarb	=	0.0;
+body.blood.PUN	=	0.010647264878621;
+body.kidney.urine.glucose	=	0.0;
+body.kidney.MacDn	=	0.0;
+body.kidney.glomerularLeak	=	0.0;
+body.kidney.urinaryKetones	=	0.0;
+body.brain.pain	=	0.0;
+body.brain.Consc	=	6.973381142894994E-105;
+body.brain.O2Supply	=	0.06110609591772096;
+body.brain.hypoxia	=	0.0;
+body.brain.fever	=	0.0;
+body.brain.ICP	=	0.009;
+body.brain.O2drive	=	1.2100532267002886;
+body.brain.CO2drive	=	0.9451952856706468;
+body.brain.pHdrive	=	1.0799465771798236;
+environment.BarP	=	0.76;
+environment.air.O2	=	0.19999999999999998;
+environment.air.CO2	=	0.0;
+environment.airP.O2	=	0.152;
+environment.airP.CO2	=	0.0;
+environment.Temp	=	20.0;
+environment.Hum	=	0.0;
+environment.Uprt	=	0.5;
+environment.Togs	=	0.5;
+environment.actions.fright	=	0.2;
+environment.actions.amountAmylNitrite	=	0.1;
+environment.actions.drinkVolume	=	0.5;
+environment.Exer	=	0.0;
+environment.Hyperv	=	0.0;
+environment.bleedingRate	=	0.0;
+environment.pain	=	0.0;
+environment.food.glucose	=	0.4;
+environment.food.bicarb	=	0.0072;
+environment.food.prot	=	0.005;
+environment.food.Osm	=	2.2938889188888894;
+environment.food.K	=	0.06;
+environment.food.Na	=	0.5;
+environment.food.solids	=	0.7;
+environment.food.pH	=	7.0;
+environment.food.carbohydrate	=	173.0;
+environment.stool.solids	=	0.99;
+environment.stool.volume	=	0.6;
+environment.stool.Na	=	0.003;
+environment.stool.K	=	3.0E-4;
+environment.stool.bicarb	=	0.003;
+environment.stool.prot	=	0.002;
+environment.stool.Osm	=	0.0086;
+body.brain.hunger	=	0.13629108145004562;
+body.brain.thirst	=	0.3485767735572554;
+body.brain.sedation	=	4.1E-4;
+body.brain.nausea	=	0.0;
+// End of variables
+
+</SCRIPT>
+<LOG>
+	Restarted
+
+02:14:26: Disease Tamponade: actions.startGradualChange("CVS.heart.pericVol", 0.150, 0.005)
+03:22:45: Eaten 741.329 mL
+03:43:28: Jason is feeling faint
+03:50:17: IV bolus of Adrenaline 200 mg/L
+03:50:53: Jason is unconscious and about to die
+03:50:56: Jason is unconscious and about to die
+03:50:57: Jason is unconscious and about to die
+03:51:00: Jason is unconscious and about to die
+03:51:02: Jason is unconscious and about to die
+03:51:04: Jason is unconscious and about to die
+03:51:06: Jason is unconscious and about to die
+03:51:08: Jason is unconscious and about to die
+03:51:10: Jason is unconscious and about to die
+03:51:12: Jason has palpitations
+03:51:14: Jason has palpitations
+03:51:15: Jason has palpitations
+03:51:18: Jason has palpitations
+03:51:20: Jason has palpitations
+03:51:22: Jason has palpitations
+03:51:24: Jason has palpitations
+03:53:45: Jason is feeling faint
+04:11:09: Jason has fainted and is unconscious
+04:31:49: IV bolus of Adrenaline 200 mg/L
+04:32:16: Jason is feeling light-headed
+04:34:23: Jason has fainted and is unconscious
+</LOG>
+<EXTRA>
+	java.lang.IllegalStateException: Noninvertible twogradient function
+	at phic.common.Curve$TwoGradients.getInverse(Curve.java:90)
+	at phic.Chamber.tick(Chamber.java:72)
+	at phic.Heart.calculateSV(Heart.java:294)
+	at phic.Heart.tick(Heart.java:59)
+	at phic.common.CommonThread.tickFor(CommonThread.java:191)
+	at phic.common.CommonThread.tickOnce(CommonThread.java:164)
+	at phic.common.CommonThread.run(CommonThread.java:109)
+
+</EXTRA>
+<CONTEXT>
+	<HOM_VERSION> 1.61</HOM_VERSION>
+<VERSION>
+	<HTML><head>	<LINK rel="StyleSheet" href=styles.css>	<title>HOM Version</title></head><BODY><TABLE width='80%'><TR>	<Th>Version</Th> <TD> 1.61 </TD></TR><TR>	<Th>Build date</Th> <TD>Oct 05, 2013 12:14:14 AM</TD></TR><TR>	<Th>Date Jar sealed</Th> <TD>Sat, Dec 21, 2013  1:01:21 PM</TD></TR><TR>	<Th>Date requested</Th> <TD>Sat, Dec 21, 2013  1:01:21 PM</TD></TR><TR>	<Th>Owner</Th> <TD>James Cullen</TD></TR><TR>	<Th>Institution</th> <TD>University of Cambridge</TD></TR></TABLE></BODY></HTML>
+</VERSION>
+	<java_version> 1.7.0_45 </java_version>
+	<java_vm_name> Java HotSpot(TM) Client VM </java_vm_name>
+	<java_vm_version> 24.45-b08 </java_vm_version>
+	<os_arch> x86 </os_arch>
+	<os_name> Windows 8 </os_name>
+	<os_version> 6.2 </os_version>
+	<user_home> C:\Users\A </user_home>
+	<user_dir> C:\Users\A\Downloads </user_dir>
+</CONTEXT>
+</REPORT>
+
+
+</LOG ------------------------------------------------------------>
+<LOG ------------------------------------------------------------->
+<TIME>Tue Jan  7 16:51:48 2014</TIME>
+<HOST>213.140.92.96</HOST>
+<REPORT><OWNER>
+	James Cullen
+</OWNER>
+<INSTITUTION>
+	University of Cambridge
+</INSTITUTION>
+<EMAIL>
+	
+</EMAIL>
+<TRIED>
+	
+</TRIED>
+<EXPECTED>
+	
+</EXPECTED>
+<HAPPENED>
+	
+</HAPPENED>
+<COMMENTS>
+	
+</COMMENTS>
+<SCRIPT>
+	// Variable script: 8. januar 2014 07:59:00
+body.CVS.heart.rate	=	182.9125422503129;
+body.CVS.heart.SV	=	0.005;
+body.CVS.heart.CO	=	0.9145627112515645;
+body.CVS.AP	=	0.023840744129234495;
+body.CVS.DiaBP	=	0.021257996848567426;
+body.CVS.SysBP	=	0.029006238690568637;
+body.CVS.heart.CI	=	0.5080903951397581;
+body.CVS.heart.left.atrialP	=	0.014677488374498143;
+body.CVS.heart.left.diaV	=	0.0021886314984260716;
+body.CVS.heart.left.diaP	=	-0.007;
+body.CVS.heart.left.sysV	=	0.0;
+body.CVS.heart.left.sysP	=	0.025898427402293426;
+body.CVS.heart.left.power	=	0.04849902997996272;
+body.CVS.heart.left.SW	=	0.02055880525418173;
+body.CVS.heart.right.atrialP	=	0.014671702222087702;
+body.CVS.heart.right.diaV	=	0.002258667367351581;
+body.CVS.heart.right.diaP	=	-0.007;
+body.CVS.heart.right.sysV	=	0.0;
+body.CVS.heart.right.sysP	=	0.005682095422787593;
+body.CVS.heart.right.power	=	0.006421688917765639;
+body.CVS.heart.right.SW	=	0.006770589614621284;
+body.CVS.heart.left.EF	=	1.0;
+body.CVS.heart.right.EF	=	1.0;
+body.CVS.heart.VO2	=	4.0259378866946234E-4;
+body.CVS.heart.LVH	=	1.5490609487996221E-4;
+body.CVS.heart.pericVol	=	0.08005523661577939;
+body.CVS.pulsePressure	=	0.007748241842001211;
+body.CVS.heart.aorticStenosis	=	0.0;
+body.CVS.heart.aorticRegurg	=	0.0;
+body.CVS.heart.mitralStenosis	=	0.0;
+body.CVS.heart.mitralRegurg	=	0.0;
+body.CVS.PR	=	0.02606791621386883;
+body.kidney.resistance	=	0.09821157677228516;
+body.kidney.flow	=	0.2427488175300556;
+body.muscle.resistance	=	0.14999999999999997;
+body.muscle.flow	=	0.15893829419489666;
+body.skin.resistance	=	0.5905657245939495;
+body.skin.flow	=	0.04036933255079523;
+body.viscera.resistance	=	0.29526206324465215;
+body.viscera.flow	=	0.0807443525498913;
+body.brain.resistance	=	0.077112100378966;
+body.brain.flow	=	0.30916994884161625;
+body.CVS.heart.resistance	=	0.35219701073088894;
+body.CVS.heart.flow	=	0.06769150050353785;
+body.Fat.resistance	=	1.6;
+body.Fat.flow	=	0.01490046508077156;
+body.CVS.heart.ischaemia	=	0.0;
+body.CVS.MPAP	=	0.0031561625129049023;
+body.CVS.DiaPAP	=	0.015466529002724369;
+body.CVS.SysPAP	=	0.005681092523228824;
+body.CVS.PVR	=	0.0034510072126008114;
+body.CVS.Pcap	=	0.01611883948997177;
+body.CVS.ICOP	=	0.006466195372287907;
+body.CVS.PCOP	=	0.02367274016480799;
+body.blood.PPr	=	0.0012446235628185065;
+body.blood.PAlb	=	40.20134107903776;
+body.CVS.Oedema	=	-0.00580740838948786;
+body.blood.Hct	=	0.45624466635669236;
+body.blood.Eryth	=	0.9332410465989757;
+body.blood.Visc	=	1.0;
+body.blood.volume	=	4.813340458450128;
+body.H2O	=	44.677567958854624;
+body.blood.PNa	=	0.1492168068634902;
+body.blood.PK	=	0.0054908419623787225;
+body.blood.POsm	=	0.32707271029595725;
+body.blood.glucose	=	0.005773198389569296;
+body.blood.PBic	=	0.023305950132553006;
+body.blood.pH	=	7.3929114719549505;
+body.blood.PCl	=	0.13140169869331592;
+body.blood.PGlu	=	0.010617272203818778;
+body.blood.Ca	=	0.0024;
+body.ecf.volume	=	15.552924743196709;
+body.ecf.Na	=	0.1464334533396959;
+body.ecf.K	=	0.0051568463772030506;
+body.ecf.bicarb	=	0.02324988914236892;
+body.ecf.prot	=	3.399682109509941E-4;
+body.ecf.Osm	=	0.3190602088854667;
+body.ecf.glucose	=	0.005888160704991059;
+body.ecf.urea	=	0.009651443533721433;
+body.ecf.Cl	=	0.12834041057453002;
+body.ecf.H	=	3.700200532057593E-8;
+body.ecf.pH	=	7.431774738742166;
+body.CVS.lymphaticPressure	=	0.0035285546743264295;
+body.blood.arterial.PO2	=	0.09598233158459739;
+body.blood.arterial.O2	=	0.19760811933600914;
+body.blood.arterial.PCO2	=	0.01802546632803183;
+body.blood.arterial.CO2	=	0.34024960713121183;
+body.blood.venous.PO2	=	-0.009304356094892368;
+body.blood.venous.O2	=	-0.07104680868397545;
+body.blood.venous.PCO2	=	0.03943028006989721;
+body.blood.venous.CO2	=	0.5629240254184695;
+body.lungs.expired.CO2	=	0.017339605187098945;
+body.lungs.expired.O2	=	0.1790571983282372;
+body.lungs.expired.CO	=	0.0;
+body.CVS.InterstitialP.CO2	=	0.045851724192456825;
+body.CVS.InterstitialP.O2	=	-0.04089036239873929;
+body.muscle.CO2	=	0.34024960713121183;
+body.muscle.O2Use	=	0.0;
+body.NMO2Use	=	0.24570887171079406;
+body.O2Use	=	0.24570904941985866;
+body.CO2Production	=	0.2034349546260644;
+body.blood.baseExcess	=	-9.600505225669589E-4;
+body.blood.SatO2	=	0.9601154544475915;
+body.blood.arterial.SatO2	=	0.9601154544475915;
+body.blood.venous.SatO2	=	-0.34519400941556366;
+body.lungs.alvP.O2	=	0.12939657105417335;
+body.lungs.alvP.CO2	=	0.016295471699555513;
+body.lungs.alvBlood.O2	=	0.20291296745305376;
+body.lungs.alvBlood.CO2	=	0.3304497298904832;
+body.lungs.alvV.CO2	=	0.20836007557408526;
+body.lungs.alvV.O2	=	1.6545135864100489;
+environment.air.CO	=	0.0;
+body.blood.CO	=	0.0;
+body.RQ	=	0.8279505989152324;
+body.muscle.O2Debt	=	0.0;
+body.lungs.RespR	=	17.29337559382858;
+body.brain.respiratoryDrive	=	1.3308774373351495;
+body.lungs.TidV	=	0.6784324271425058;
+body.lungs.Vent	=	11.732386777608095;
+body.lungs.AVent	=	9.138380438533808;
+body.lungs.Oedema	=	0.11571591043727178;
+body.lungs.Pairway	=	0.0016136999874175318;
+body.lungs.lungVolume	=	3.339216213571253;
+body.lungs.compliance	=	140.0;
+body.lungs.airwayResistance	=	3.0000000000000004E-5;
+body.lungs.flow	=	0.0;
+body.lungs.FRC	=	3.0;
+body.lungs.FVC	=	5.5;
+body.lungs.TLV	=	6.0;
+body.lungs.ITP	=	-0.006613699987417532;
+body.lungs.DdSp	=	0.15;
+body.lungs.H2Oloss	=	1.9649733093779817E-4;
+body.lungs.IEratio	=	0.333;
+body.skin.Temp	=	22.99523766077125;
+body.MBR	=	1965670.9736863524;
+body.Temp	=	37.37507761793541;
+body.skin.SwR	=	5.226428252709987E-6;
+body.Fat.mass	=	10495.271859090208;
+body.Mass	=	73131.12668594715;
+body.muscle.Cal	=	0.0;
+body.muscle.O2Req	=	0.0;
+body.Cals	=	1365.0492872821892;
+body.Glycogen	=	1968.9910378005193;
+body.gitract.glucoseTolerance	=	1.0;
+body.gitract.stomach.volume	=	0.4940642176396723;
+body.gitract.stomachCapacity	=	1.5;
+body.gitract.stomach.pH	=	4.223553133035967;
+body.gitract.stomach.carbohydrate	=	54.795736177407875;
+body.gitract.stomach.Na	=	0.3460510027181059;
+body.gitract.colonSecretion	=	0.0;
+body.kidney.GFR	=	0.0;
+body.kidney.urineFlow	=	0.0;
+body.kidney.urine.K	=	0.0;
+body.kidney.urine.Na	=	0.0;
+body.kidney.urine.Osm	=	0.0;
+body.kidney.urine.pH	=	0.0;
+body.kidney.urine.prot	=	0.0;
+body.kidney.urine.urea	=	0.0;
+body.blood.creat	=	3.6301941890028114E-5;
+body.blood.PCreat	=	6.676153711779762E-5;
+body.NaQ	=	2.918010576339727;
+body.KQ	=	3.4728297297068846;
+body.blood.NH3	=	4.1E-5;
+body.kidney.glomerulus.bicarb	=	0.0;
+body.kidney.glomerulus.pH	=	0.0;
+body.kidney.glomerulus.glucose	=	0.0;
+body.kidney.glomerulus.urea	=	0.0;
+body.kidney.glomerulus.prot	=	0.0;
+body.kidney.glomerulus.Na	=	0.0;
+body.kidney.glomerulus.K	=	0.0;
+body.kidney.glomerulus.Cl	=	0.0;
+body.kidney.glomerulus.Osm	=	0.0;
+body.kidney.PCT.bicarb	=	0.0;
+body.kidney.PCT.pH	=	0.0;
+body.kidney.PCT.glucose	=	0.0;
+body.kidney.PCT.urea	=	0.0;
+body.kidney.PCT.prot	=	0.0;
+body.kidney.PCT.Na	=	0.0;
+body.kidney.PCT.K	=	0.0;
+body.kidney.PCT.Cl	=	0.0;
+body.kidney.PCT.Osm	=	0.0;
+body.kidney.Loop.bicarb	=	0.0;
+body.kidney.Loop.pH	=	0.0;
+body.kidney.Loop.glucose	=	0.0;
+body.kidney.Loop.urea	=	0.0;
+body.kidney.Loop.prot	=	0.0;
+body.kidney.Loop.Na	=	0.0;
+body.kidney.Loop.K	=	0.0;
+body.kidney.Loop.Cl	=	0.0;
+body.kidney.Loop.Osm	=	0.0;
+body.kidney.DCT.bicarb	=	0.0;
+body.kidney.DCT.pH	=	0.0;
+body.kidney.DCT.glucose	=	0.0;
+body.kidney.DCT.urea	=	0.0;
+body.kidney.DCT.prot	=	0.0;
+body.kidney.DCT.Na	=	0.0;
+body.kidney.DCT.K	=	0.0;
+body.kidney.DCT.Cl	=	0.0;
+body.kidney.DCT.Osm	=	0.0;
+body.blood.Aldo	=	1.599595595104697E-10;
+body.blood.AngII	=	7.110791376200236E-12;
+body.blood.ADH	=	9.083986090031748E-12;
+body.blood.Thyr	=	1.6006223366695294E-11;
+body.brain.Symp	=	0.9838605574892376;
+body.blood.Insul	=	5.045562087271994E-11;
+body.blood.LH	=	9.997981541305625E-6;
+body.blood.FSH	=	4.3037756941817706E-5;
+body.blood.oestrogen	=	4.800095255997135E-8;
+body.blood.progesterone	=	2.276359433385979E-22;
+body.blood.inhibin	=	270.000020003072;
+body.gonads.poolLH	=	1.8782461402478255E-4;
+body.gonads.poolFSH	=	5.267399137357168E-5;
+body.blood.prot	=	6.767707006606992E-4;
+body.blood.Na	=	0.08113743460124612;
+body.blood.K	=	0.0029856746032359163;
+body.blood.Osm	=	0.18048152168565917;
+body.blood.H	=	2.2003514710583815E-8;
+body.blood.bicarb	=	0.01267273469020065;
+body.blood.urea	=	0.005785312182950409;
+body.blood.ketones	=	0.0;
+body.blood.PHy	=	4.0465837021136547E-8;
+body.blood.lactate	=	0.001;
+body.blood.RCM	=	2.196060911526747;
+body.blood.PV	=	2.6172795469233807;
+body.BMR	=	1965670.9736863524;
+body.CVS.APL	=	0.03354668716785321;
+body.CVS.VCT	=	0.6610597598364877;
+body.CVS.Venoconstriction	=	600.0;
+body.CVS.Hard	=	0.25;
+environment.H2OX	=	8.036E-4;
+body.kidney.overallRenalFunction	=	1.0;
+body.kidney.tubularFunction	=	1.0;
+body.brain.greed	=	1.0;
+body.brain.thirstiness	=	1.0;
+body.lungs.Shunt	=	0.02;
+body.skin.area	=	1.8;
+body.icf.volume	=	24.311302757207788;
+body.icf.Na	=	0.010283282738761538;
+body.icf.K	=	0.13895818959043302;
+body.icf.glucose	=	0.005141641369380769;
+body.icf.Cl	=	0.1410148461381853;
+body.icf.prot	=	0.007198297917133115;
+body.icf.H	=	7.449579803577198E-8;
+body.icf.bicarb	=	0.008226626191009253;
+body.icf.urea	=	0.007479031535901357;
+body.icf.Osm	=	0.3183019899766024;
+body.icf.pH	=	7.127868223108662;
+body.DOsm	=	-7.582189088642943E-4;
+body.blood.Hb	=	155.5379544397815;
+body.kidney.urine.H	=	0.0;
+body.kidney.urine.bicarb	=	0.0;
+body.blood.PUN	=	0.010639550225994575;
+body.kidney.urine.glucose	=	0.0;
+body.kidney.MacDn	=	0.0;
+body.kidney.glomerularLeak	=	0.0;
+body.kidney.urinaryKetones	=	0.0;
+body.brain.pain	=	0.0;
+body.brain.Consc	=	3.486690571447497E-105;
+body.brain.O2Supply	=	0.061121785836906285;
+body.brain.hypoxia	=	0.0;
+body.brain.fever	=	0.0;
+body.brain.ICP	=	0.009;
+body.brain.O2drive	=	1.2098979207041654;
+body.brain.CO2drive	=	0.9451325890822547;
+body.brain.pHdrive	=	1.0760880163614175;
+environment.BarP	=	0.76;
+environment.air.O2	=	0.19999999999999998;
+environment.air.CO2	=	0.0;
+environment.airP.O2	=	0.152;
+environment.airP.CO2	=	0.0;
+environment.Temp	=	20.0;
+environment.Hum	=	0.0;
+environment.Uprt	=	0.5;
+environment.Togs	=	0.5;
+environment.actions.fright	=	0.2;
+environment.actions.amountAmylNitrite	=	0.1;
+environment.actions.drinkVolume	=	0.5;
+environment.Exer	=	0.0;
+environment.Hyperv	=	0.0;
+environment.bleedingRate	=	0.0;
+environment.pain	=	0.0;
+environment.food.glucose	=	0.4;
+environment.food.bicarb	=	0.0072;
+environment.food.prot	=	0.005;
+environment.food.Osm	=	2.2938889188888894;
+environment.food.K	=	0.06;
+environment.food.Na	=	0.5;
+environment.food.solids	=	0.7;
+environment.food.pH	=	7.0;
+environment.food.carbohydrate	=	173.0;
+environment.stool.solids	=	0.99;
+environment.stool.volume	=	0.6;
+environment.stool.Na	=	0.003;
+environment.stool.K	=	3.0E-4;
+environment.stool.bicarb	=	0.003;
+environment.stool.prot	=	0.002;
+environment.stool.Osm	=	0.0086;
+body.brain.hunger	=	0.13634075894818057;
+body.brain.thirst	=	0.3486702860154688;
+body.brain.sedation	=	4.1E-4;
+body.brain.nausea	=	0.0;
+// End of variables
+
+</SCRIPT>
+<LOG>
+	Restarted
+
+02:14:26: Disease Tamponade: actions.startGradualChange("CVS.heart.pericVol", 0.150, 0.005)
+03:22:45: Eaten 741.329 mL
+03:43:28: Jason is feeling faint
+03:50:17: IV bolus of Adrenaline 200 mg/L
+03:50:53: Jason is unconscious and about to die
+03:50:56: Jason is unconscious and about to die
+03:50:57: Jason is unconscious and about to die
+03:51:00: Jason is unconscious and about to die
+03:51:02: Jason is unconscious and about to die
+03:51:04: Jason is unconscious and about to die
+03:51:06: Jason is unconscious and about to die
+03:51:08: Jason is unconscious and about to die
+03:51:10: Jason is unconscious and about to die
+03:51:12: Jason has palpitations
+03:51:14: Jason has palpitations
+03:51:15: Jason has palpitations
+03:51:18: Jason has palpitations
+03:51:20: Jason has palpitations
+03:51:22: Jason has palpitations
+03:51:24: Jason has palpitations
+03:53:45: Jason is feeling faint
+04:11:09: Jason has fainted and is unconscious
+04:31:49: IV bolus of Adrenaline 200 mg/L
+04:32:16: Jason is feeling light-headed
+04:34:23: Jason has fainted and is unconscious
+</LOG>
+<EXTRA>
+	java.lang.IllegalStateException: Noninvertible twogradient function
+	at phic.common.Curve$TwoGradients.getInverse(Curve.java:90)
+	at phic.Chamber.tick(Chamber.java:72)
+	at phic.Heart.calculateSV(Heart.java:294)
+	at phic.Heart.tick(Heart.java:59)
+	at phic.common.CommonThread.tickFor(CommonThread.java:191)
+	at phic.common.CommonThread.tickOnce(CommonThread.java:164)
+	at phic.common.CommonThread.run(CommonThread.java:109)
+
+</EXTRA>
+<CONTEXT>
+	<HOM_VERSION> 1.61</HOM_VERSION>
+<VERSION>
+	<HTML><head>	<LINK rel="StyleSheet" href=styles.css>	<title>HOM Version</title></head><BODY><TABLE width='80%'><TR>	<Th>Version</Th> <TD> 1.61 </TD></TR><TR>	<Th>Build date</Th> <TD>Oct 05, 2013 12:14:14 AM</TD></TR><TR>	<Th>Date Jar sealed</Th> <TD>Sat, Dec 21, 2013  1:01:21 PM</TD></TR><TR>	<Th>Date requested</Th> <TD>Sat, Dec 21, 2013  1:01:21 PM</TD></TR><TR>	<Th>Owner</Th> <TD>James Cullen</TD></TR><TR>	<Th>Institution</th> <TD>University of Cambridge</TD></TR></TABLE></BODY></HTML>
+</VERSION>
+	<java_version> 1.7.0_45 </java_version>
+	<java_vm_name> Java HotSpot(TM) Client VM </java_vm_name>
+	<java_vm_version> 24.45-b08 </java_vm_version>
+	<os_arch> x86 </os_arch>
+	<os_name> Windows 8 </os_name>
+	<os_version> 6.2 </os_version>
+	<user_home> C:\Users\A </user_home>
+	<user_dir> C:\Users\A\Downloads </user_dir>
+</CONTEXT>
+</REPORT>
+
+
+</LOG ------------------------------------------------------------>

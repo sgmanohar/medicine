@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head >
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    
+    <!--[if lt IE 9]>  
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
+    <![endif]-->  
+    <!--[if (gte IE 9) | (!IE)]><!-->  
+    <script src="jquery-3.3.1.min.js"></script>  
+    <!--<![endif]-->
+    <!--
+      <script src="jquery.history.js"></script>
+    -->
+
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="jquery.mmenu.all.css">
+    <script src="jquery.mmenu.all.js"></script>
+
+    <link rel="stylesheet" href="fontawesome.min.css">
+    <link rel="stylesheet" href="fa-solid.min.css">
+
+    <script src="medicine.js"></script>
+    <link   rel="stylesheet" href="medicine.css">
+    <script src="old_jsweet.js"></script>
+    <script src="lib/react.development.js"></script>
+
+    <!--script src="//use.edgefonts.net/pt-sans-narrow.js"></script>-->
+
+    <script src="lib/d3v4.js"></script>
+    <script src="lib/cola.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="medicine.webmanifest">
+</head>
+
+
+<body>
+  <nav id="menu">
+    <ul>
+      <li><span title="Some useful top-level categories of items">
+          <i class="fas fa-sitemap fa-fw"></i>
+          Categories
+        </span>
+        <ul>
+          <li><a href="javascript:menu_navigateto('Disease')">Diseases</a></li>
+          <li><a href="javascript:menu_navigateto('Pathology')">Pathology</a></li>
+          <li><a href="javascript:menu_navigateto('Sign')">Signs</a></li>
+           <li><a href="javascript:menu_navigateto('Symptom')">Symptoms</a></li>
+           <li><a href="javascript:menu_navigateto('Investigation')">Investigations</a></li>
+           <li><a href="javascript:menu_navigateto('Treatment')">Treatments</a></li>
+           <li><a href="javascript:menu_navigateto('Substance')">Substances</a></li>
+           <li><a href="javascript:menu_navigateto('Lifestyle')">Lifestyle</a></li>
+        </ul>
+     </li>
+     <li><span title="Links to other websites for this item">
+        <i class="fas fa-globe fa-fw"></i>
+        Web lookup
+      </span>
+      <ul><li class='google'>
+      </li><li class='wikipedia'>
+      </li><li class='emedicine'>
+      </li><li class='uptodate'>
+      </li><li class='pubmed'>
+      </li><li class='fpnotebook'>
+      </li></ul>
+     </li>
+     <li><span title="Keep a hotlist of items you commonly refer to">
+        <i class="fas fa-bookmark fa-fw"></i>
+        Bookmarks
+      </span>
+       <ul class="bookmark-list"><li class="bookmark-add">
+          <a href="javascript:;">Bookmark current item</a>
+      </li>
+      </ul>
+     </li>
+     <li>
+        <span id='comment'>
+          <a href='' id='show_comment_button'>
+              <i class="fas fa-comment fa-fw"></i>
+              Submit Comment
+            </a>
+          <section id='comment_box' style='display:none;'>
+            <form action='javascript:submit_comment();'>
+              Did you notice something wrong? Please send a comment about this item to the author
+              <br>
+              Regarding: <span class="comment_box_entity_name"></span>
+              <br>
+              <input id='comment_input' type='text' value='' placeholder='type here' size='30' >
+              <i class="fas fa-spinner fa-pulse"></i>
+              <i class="fas fa-check"></i>
+              <input class="button" type='submit' value='Send'>
+              <ul class="previous-comments"></ul>
+            </form>
+          </section>
+        </span>
+      </li>
+      <li><span title="Tools to examine links">
+          <i class="fas fa-wrench fa-fw"></i>
+          Tools
+        </span>
+        <ul>
+          <li><a href="javascript:medicine.menu_list('Causes',['Disease','Substance','Lifestyle','Treatment'])">List causes</a></li>
+          <li><a href="javascript:medicine.menu_list('Effects','Symptom')">List symptoms</a></li>
+          <li><a href="javascript:medicine.menu_list('Effects','Sign')">List signs</a></li>
+          <li><a href="javascript:medicine.menu_find_path()">Find path</a></li>
+          <li><a href="javascript:medicine.visualise()">Visualise</a></li>
+        </ul>
+     </li>
+      <li> <span> 
+        <i class="fas fa-cog fa-fw"></i>        
+        Settings
+       </span>
+        <ul>
+          <li class='edit-mode-menu'>
+            <a href="#">Edit mode</a>
+            <input type="checkbox" class="Toggle edit-mode-checkbox"/>
+          </li>
+          <li><a href="" class="reload-button"><span>Reload stable verison</span>
+            <div>Current: <span class="current-version-info">Stable version</span></div>
+            <div class="server-info">
+              </span><span class="entity-count-text"></span> entries 
+            </div><div class="server-info">
+              Updated <span class="server-date-text"></span>          
+            </div>         
+          </a></li>
+          <li>
+            <a href="javascript:medicine.read_server_edits()" class="import-edits-button">Import community edits
+              <div class="import-edits-comment">
+                No edits imported.
+              </div>
+              <ul class="edit-log"></ul>
+            </a>
+          </li>
+          <li>
+            <span> My edits </span>
+            <ul class="edit-log">    </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span id='copyright-button'>
+          <a href='javascript:;' title="Show information about the authors">
+            <i class="fas fa-copyright fa-fw"></i>
+            Credits
+          </a>
+          <section id='copyright' class='greypanel' style="white-space:normal;"> 
+            All material written by <ul>
+            <li>
+              <a href='http://www.smanohar.com' target='_blank'>Prof Sanjay Manohar</a> (Neurologist),
+            </li><li>
+              Dr Vayakara Manohar (Surgeon), 
+            </li><li>
+              <a href='http://sunil.smanohar.com' target='_blank'>Dr Sunil Manohar</a> (Gerontologist), 
+            </li><li>
+              Dr Gita Manohar (Psychiatrist), and
+            </li><li>
+              Dr Rina Manohar (Cardiologist)
+            </li>
+          </ul>
+          &copy; 2003-2018
+          </section>        
+        </span> 
+      </li>
+    </ul> 
+  </nav>
+
+  <div id='mainpage'>
+    <section width="100%">
+      <h1 class="header">
+        <a href="#menu"><i class="fas fa-bars fa-lg"></i></a>
+        <a href="javascript:;"><i class="searchbutton fas fa-search fa-lg"></i></a>
+
+        <span id='entityname' class='entityname'> Manohar MedLinks Browser  </span>
+        <span class='searcharea' >   
+          <form action='javascript:dosearch()'>
+            <input class='autocomplete' placeholder="Search..." type='text' id='searchtext' size='32'></input>
+          </form>
+        </span>
+        <span class="busy-icon">
+          <i class="busy-icon fas fa-spinner fa-pulse"></i>     
+        </span>
+      </h1>  
+    </section>
+    <section width="100%">
+      <h1 class="editor-bar edit">
+        <a href="javascript:medicine.edit_rename();" class="button" title="Rename entity">
+          <i class="fas fa-edit"></i>
+        </a>
+        <a class="editor-bar-select-tool button" href="javascript:medicine.select_mode_clicked();" title="Select entities">
+          <i class="fas fa-check-square"></i>
+          <span class="editor-bar-selected-count">0</span>
+        </a>
+        <a href="javascript:medicine.edit_remove_click();" class="edit-remove button" title="Remove entity">
+          <i class="fas fa-trash-alt"></i>
+        </a>
+        <div class="editor-bar-clip-tool">
+          <a href="javascript:medicine.edit_clipboard_click();" title="Copy to clipboard" class="button">
+            <i class="fas fa-clipboard"></i>
+            <span class="editor-bar-clipboard-count">0</span>
+          </a>
+          <div class="clipboard-entities-list-container" title="Clipboard items">
+            <ul class="clipboard-entities-list"></ul>
+          </div>
+        </div>
+        <a href="javascript:medicine.set_edit_mode(false);" class="button editor-bar-stop-editing" title="Stop editing">
+          <i class="fas fa-level-up-alt"></i>
+        </a>
+      </h1>
+    </section>
+
+    <section width="100%">
+      <div id='topstrip' width="100%">
+        <section id='parents' class='listarea'>
+          <h2> Supertype </h2>
+          <ul class='slist' id='l_parents'>
+          </ul>
+        </section>
+      </div>
+      <div id='midstrip' width="100%">
+        <section id='causes' class='listarea'>
+          <h2> Causes </h2>
+          <ul class='slist' id='l_causes'>
+          </ul>
+          <ul class='slist inherited' id='l_causes_p'></ul>
+        </section>
+        <div id='midregion'>
+          <section id='description'>
+          </section>
+          <section id='synonyms'>
+            <h2> Synonyms </h2>
+            <ul id='l_synonyms'>
+            </ul>
+          </section>
+        </div>
+        <section id='effects' class='listarea'>
+          <h2> Effects </h2>
+          <ul class='slist' id='l_effects'>
+          </ul>
+          <ul class='slist inherited' id='l_effects_p'></ul>
+        </section>
+      </div>
+      <div id='bottomstrip' width="100%">
+        <section id='children' class='listarea'>
+          <h2> Subtypes </h2>
+          <ul class='slist' id='l_children'>
+          </ul>
+        </section>
+      </div>  
+    </section>
+    
+    <section style='width:100%;margin-top:6px;'>     
+      <section id='treats' class='listarea'>
+          <h2 id='treat_type'> Treats </h2>
+          <ul class='slist' id='l_treats'>
+          </ul>
+          <ul class='slist inherited' id='l_treats_p'></ul>
+      </section>
+      <section id='treatments' class='listarea'>
+        <h2> Treatments </h2>
+        <ul class='slist' id='l_treatments'>
+        </ul>
+        <ul class='slist inherited' id='l_treatments_p'></ul>
+    </section>      
+    </section>
+  </div>
+  <div id='disclaimer' class='modal-dialog'>
+    <h1> Disclaimer </h1>
+    <ul><li>
+        This app contains easy-to-access linked lists of medical conditions, 
+        syymptoms and drugs. By its nature, it is incomplete and approximate.
+      </li><li>
+        This software is provided as is and there is <b>no guarantee as to
+        the accuracy of the information</b>, or to whether it is up to date. 
+      </li><li>
+        Tha app is not a textbook or
+        revision aid, and is not to be used for treatment of patients.
+      </li><li>
+        If you want to contribute to the information, e.g. by adding missing 
+        items or updating incorrect information,
+        please either <ol><li>
+           select "Submit comment" in the menu, or
+          </li><li>
+            select "edit mode" from Settings.
+          </li></ol>
+        Your input is gratefully received
+        and will slowly be incorporated into the app.
+      </li><li>
+        There are two versions of the list database. 
+        You can switch between these versions using the "Settings" menu:
+        <ol><li>
+          A "community" version, with everybody's edits pooled, like Wikipedia
+        </li><li>
+          A "stock" version, with the original curated lists.
+        </li></ol>
+    </li></ul>
+    I agree that I will always consult an up-to-date textbook or reference.
+    I understand that this app is not a substitute for prior knowledge,
+    clinical experience or clinical judgement.
+    <input type="button" class="button" value="I agree">
+  </div>
+
+  <div id='select-entity-dialog' class='modal-dialog'>
+    <h1> 
+       <span class="select-dialog-title">Add</span>
+    </h1>
+    <form action='javascript:select_entity_dialog_done()'>
+      <input id="select-dialog-searchtext" class='autocomplete' placeholder="Type name..." type='text' id='add-searchtext' size='32'></input>
+    </form>
+    <div class="">
+      <div class="select-entity-dialog-paste-button button">
+        <i fa fa-paste></i>
+        Or use <span class="select-entity-dialog-paste-text"> </span>
+      </div>
+    </div>
+    <div class="select-entity-dialog-results"></div>
+    <input type="button" class="button button-cancel" value="Cancel">
+    <input type="button" class="button button-done"   value="OK">
+  </div>
+
+  <div id='confirm-create-dialog' class='modal-dialog'> 
+    <h1>
+      Are you sure you want to create a new entity?
+    </h1>
+    <ul><li>
+      Please ensure you go into the new item
+      and fill out synonyms, parents, description, and any causes or effects.
+    </li><li>
+      Please check if this entry is better described by an existing entity.
+    </li></ul>
+    <input type="button" class="button button-cancel" value="Cancel">
+    <input type="button" class="button button-ok" value="Yes">
+  </div>
+
+  <div id='visualisation-dialog' class='modal-dialog'>
+    <h1>
+      Visualisation?
+    </h1>
+    <div class="vis-toolbar">
+      <a class="button" href="javascript:medicine.vis.change_depth(1);"><i class="fa fa-plus"></i></a>
+      <a class="button" href="javascript:medicine.vis.change_depth(-1);"><i class="fa fa-minus"></i></a>
+      <label>
+        <input class="vis-toolbar-constrain" id="vis-toolbar-constrain" type="checkbox" value="Constrain">
+        Constrain
+      </label> 
+    </div>
+    <div id="visualisation-div" class="visualisation-div"></div>
+    <input type="button" class="button button-cancel" value="Cancel">
+    <input type="button" class="button button-ok" value="Go to">
+  </div>
+  
+</body>
+
+
+<script>
+  if ('serviceWorker' in navigator){
+    console.log('registering service worker...');
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+        console.log('registered service worker');
+      }).catch(function(err){
+        console.log('unable to register service worker');
+      });
+  }
+</script>
+
+</html>
