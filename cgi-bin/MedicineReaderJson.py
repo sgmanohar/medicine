@@ -121,7 +121,7 @@ else:
 if "entity" in params:
     entity=urllib.parse.unquote(params["entity"].value)
     zf=zipfile.ZipFile(dataFile, "r")
-    data=zf.read("Medical.txt").decode("iso8859-1");
+    data=zf.read("Medical.txt").decode("iso8859-1")
     #look for definition of entity:
     # entity { s2 { s3,s4, s5 } s6 {s7,s8}}
     

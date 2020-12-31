@@ -1022,10 +1022,16 @@ var  MedicineReader = function(){
       console.log('server error: ');console.log(data);
     }
   }
-  /* called when the submit button on the comment is pressed */
+  /** 
+   * called when the submit button on the comment is pressed.
+   * Sends the comment in the #comment_box to the edit server.
+   */
   my.submit_comment = function(){
+    // disable pressing send again
     $("#comment_box .button").prop("disabled",true);
+    // change box to the "sending" state
     $("#comment_box").addClass("comment-sending")
+    // read comment text, remove special chars and truncate
     var comment0 = $('#comment_input').val();
     var comment = comment0.replace(/([^a-z0-9 /.?()%!"'-]+)/gi, '_');
     if(comment!==comment0){
@@ -1035,11 +1041,13 @@ var  MedicineReader = function(){
       comment=comment.substring(0,125);
       alert("comment was truncated to 125 letters.");
     }
+    // send comment to server
     editurl = my.edit_server
        +"?command=comment&verified=true&entity="+encodeURIComponent(my.entityname)
        +"&comment="+encodeURIComponent( comment );
     console.log(editurl);
-    $.get(editurl, "text").done(function(){
+    // create handler functions for the web request result
+    var comment_success = function(){  // if successful, 
       $('#comment_input').val("Comment sent.");   
       $("#comment_box").removeClass("comment-sending");
       $("#comment_box").addClass("comment-sent");   
@@ -1050,10 +1058,22 @@ var  MedicineReader = function(){
         $("#comment_box .button").prop("disabled",false);
         $("#comment_box").hide();
       }, 3000);
-    }).fail(function(msg){
-      $('#comment_input').val("Not sent...");
+    }, comment_fail = function(msg){  // if not sent, warn the user
+      $('#comment_box .comment_box_entity_name').html("Not sent...");
+      // don't clear the typed text (in case they spent ages typing it)
+      // re-enable buttons and reset style
+      $("#comment_box .button").prop("disabled",false);
+      $("#comment_box").removeClass("comment-sending");
       console.log(msg);
-    });
+    };
+    // send the request:
+    $.get(editurl, "text").done(function(resp){
+      if(resp.match(/Thank you/)){
+        comment_success();
+      }else{
+        comment_fail(resp);
+      }
+    }).fail(comment_fail);
   }
   /** Used when not using localStorage */
   function getAutocompleteNames(){ // read index of names for autocomplete
