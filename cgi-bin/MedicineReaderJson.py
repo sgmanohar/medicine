@@ -3,7 +3,7 @@ import cgi
 import zipfile
 import re
 import urllib
-import urllib2
+import urllib.parse
 import sys
 import json
 
@@ -29,7 +29,7 @@ else:
     editPath     = 'http://www.homphysiology.org/cgi-bin/MedicineEdit.py'
     jsonQueryURL = 'http://www.homphysiology.org/cgi-bin/MedicineEntityNameJsonQuery.py'
     allow_edits  = False  # display options to edit the database
-dataFile = "data/submit_medicine.zip"
+dataFile = "cgi-bin/data/submit_medicine.zip"
 
 #   document header
 print( "Content-Type: application/json" )
@@ -65,7 +65,7 @@ def printItemOnDefinitionString(edef):
                 break
             tokmatch=re.search("[^{},]+",edef[i:])
             token=tokmatch.group(0).strip()
-            token=token.decode('iso8859-1').strip()   # added 16/7/14 due to errors with special chars
+            token=token.strip()   # added 16/7/14 due to errors with special chars
             tokens.append(token)
             i+=tokmatch.end()
             if len(token) > 0:
@@ -108,20 +108,20 @@ def itercat(*iterators):
 ##  Main program
 
 params=cgi.FieldStorage()
-if(params.has_key("exact")):  
+if "exact" in params:  
     exact=True
 else:
     exact=False
 
-if(params.has_key("single")):   # return just a single item?
+if "single" in params:   # return just a single item?
     single=True
 else:
     single=False
 
-if params.has_key("entity") :
-    entity=urllib.unquote(params["entity"].value)
+if "entity" in params:
+    entity=urllib.parse.unquote(params["entity"].value)
     zf=zipfile.ZipFile(dataFile, "r")
-    data=zf.read("Medical.txt")
+    data=zf.read("Medical.txt").decode("iso8859-1");
     #look for definition of entity:
     # entity { s2 { s3,s4, s5 } s6 {s7,s8}}
     
@@ -172,7 +172,7 @@ if params.has_key("entity") :
             if not edef in foundEntities:
                 foundEntities.append(edef)
                 if findcount>0:
-                    print ","
+                    print( "," )
                 printItemOnDefinitionString(edef)
                 findcount+=1
             if findcount>=1 and single:

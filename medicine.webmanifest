@@ -14,3 +14,8 @@
     "start_url": "index.html",
     "theme_color":"#66a"
   }
+
+  /**
+   * Can be run using:
+   * python -m http.server --cgi
+   */
