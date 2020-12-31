@@ -247,17 +247,22 @@ var  MedicineReader = function(){
     $.ajax({
       url: my.server + "?single=true&entity=" + my.entityname, 
       success: function(data){
+        // the data should be json, otherwise something is wrong.
+        if(typeof data === "string"){
+          console.log("Data was not returned as json. Is the server configured correctly?");
+        }else{
           pushCache(data[0]); // cache in case needed later
           populate(data[0]);  // set up the main data fields
-          $('body').css('cursor','auto');
+        }
+        $('body').css('cursor','auto');
       },
-    error:function( xhr, status, error){
-          $('body').css('cursor','auto');       
-    },
-    cache: false, 
-    datatype: "json",
-    crossDomain: true
-  }); // ajax
+      error:function( xhr, status, error){
+            $('body').css('cursor','auto');       
+      },
+      cache: false, 
+      datatype: "json",
+      crossDomain: true
+    }); // ajax
   }
   /** 
    * This takes a JSON array for the current Entity, and fills out all the fields
@@ -1070,12 +1075,19 @@ var  MedicineReader = function(){
     my.dataFound = false;
     // Offline: just read from local storage
     if("cache" in localStorage && localStorage.cache.length>0){
-      my.cache     = JSON.parse(localStorage.cache);       // start reading cache
-      my.namecache = JSON.parse(localStorage.namecache);   // from localStorage
-      setup_autocomplete();           
-      ensure_first_entity_loaded();
-      update_date_text();
-      my.dataFound = true;
+      try{
+        my.cache     = JSON.parse(localStorage.cache);       // start reading cache
+        my.namecache = JSON.parse(localStorage.namecache);   // from localStorage
+        setup_autocomplete();           
+        ensure_first_entity_loaded();
+        update_date_text();
+        my.dataFound = true;
+      }catch(err){ // we did not retrieve correctly from our cache
+        console.log("possibly corrupted cache.");
+        console.log(err);
+        my.cache={};
+        my.namecache=[];
+      }
     }
     if(navigator.onLine){
       // Online: check the server for updates

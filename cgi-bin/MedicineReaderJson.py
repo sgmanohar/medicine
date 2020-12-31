@@ -32,9 +32,9 @@ else:
 dataFile = "data/submit_medicine.zip"
 
 #   document header
-print "Content-Type: application/json"
-print "Access-Control-Allow-Origin: *"
-print ""
+print( "Content-Type: application/json" )
+print( "Access-Control-Allow-Origin: *" )
+print( "" )
 
 '''
       search database and output any entities that match the query
@@ -84,7 +84,7 @@ def printItemOnDefinitionString(edef):
         output[secname]=seclist
         #end of section
     try:
-        print json.dumps(output)
+        print(json.dumps(output))
     except:
         print(output)
         raise ValueError("Error on this item "+repr(output['Name']))
@@ -139,10 +139,10 @@ if params.has_key("entity") :
               for synonym in synonyms:
                 output.append(synonym) # add the entity name to the output
         output = sorted(output)
-        print json.dumps(output)
+        print( json.dumps(output) )
     elif entity.lower() == "count": #count: return number of entities in database
         entitymatches = re.findall(r"^([^{}\n]*)\s*\{([^{}]*\{[^{}]*\})*\s*\}", data, re.MULTILINE )
-        print len(entitymatches)
+        print( len(entitymatches) )
     elif entity.lower() == "date": # date: return the timestamp of the saved data
         datematch = re.findall(r"_SAVED_TIME\s*(\d+)", data, re.MULTILINE)
         if len(datematch)==0:
@@ -165,7 +165,7 @@ if params.has_key("entity") :
         findcount     = 0
         foundEntities = []    
         
-        print "["
+        print( "[" )
         for entityData in entityDataIter:
             # for each matching item, call printItemOnDefinitionString
             edef=entityData.group().strip()
@@ -177,7 +177,7 @@ if params.has_key("entity") :
                 findcount+=1
             if findcount>=1 and single:
                 break            
-        print "]"  
+        print( "]" )
         
 else: #no entity parameter
-    print "[]"
+    print( "[]" )
