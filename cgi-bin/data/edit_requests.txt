@@ -1,0 +1,148 @@
+remove 	 Pancoast 	 Parents 	 Sign
+comment 	 Invasive TCC 	 change name
+comment 	 Ureteric TCC 	 change name
+comment 	 Transitional Cell Carcinoma 	 change name to "of bladder"
+comment 	 Haematological pathology 	 should not be under disease
+comment 	 pancoast 	 duplicate-delete
+comment 	 Acute glomerulonephritis 	 Is this the same as rapidly progressive
+comment 	 Stupor 	 this is not caused by infectious disease
+comment 	 Toxiic states 	 delete this and replace with something else
+comment 	 Stupor 	 more specific than toxic state is needed
+comment 	 Stupor 	 delirium as cause
+comment 	 Encephalopathy 	 causes shuold go under toxic encephalopathy
+comment 	 Chancroid 	 could go under genital ulcer
+comment 	 Trachoma 	 describe
+comment 	 Arteriovenous malformation 	 cerebral arteriovenous maloformation is both parent and child 
+comment 	 Teratogenic drug 	 subtypes need filling in
+comment 	 Gastrointestinal carcinoma 	 should cause upper gi bleed, not haematemesis and melaena
+comment 	 Haematemesis 	 consider moving all the causes up one level
+comment 	 Breath smell 	 needs synonyms
+comment 	 Multiple birth 	 add gestational diabetes as an effect
+comment 	 Incomplete separation 	 Improve name and synonyms
+comment 	 Multiple birth 	 synonyms
+comment 	 Hydrops fetalis 	 move description items to effects-haemorrhage, tachycardia etc
+comment 	 Caesarian section 	 change to subclass of surgery not childbirth
+comment 	 Shunt nephritis 	 caused by vp shunt
+comment 	 Genetic disease 	 Effects must all be removed and the genetic relation must be specified
+comment 	 Autosomal recessive disorder 	 Effects must all be made children
+comment 	 Bladder outflow obstruction 	 chronic retention should be moved from child to effect
+comment 	 Pelviureteric junction obstruction 	 add synonym PUJ obstruction
+comment 	 Iatrogenic 	 Should delete this and be more specific. Says ligation of ureter.
+comment 	 Barium sign 	 should not inherit from enema, which is a treatment
+comment 	 Neurological investigation 	 synonym LP is on wrong item
+comment 	 Renal vein thrombosis 	 cause hypercoagulable state can be removed - already inherited
+comment 	 Secondary Glomerular disease 	 consider nephrotic in name
+comment 	 Primary Glomerular disease 	 consider nephrotic in name
+comment 	 Ageing 	 merge with old age?
+comment 	 Erythema 	 three causes should be moved to more specific subtypes
+comment 	 Dyschondroplasia 	 synonym has extraneous bracket
+comment 	 Stridor  	 add cause epiglottitis
+comment 	 Liver abscess 	 remove amoebic liver abscess cause which is also a subtype
+comment 	 Blood in faeces 	 add synonym haematochezia
+comment 	 Disease 	 tcc
+comment 	 Squamous cell carcinoma 	 name -of bladder
+comment 	 TURBT 	 unabbreviated
+comment 	 TIPS 	 unabbreviated
+comment 	 Plasmapheresis 	 add synonym PlEx
+comment 	 Surgery 	 Treats items should be for subclasses only
+comment 	 Congenital malformation 	 move  kyphosis from effects to subtypes?
+comment 	 Kyphosis 	 postural is not a cause of anything. It must be an entity! Maybe make Poor Posture, which should be a subtype of lifestyle
+comment 	 Spondylosis 	 this is incomplete. related to cervical spondylosis? supertype?
+comment 	 Scheuermann Kyphosis 	 remove capital from Kyphosis
+comment 	 Scheuermann Kyphosis 	 should this be a type of kyphosis? depends on what causes it
+comment 	 Peripheral vascular disease 	 diabetes causes atherosclerosis. so perhaps it should not cause this directly
+comment 	 Myocardial infarction 	 maybe remove all these causes and just have Atherosclerosis
+comment 	 Referred pain 	 This item needs restructuring. Some of the subtypes should be causes. e.g. Myocardial infarction is not a type of referred pain.
+comment 	 Chest pain 	 the Causes here need to be moved to be causes of the Subtypes
+comment 	 Extrabdominal Causes 	 What on earth is this? an entity called "extraabdominal causes"?
+comment 	 Porphyria 	 Are all these effects of Porphyria? or just Acute Intermittent Porphyria?
+comment 	 Porphyria 	 The list of drugs in the description needs to be moved to causes of AIP attacks
+comment 	 Nerve root lesion 	 does not cause peripheral neuropathy
+comment 	 Cervical spondylosis 	 Does not cause peripheral neuropathy - rather causes radiculopathy
+comment 	 Nerve root lesion 	 causes of radiculopathy need to be added
+comment 	 Gastroenteritis 	 maybe change name to Infective gastroenteritis - since all causes seem to be infectious
+comment 	 fecal contamination of food 	 Need to add more effects
+comment 	 Sarcoidosis 	 ventricular tachycardia should be removed and replaced with whatever mechanism causes arrhythmia
+comment 	 Iridocyclitis 	 needs synonyms
+comment 	 Manoeuvre 	 This is nice! should be a type of treatment or procedure?
+comment 	 Upper limb deformity 	 not all of these are congenital. maybe Orthopaedic malformation should not be a type of congenital malformation
+comment 	 Anticoagulant drug 	 the warfarin-influencing drugs should not be subtypes of this
+comment 	 Adrenaline 	 maybe add other Treats items such as anaphylaxis and cardiac arrest
+comment 	 Disorders due to neurological pathology 	 Maybe change name and add synonyms - as it is unclear what this name means
+comment 	 Disorders due to psychoactive substance use 	 Name of this item is incorrect. What is it actually?
+comment 	 Impulse control disorders 	 Should be singular - disorder
+comment 	 Neurotic disorders 	 should be single
+comment 	 Childhood disorders 	 singular - disorder
+comment 	 Organic Mental disorders 	 single - disorder
+comment 	 Oral ulcer 	 re-order causes
+comment 	 Hoarse voice 	 maybe some of these can be moved up into the parent dysphonia
+comment 	 Romberg sign 	 add synonym for the common mis-spelling rhomberg
+comment 	 Mis-aligned bones 	 I have not heard of this, maybe some synonyms would help.
+comment 	 Alkaptonuria 	 synonym black bone syndrome, black bone disease
+comment 	 Preauricular sinus 	 add synonym
+comment 	 Pseudorhagades 	 synonym would be helpful
+comment 	 Darrier 	 Should be darier disease -already exists, please merge
+comment 	 Cyanotic congenital heart disease 	 the parent Thoracic Malformation should be moved up to be parent of Congenital Heart Disease instead
+comment 	 Blind loop syndrome 	 description: Bowe = Bowel. Also put the description as synonyms.
+comment 	 Blind loop syndrome 	 Should not be a Disease
+comment 	 Greasy yellow papules 	 needs parents. where are the papules?
+comment 	 Pachydermoperiostosis 	 tho of the parents are also effects. should be removed from parents
+comment 	 Riedel thyroiditis 	 does this cause hypo or hyperthyroidism?
+comment 	 Koebner phenomenon 	 description as synonym
+comment 	 Eye discharge 	 needs a parent
+comment 	 Autoimmune skin disease 	 Should not have Immunological Urticaria as a Parent
+comment 	 nausea 	 this should be under Nausea and vomiting
+comment 	 Hot flashes 	 please remove and put as Hot flush - and add synonym
+comment 	 High urinary Potassium 	 are there other causes?
+comment 	 Liddle syndrome 	 Perhaps this should cause Renal fluid retention, rather than hypertension
+comment 	 Drug irritating bowel 	 either change name to Bowel irritation by drug, or move drugs to subtypes and add drug as supertype
+comment 	 Substance induced disorders 	 this item looks like it should be removed
+comment 	 Disorders due to psychoactive substance use 	 what are the disorders caused by substance use?
+comment 	 Hand trauma 	 i don't think nerve injury belongs in the causes
+comment 	 Hand trauma 	 does tendon injury and fracture cause hand trauma?
+comment 	 Laceration 	 I don't think laceration causes hand trauma
+comment 	 hand trauma 	 there may be a problem in the database- amputation does not cause hand trauma
+comment 	 Trauma 	 I don't think trauma is a type of haemorrhage
+comment 	 Crush Injury  	 incomplete eg compartment syndrome 
+comment 	 Tissue injury  	 caused by crush injury
+comment 	 Thermal injury  	 Is this different from Thermal burn, and Burn - which are all separate items!
+comment 	 Burn  	 thermal burn as a cause or subtype, or maybe even merge the two
+comment 	 Penetrating injury  	 this item could have more links
+comment 	 Penetrating injury  	 needs synonyms
+comment 	 Laser injury  	 caused by cataract surgery maybe
+comment 	 Recurrent laryngeal nerve injury  	 maybe cause of Recurrent laryngeal nerve palsy (a separate entity)
+comment 	 Soft tissue injury  	 is this related to (or the same as) Tissue injury 
+comment 	 Urethral injury  	 must have effects like haematuria, outflow obstruction, stricture
+comment 	 Occupational injury 	 shuold be specifically hand injury
+comment 	 Chest pain 	 move MI/dissection/PE/zoster/Panic out from subtypes!
+comment 	 Hepatitis virus 	 Remove liver disease from parent
+comment 	 Anaemia of chronic disease 	 Causes: remove breast, hodgkin etc, add malignancy
+comment 	 Heart disease 	 I don't think polygenic inheritance belongs as a cause here
+comment 	 Sickle cell trait 	 This is not polygenic
+comment 	 Cerebrovascular accident 	 delete polygenic inheritance as cause.
+comment 	 Cerebrovascular accident 	 remove ASD from causes
+comment 	 Toxic Psychosis 	 maybe add Organic mental disorder as a cause
+comment 	 Systemic lupus erythematosus 	 70% (not 6%) have anti- dsDNA
+comment 	 serositis 	 should include pericarditis and peritonitis as "effect", SLE, rheumatoid and uraemia should be "causes" 
+comment 	 Viral hepatitis 	 causes should include dengue, ebola, Marburg, CMV, and maybe yellow fever
+comment 	 Acute hepatitis 	 causes should include Hep E, ischaemic hepatitis
+comment 	 Leishmania donovani 	 cause should be sandfly bite
+comment 	 Kala-azar 	 effects should include infective hepatitis
+comment 	 Falciparum malaria 	 effects should include hepatomegaly and infective hepatitis
+comment 	 Katayama fever 	 effects: fever, arthralgia, lymphadenopathy, hepatomegaly, splenomegaly
+comment 	 bilharzia 	 effects should include pulmonary htn and cirrhosis
+comment 	 bladder fibrosis 	 effects should include ureteric obstruction and bladder SCC
+comment 	 aflatoxin 	 causes should include aflatoxin
+comment 	 Macrocytosis 	 causes should include myelodysplastic syn
+comment 	 Chronic liver disease 	 effects should include hyponatraemia
+comment 	 Microcytic anaemia 	 causes should include anaemia of chronic disease and lead poisoning
+comment 	 Iron deficiency anaemia 	 causes could include the hookworm ancylostoma duodenale
+comment 	 Malabsorption state 	 causes: gastrectomy
+comment 	 Deep vein thrombosis 	 sgm consolidate causes
+comment 	 scleroderma 	 No entry for scleroderma renal crisis? (effect of scleroderma)
+comment 	 Systemic sclerosis 	 the modern sub-classification of this is limited cutaneous systemic sclerosis (lcSSc, synonym CREST) and diffuse (dcSSc synonym scleroderma) - can voo re-arrange this?
+comment 	 Systemic lupus erythematosus 	 effects should include aortic regurg, mononeuritis multiplex, ?psychiatric disturbances (mood, psychosis). Are lupus seizures accounted for by cerebral vasculitis? 
+comment 	 Scleroderma 	 effects should include gastric antral vascular ectasia (GAVE) syndrome aka "watermelon stomach"
+comment 	 Tarius 	 what is this? ngee has never heard of it! google says it is "a good all-round sleeping bag".
+comment 	 Rhabdomyolysis 	 causes: hypothermia, DKA, sympathomimetics (cocaine, amphetamines, MDMA); effects: compartment syndrome, DIC
+comment 	 Laughter 	 50% young onsset ALS get it. Also Angelman Syndrome, Tuber cinereum damage, and Atypical antipsychotics. Rx L-DOPA
