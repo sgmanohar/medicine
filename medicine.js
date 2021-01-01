@@ -732,68 +732,6 @@ var  MedicineReader = function(){
     /** remove dangling tooltips */
     $(".ui-tooltip").remove();
   };
-  /** find entity's true name, by loose name */
-  my.internal_find = function(ename){
-    var true_ename; // undefined
-    if(my.cache.hasOwnProperty(ename)){ // look in cache for the given name
-      data = my.cache[ename];
-      // check for synonyms. synonyms are stored in the cache, with just a string
-      // that references the appropriate real entity.
-      if(typeof data === 'string' || data instanceof String){
-        true_ename = data;              // actual internal name
-        //data = my.cache[data];          // the data object
-      }else{                            // the user provided an accurate name
-        true_ename = ename;             // so use the name provided 
-      }
-    }else{ // if the exact given name isn't in the cache,
-      for(var p in my.cache){
-        if(my.cache.hasOwnProperty(p)){ // look for exact synonyms
-          if(my.cache[p].hasOwnProperty("Synonyms")){
-            if(my.cache[p].Synonyms.indexOf(ename)>=0){ return p; }
-          }
-        }
-      }
-      for(var p in my.cache){       // for each cache item
-        if(my.cache.hasOwnProperty(p)){
-          if(my.looseMatch(ename,p)){ // use looseMatch to find any cache item that might match?
-            true_ename = p;             // internal name
-            data = my.cache[p]; break;     // found the item! (we take the first match)
-          }
-        }
-      }// end for each cache item
-    }
-    return true_ename;
-  };
-
-  /** 
-   * does the text t match entity e?
-   * Use some loose spelling. Test for the presence of item 1, and replace with item 2.
-   */
-  my.LOOSE = [
-    ["leuco", "leuko"],
-    ["ae", "e"],
-    ["oe", "e"],
-    ["ph","f"],
-    ["elevated", "high"],
-    ["raised","high"],
-    ["increased","high"],
-    ["low","reduced"],
-    ["decreased","reduced"]
-  ];
-  my.looseMatch = function(t,e){
-    t=t.toLowerCase(); e=e.toLowerCase();
-    if(e.indexOf(t)>=0)  { return true; }
-    for(var i=0;i<my.LOOSE.length; i++){
-      var a=my.LOOSE[i][0]; var b=my.LOOSE[i][1];
-      if(e.indexOf(a)>=0 && t.indexOf(b)>=0 ){
-        if(e.replace(a,b).indexOf(t)>=0){ return true;}
-      }
-      if(e.indexOf(b)>=0 && t.indexOf(a)>=0){
-        if(e.indexOf(t.replace(a,b))>=0){ return true;}
-      }
-    }
-    return false;
-  };
 
   my.dosearch = function(){ // called when search fo  rm action performed
     var e = $('#searchtext').val();
@@ -882,9 +820,81 @@ var  MedicineReader = function(){
       }
     }
   }
+
   /**************************************
+   * 
+   * 
    * Entity functions
+   * 
+   * 
    ***************************************/
+
+  /** 
+   * find entity's true name, by loose name 
+   */
+  my.internal_find = function(ename){
+    var true_ename; // undefined
+    if(my.cache.hasOwnProperty(ename)){ // look in cache for the given name
+      data = my.cache[ename];
+      // check for synonyms. synonyms are stored in the cache, with just a string
+      // that references the appropriate real entity.
+      if(typeof data === 'string' || data instanceof String){
+        true_ename = data;              // actual internal name
+        //data = my.cache[data];          // the data object
+      }else{                            // the user provided an accurate name
+        true_ename = ename;             // so use the name provided 
+      }
+    }else{ // if the exact given name isn't in the cache,
+      for(var p in my.cache){
+        if(my.cache.hasOwnProperty(p)){ // look for exact synonyms
+          if(my.cache[p].hasOwnProperty("Synonyms")){
+            if(my.cache[p].Synonyms.indexOf(ename)>=0){ return p; }
+          }
+        }
+      }
+      for(var p in my.cache){       // for each cache item
+        if(my.cache.hasOwnProperty(p)){
+          if(my.looseMatch(ename,p)){ // use looseMatch to find any cache item that might match?
+            true_ename = p;             // internal name
+            data = my.cache[p]; break;     // found the item! (we take the first match)
+          }
+        }
+      }// end for each cache item
+    }
+    return true_ename;
+  };
+
+  /** 
+   * does the text t match entity e?
+   * Use some loose spelling. Test for the presence of item 1, and replace with item 2.
+   */
+  my.LOOSE = [
+    ["leuco", "leuko"],
+    ["ae", "e"],
+    ["oe", "e"],
+    ["ph","f"],
+    ["elevated", "high"],
+    ["raised","high"],
+    ["increased","high"],
+    ["low","reduced"],
+    ["decreased","reduced"]
+  ];
+  my.looseMatch = function(t,e){
+    t=t.toLowerCase(); e=e.toLowerCase();
+    if(e.indexOf(t)>=0)  { return true; }
+    for(var i=0;i<my.LOOSE.length; i++){
+      var a=my.LOOSE[i][0]; var b=my.LOOSE[i][1];
+      if(e.indexOf(a)>=0 && t.indexOf(b)>=0 ){
+        if(e.replace(a,b).indexOf(t)>=0){ return true;}
+      }
+      if(e.indexOf(b)>=0 && t.indexOf(a)>=0){
+        if(e.indexOf(t.replace(a,b))>=0){ return true;}
+      }
+    }
+    return false;
+  };
+
+
   /**
    * Test whether the entity has a relation called rname
    * ename = starting entity
@@ -1263,10 +1273,18 @@ var  MedicineReader = function(){
 
   /********************************************
    * 
+   * 
    *  Editing functions 
+   * 
    * 
    *********************************************/
 
+  /**
+   * When entering edit mode, several things change.
+   * - The edit elements (toolbar etc) are shown
+   * - synonyms and description become editable
+   * - dragging is enabled by 'sortable'
+   */
   my.set_edit_mode = function(is_edit_mode){
     my.is_edit_mode = is_edit_mode;
     my.saveOptions();
@@ -1308,6 +1326,7 @@ var  MedicineReader = function(){
       $(".edit").hide();
       $("#synonyms li h3").attr("contenteditable",false);
       $(".edit-mode-checkbox").prop("checked",false);
+      $("#l_causes, #l_effects, #l_treatments, #l_treats, #l_parents, #l_children").sortable("disable");
     }
   };
   /**
@@ -2284,8 +2303,45 @@ var  MedicineReader = function(){
   };
 
 
-
-
+  /**
+   * Index
+   */
+  my.show_index = function(){
+    my.menu.close();
+    var dlg = $("#index-dialog");
+    // first create an index navigate function, to attach to each index entry
+    var index_navigate = function(evt){
+      dlg.removeClass("show"); // close the dialog after navigating
+      my.navigateto(evt.target.innerHTML); // use the element's text to navigate
+    };
+    // first create a function to update the list of items.
+    var update_index = function(evt){
+      var chr = evt.target.innerHTML;
+      var list = dlg.find(".index-list");
+      list.empty();
+      // match all elements in the name cache that begin with the character
+      var match = my.namecache.filter( x => x[0]===chr );
+      for(var i in match){
+        var e = match[i];
+        // add a <li> for each entity.
+        var li = $( "<li>" + e + "</li>"  );
+        list.append( li )
+        li.on("click", index_navigate); // attach the generic click handler 
+      }
+    };
+    var button_bar = dlg.find(".button-bar");
+    button_bar.empty(); // remove the index buttons
+    for(var letter = 0; letter<26; letter++){ // for each letter of the alphabet
+      var chr = String.fromCharCode( letter + "A".charCodeAt(0) );
+      var li = $("<li class='button'>"+chr+"</li>");
+      li.click(update_index);
+      button_bar.append(li); // add a button with that letter
+    }
+    dlg.find(".button-ok").off().click(function(){
+      dlg.removeClass("show");
+    });
+    dlg.addClass("show");
+  };
 
 
   /**

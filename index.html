@@ -109,6 +109,7 @@
           <li><a href="javascript:medicine.menu_list('Effects','Sign')">List signs</a></li>
           <li><a href="javascript:medicine.menu_find_path()">Find path</a></li>
           <li><a href="javascript:medicine.visualise()">Visualise</a></li>
+          <li><a href="javascript:medicine.show_index()">Index</a></li>
         </ul>
      </li>
       <li> <span> 
@@ -169,6 +170,8 @@
       </li>
     </ul> 
   </nav>
+
+
 
   <div id='mainpage'>
     <section width="100%">
@@ -364,6 +367,16 @@
     </form>
     <input type="button" class="button button-cancel" value="Cancel">
     <input type="button" class="button button-ok" value="OK">
+  </div>
+
+  
+  <div id='index-dialog' class='modal-dialog'>
+    <h1>
+      Index
+    </h1>
+    <ul class="button-bar">    </ul>
+    <ul class="index-list">  </ul>
+    <input type="button" class="button button-ok" value="Close">
   </div>
 
 </body>

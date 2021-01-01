@@ -348,3 +348,27 @@ ul.slist li.selected {
   0%, 20% { background: red; }
   100%    { background: yellow; }
 }
+
+
+#index-dialog .button-bar li {
+  display:inline;
+  width:1.5em;
+  font-size:150%;
+  flex:1 1 0px;
+  padding: 3px 15px;
+}
+#index-dialog .button-bar{
+  padding:0px;
+  display:flex;
+  flex-wrap: wrap;
+}
+#index-dialog .index-list{
+  max-height:60vh;
+  overflow-y:auto;
+  background:#ddf;
+  border-radius: 10px;
+}
+#index-dialog .index-list li{
+  cursor:pointer;
+
+}
