@@ -231,7 +231,7 @@ var  MedicineReader = function(){
     $("#select-entity-dialog .button.button-done").click(function(){ // when "accept" is clicked
       my.select_entity_dialog_done();
     });
-    $("#select-entity-dialog .button.button-cancel").click(function(){ // when "accept" is clicked
+    $("#select-entity-dialog .button.button-cancel").click(function(){ // when "cancel" is clicked
       my.select_entity_dialog_cancel();
     });
     // start listening for long-presses.
@@ -550,6 +550,7 @@ var  MedicineReader = function(){
   my.select_entity_dialog_cancel = function(){
     $("#select-entity-dialog").removeClass("show");
     my.editing_list = ""; // clear information about what list is being added to
+    $("select-entity-dialog-paste-text").hide();
   };
   /** 
    * Called when "edit" is turned on, or
@@ -602,8 +603,12 @@ var  MedicineReader = function(){
       }
     }
     // shall we visualise it as a graph?
-    var graph = my.convert_paths_to_graph(my.entityname, list, e);
-
+    try{
+      var graph = my.convert_paths_to_graph(my.entityname, list, e);
+    }catch(err){
+      console.log("cannot draw graph:");
+      console.log(err);
+    }
     if(list.length==0){   // empty result?
       result_list = $("No routes found.")
     }
@@ -618,9 +623,12 @@ var  MedicineReader = function(){
       "type":"alignment", "axis":"x", "offsets":[]
     }]};
     for(var i=0;i<list.length;i++){
+      var from = my.entityname;
+      var layer=0;
       for(var j=0;j<list[i].length;j++){ 
-        list[i][j];
-        json = my.create_single_node(json, ent_name, e, layer+1); 
+        var to = list[i][j];
+        json = my.create_single_node(json, from, to, layer++); 
+        from = to;
       }
     }
   };
@@ -1289,7 +1297,7 @@ var  MedicineReader = function(){
         var initpos = my.cache[my.entityname][listname].indexOf(item.find("h3").html());
         // construct a command to actually move the item
         var command = "move\t"+my.entityname+"\t"+listname+"\t"+itemname+"\t"+(finalpos-initpos);
-        invoke_edit_and_log(command);
+        my.invoke_edit_and_log(command);
       };
       // enable drag and drop within lists using jquery ui sortable
       $("#l_causes, #l_effects, #l_treatments, #l_treats, #l_parents, #l_children").sortable({
@@ -1311,19 +1319,15 @@ var  MedicineReader = function(){
     var sec_id = $(element).closest("section").attr("id");
     return sec_id[0].toUpperCase() + sec_id.substring(1);
   };
-  /** Add an item - called when + is clicked */
+  /** 
+   * Add an item - called when + is clicked.
+   * Show a 'select item' dialog.
+   */
   my.add_entity_clicked = function( listName ){
     $("#select-entity-dialog").addClass("show");
     // focus and select the text
     $("#select-entity-dialog input:text").focus().select();
     listname  =  toInitialCapsCase(listName).trim();
-    if(listname==="Treat"){
-      if(my.hasRel(my.entityname,"Parents","Treatment")){
-        listname = "Treats";
-      }else{
-        listname = "Treatments";
-      }
-    }
     my.editing_list = listname;
     // paste button: adds the selection to a list
     $(".select-dialog-title").html("Add "+listname);
@@ -1344,8 +1348,8 @@ var  MedicineReader = function(){
     }
   };
   /**
-   * Called when the add selection button the add entitity dialog
-   * is pressed.
+   * Called when the add selection (i.e. paste) button in the Add Entitity
+   * editor dialog is pressed.
    */
   my.add_selection_done = function(){
     $("#select-entity-dialog").removeClass("show"); // hide it again
@@ -1361,6 +1365,7 @@ var  MedicineReader = function(){
       success=true;
     }
     my.editing_list=""; // clear editing list as we are no longer adding to the list
+    $(".select-entity-dialog-paste-button").hide(); // hide the paste button
     return success;
   };
   /** called when the OK button is clicked in the add entity dialog,
@@ -1406,6 +1411,7 @@ var  MedicineReader = function(){
       }
     }
     my.editing_list=""; // clear the adding list
+    $(".select-entity-dialog-paste-button").hide(); // hide the paste button
   };
 
   /** 
@@ -1820,9 +1826,14 @@ var  MedicineReader = function(){
    */
   my.clipboard_add = function(ename){
     // check it's already there
-    if(my.clipboard_list.indexOf(ename)<0){
+    if(my.clipboard_list.indexOf(ename)<0){ // if not:
       my.clipboard_list.push(ename);
-      $(".clipboard-entities-list").append("<li>"+ename+"</li>");
+      // create a UI text for it
+      var li = $("<li>"+ename+"</li>");
+      $(".clipboard-entities-list").append(li);
+      li.click( function(){
+        my.navigateto(ename);
+      } );
       my.update_clipboard_count();
     };
   }
@@ -2406,6 +2417,7 @@ var LongPressHandler = function(handler){
       return false; // don't propagate
     }
     // normal click...
+    return true;
   };
   var start = function(e) { // start counting
     if (e.type === "click" && e.button !== 0) {
@@ -2419,7 +2431,7 @@ var LongPressHandler = function(handler){
         my.longpress = true;
       }, my.TIMEOUT);
     }  
-    return false;
+    // return false; // don't cancel this since it blocks drag/drop for sortables.
   };  
   my.initialise = function(new_nodes){
     if(nodes.length>0){
@@ -2440,7 +2452,8 @@ var LongPressHandler = function(handler){
 };
 
 var medicine = MedicineReader();
-// callback function that is requested externally by the HTML
+// 'exports':
+// callback functions that are called externally by the HTML
 var navigateto = medicine.navigateto;
 var menu_navigateto = medicine.menu_navigateto;
 var dosearch = medicine.dosearch;

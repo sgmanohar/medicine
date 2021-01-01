@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="lib/jquery-ui.theme.min.css">
     <link rel="stylesheet" href="lib/jquery.mmenu.all.css">
     <script src="lib/jquery.mmenu.all.js"></script>
+    <script src="lib/jquery.ui.touch-punch.min.js"></script>
 
     <link rel="stylesheet" href="lib/fontawesome.min.css">
     <link rel="stylesheet" href="lib/fa-solid.min.css">
@@ -188,9 +189,6 @@
     </section>
     <section width="100%">
       <h1 class="editor-bar edit">
-        <a href="javascript:medicine.edit_rename();" class="button" title="Rename entity">
-          <i class="fas fa-edit"></i>
-        </a>
         <a class="editor-bar-select-tool button" href="javascript:medicine.select_mode_clicked();" title="Select entities">
           <i class="fas fa-check-square"></i>
           <span class="editor-bar-selected-count">0</span>
@@ -207,6 +205,9 @@
             <ul class="clipboard-entities-list"></ul>
           </div>
         </div>
+        <a href="javascript:medicine.edit_rename();" class="button" title="Rename entity">
+          <i class="fas fa-edit"></i>
+        </a>
         <a href="javascript:medicine.set_edit_mode(false);" class="button editor-bar-stop-editing" title="Stop editing">
           <i class="fas fa-level-up-alt"></i>
         </a>

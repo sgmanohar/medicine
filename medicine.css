@@ -303,6 +303,11 @@ ul.slist li:only-child .list-move-buttons{
 .clipboard-entities-list-container{
   position:absolute;
   margin-top:1.2em;
+  margin-left:1em;
+}
+.clipboard-entities-list li{
+  cursor:pointer;
+
 }
 .clipboard-entities-paste-preview-list { 
   
