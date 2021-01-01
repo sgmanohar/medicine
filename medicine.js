@@ -2488,6 +2488,7 @@ var LongPressHandler = function(handler){
   my.longpress = false; // is the press more than the TIMEOUT, yet?
   presstimer = null; // keep hold of the timer so we can cancel it
   my.long_press_handler = handler; // the function to call (can be changed)
+  var current_node = null;
   var cancel = function(e) { // end of press
     if (presstimer !== null) { // if there's a timer, cancel it
       clearTimeout(presstimer);
@@ -2496,6 +2497,7 @@ var LongPressHandler = function(handler){
     this.classList.remove("longpress");
   };
   var click = function(e) { // end of press: click event generated
+    current_node = e.target;
     if (presstimer !== null) { // cancel timer
       clearTimeout(presstimer);
       presstimer = null;
@@ -2509,6 +2511,7 @@ var LongPressHandler = function(handler){
     return true;
   };
   var start = function(e) { // start counting
+    current_node = e.target;
     if (e.type === "click" && e.button !== 0) {
       return; // ignore right clicks or end-of-press
     }
@@ -2526,6 +2529,18 @@ var LongPressHandler = function(handler){
     e.preventDefault(); 
     return false;
   }
+  /**
+   * Test if the mouse has moved out of the element,
+   * and if so, cancel the timer
+   */
+  var checkifout = function(e){
+    var rect = e.target.getBoundingClientRect();
+    var x = e.clientX - rect.left; //x position within the element.
+    var y = e.clientY - rect.top;  //y position within the element.
+    if( x<0 || y<0 || x>rect.width || y>rect.height ){
+      cancel(e);
+    }
+  }
   my.initialise = function(new_nodes){
     if(nodes.length>0){
       nodes.off(); // remove any old listeners
@@ -2541,6 +2556,8 @@ var LongPressHandler = function(handler){
     nodes.on("touchleave", cancel);
     nodes.on("touchcancel", cancel);
     nodes.on("contextmenu", ignore);
+    nodes.on("touchmove", checkifout);
+    nodes.on("mouseleave", cancel);
   }
   return my;
 };
