@@ -1,5 +1,9 @@
 var  MedicineReader = function(){
   my = {};
+
+  /** 
+   * GLOBAL OPTIONS 
+   */
   var LOCAL_MODE=true;
   // the server to prepend. Will probably be 
   // http://www.homphysiology.org, but this gives CORS errors
@@ -9,7 +13,12 @@ var  MedicineReader = function(){
   my.edit_server = my.server_root + "cgi-bin/MedicineEdit.py";
   my.entityname = 'Disease';  // starting entity name
   my.USE_MOVE_BUTTONS = false; // when no drag/drop, display arrows for editing?
-  // INITIALISE
+  my.USE_DRAG_ORDER = 2; // uses jquery 'sortable' to re-order items in a list. 1=drag whole item, 2=drag handle
+  my.USE_LONG_PRESS_SELECTION = true; // long-press in edit mode selects an item.
+
+  /**
+   *  INITIALISE data
+   */
   my.cache = {};      // all the entities data that have been preloaded
   my.namecache = [];  // names of all entities (for autocomplete).
   my.bookmarks = [];  // list of bookmarked items
@@ -22,7 +31,13 @@ var  MedicineReader = function(){
   }
   var parentcount = 0; // make sure not too many parents chained
 
-  /* When the HTML finishes loading */
+  /**
+   * When the HTML finishes loading:
+   * Lots to prepare.
+   * read the cache into entity objects, and download data if needd
+   * setup autocompletes, menus, menu handlers, and some editing commands.
+   * Finally, display the first entity.
+   * */
   $(document).ready(function () {
     /** if there is no cache, this is our first run.  */
     if(!("cache" in localStorage)){
@@ -314,15 +329,21 @@ var  MedicineReader = function(){
        * if we are using move buttons (i.e. no drag-and-drop)
        * then display them 
        * */
-      if(my.is_edit_mode && my.USE_MOVE_BUTTONS){
-        li.append("<div class='list-move-buttons edit'>"+
-                   "<i class='list-move-button-up button fa fa-angle-up'></i>"+
-                   "<i class='list-move-button-down button fa fa-angle-down'></i>");
-        let move_e = entity, move_l=listname;
-        li.find("i.list-move-button-up"  ).click(function(){my.edit_list_move( entity,listname, -1);});
-        li.find("i.list-move-button-down").click(function(){my.edit_list_move( entity,listname, +1);});
+      if(my.is_edit_mode){
+        if(my.USE_MOVE_BUTTONS==1){
+          li.append("<div class='list-move-buttons edit'>"+
+                    "<i class='list-move-button-up button fa fa-angle-up'></i>"+
+                    "<i class='list-move-button-down button fa fa-angle-down'></i>");
+          let move_e = entity, move_l=listname;
+          li.find("i.list-move-button-up"  ).click(function(){my.edit_list_move( entity,listname, -1);});
+          li.find("i.list-move-button-down").click(function(){my.edit_list_move( entity,listname, +1);});
+        }
       }
       i.appendTo(li);
+      // editing by drag but without buttons? use handle
+      if(my.is_edit_mode && (!my.USE_MOVE_BUTTONS) && my.USE_DRAG_ORDER==2){ 
+        li.append("<div class='list-move-handle-container'><i class='list-move-handle fa fa-th edit'></i></div>");
+      }
       // is it selected? check in the list of selected items
       var is_selected=false;
       for(e in my.selected_entities){
@@ -424,7 +445,9 @@ var  MedicineReader = function(){
 
     if(my.is_edit_mode){   // irrespective of whether a zone is populated,
       my.show_all_areas(); // show it when we're in edit mode.
-      my.longPressHandler.initialise($(".slist li"));
+      if(my.USE_LONG_PRESS_SELECTION){
+        my.longPressHandler.initialise($(".slist li"));
+      }
     }
 
     // add wikipedia and google
@@ -1317,11 +1340,18 @@ var  MedicineReader = function(){
         var command = "move\t"+my.entityname+"\t"+listname+"\t"+itemname+"\t"+(finalpos-initpos);
         my.invoke_edit_and_log(command);
       };
-      // enable drag and drop within lists using jquery ui sortable
-      $("#l_causes, #l_effects, #l_treatments, #l_treats, #l_parents, #l_children").sortable({
-        placeholder:"edit-mode-drop-placeholder",
-        update: update_drag_item_handler
-      });
+      if(my.USE_DRAG_ORDER){
+        var opts = {
+          placeholder:"edit-mode-drop-placeholder",
+          update: update_drag_item_handler,
+        };
+        if(my.USE_DRAG_ORDER ==2){
+          opts.handle = ".list-move-handle";
+        }
+        // enable drag and drop within lists using jquery ui sortable
+        $("#l_causes, #l_effects, #l_treatments, #l_treats, #l_parents, #l_children")
+          .sortable(opts);
+      }
     }else{ // Turn off edit mode
       $(".edit").hide();
       $("#synonyms li h3").attr("contenteditable",false);
@@ -1485,7 +1515,7 @@ var  MedicineReader = function(){
    * element: the html that was clicked
    */
   my.edit_selection_select_entity = function(entity,listname,element){
-    if(entity.length==0){
+    if(entity.length==0){ // assert: the entity isn't blank 
       console.log("abnormal selection");
       return;
     }
@@ -1638,6 +1668,9 @@ var  MedicineReader = function(){
           +"&section=" +encodeURIComponent(cmd[2])
           +"&listitem="+encodeURIComponent(cmd[3])
           +"&verified=true";
+      if(cmd[0]==="move"){
+        editurl += "&direction="+encodeURIComponent(cmd[4]);
+      }
       console.log(editurl);
       // if we can't write the edit to the server, keep it for later.
       // this local function will be used as a callback.
@@ -2489,6 +2522,10 @@ var LongPressHandler = function(handler){
     }  
     // return false; // don't cancel this since it blocks drag/drop for sortables.
   };  
+  var ignore = function(e){ // ignore these events
+    e.preventDefault(); 
+    return false;
+  }
   my.initialise = function(new_nodes){
     if(nodes.length>0){
       nodes.off(); // remove any old listeners
@@ -2503,6 +2540,7 @@ var LongPressHandler = function(handler){
     nodes.on("touchend", cancel);
     nodes.on("touchleave", cancel);
     nodes.on("touchcancel", cancel);
+    nodes.on("contextmenu", ignore);
   }
   return my;
 };

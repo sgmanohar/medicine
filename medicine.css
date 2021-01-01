@@ -341,12 +341,29 @@ ul.slist li.selected {
           animation: 0.5s longpress;
 }
 @-webkit-keyframes longpress {
-  0%, 20% { background: red; }
-  100%    { background: yellow; }
+  0%, 20% { background: #f001; }
+  100%    { background: #f00f
+; }
 }
 @keyframes longpress {
-  0%, 20% { background: red; }
-  100%    { background: yellow; }
+  0%, 20% { background: #f001; }
+  100%    { background: #f00f; }
+}
+.list-move-handle-container{
+  margin-right:0px;
+  position:relative;
+}
+.list-move-handle{
+  cursor:grab;
+  position:absolute;
+  right:0px;
+  font-size:120%;
+  color:#0004;
+  padding:0 0 0 1em;
+}
+/* hide if only child */
+ul.slist li:only-child .list-move-handle{ 
+  display:none;
 }
 
 
@@ -370,5 +387,4 @@ ul.slist li.selected {
 }
 #index-dialog .index-list li{
   cursor:pointer;
-
 }

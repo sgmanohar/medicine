@@ -12,3 +12,7 @@
 2021-01-01 00:24:33	::1	remove 	 Ascites 	 Causes 	 Abdominal striae
 2021-01-01 00:24:33	::1	remove 	 Ascites 	 Causes 	 Shifting dullness
 2021-01-01 00:24:33	::1	remove 	 Ascites 	 Causes 	 Abdominal distension
+2021-01-01 18:19:37	::1	move 	 Acquired childhood disease 	 Children 	 Intussusception 	 1
+2021-01-01 18:49:30	::1	move 	 Acquired childhood disease 	 Children 	 Childhood malnutriton 	 2
+2021-01-01 18:49:32	::1	move 	 Acquired childhood disease 	 Children 	 Childhood malnutriton 	 -1
+2021-01-01 19:20:32	::1	add 	 X-linked recessive disorder 	 Causes 	 Male Gender
