@@ -287,21 +287,27 @@ ul.slist li:only-child .list-move-buttons{
 
 /** edit bar */
 .editor-bar {
-  height:30px; overflow:visible;
+  height:40px; overflow:visible;
 }
 .clipboard-entities-list {
   margin:0px;
-  position:absolute;
   background:#006c;
   font-size:initial; /* remove the heading font */
   font-weight:initial;
   border-radius:10px;
   border:3px solid  #33f;
   padding:0px 5px 0px 20px;
+  max-height:6em;
+  overflow-y:scroll;
 }
 .clipboard-entities-list-container{
-
+  position:absolute;
+  margin-top:1.2em;
 }
+.clipboard-entities-paste-preview-list { 
+  
+}
+
 .editor-bar .selected {
   color:#f83;
   background:#33a;
@@ -320,4 +326,20 @@ ul.slist li.selected {
 }
 .editor-bar-clip-tool {
   display:flex;
+}
+.edit-mode-drop-placeholder{
+  height:1.5em;
+  background:#0008 !important;
+}
+.longpress {
+  -webkit-animation: 0.5s longpress;
+          animation: 0.5s longpress;
+}
+@-webkit-keyframes longpress {
+  0%, 20% { background: red; }
+  100%    { background: yellow; }
+}
+@keyframes longpress {
+  0%, 20% { background: red; }
+  100%    { background: yellow; }
 }

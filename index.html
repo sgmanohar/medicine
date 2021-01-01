@@ -8,8 +8,8 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
     <![endif]-->  
     <!--[if (gte IE 9) | (!IE)]><!-->  
-    <script src="lib/jquery-3.3.1.min.js"></script>  
-    <!--<![endif]-->
+      <script src="lib/jquery-3.2.1.min.js"></script>  
+        <!--<![endif]-->
     <!--
       <script src="jquery.history.js"></script>
     -->
@@ -116,8 +116,9 @@
        </span>
         <ul>
           <li class='edit-mode-menu'>
-            <a href="#">Edit mode</a>
+            <a href="#" class="">Edit mode
             <input type="checkbox" class="Toggle edit-mode-checkbox"/>
+            </a>
           </li>
           <li><a href="" class="reload-button"><span>Reload stable verison</span>
             <div>Current: <span class="current-version-info">Stable version</span></div>
@@ -351,7 +352,19 @@
     <input type="button" class="button button-cancel" value="Cancel">
     <input type="button" class="button button-ok" value="Go to">
   </div>
+
   
+  <div id='rename-dialog' class='modal-dialog'>
+    <h1>
+      Are you sure you want to rename?
+    </h1>
+    <form action='javascript:medicine.invoke_rename();'>
+      <input class='rename-input' placeholder="[Name required]" type='text' size='32'></input>
+    </form>
+    <input type="button" class="button button-cancel" value="Cancel">
+    <input type="button" class="button button-ok" value="OK">
+  </div>
+
 </body>
 
 

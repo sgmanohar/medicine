@@ -8,6 +8,8 @@ var  MedicineReader = function(){
   my.server      = my.server_root + "cgi-bin/MedicineReaderJson.py";
   my.edit_server = my.server_root + "cgi-bin/MedicineEdit.py";
   my.entityname = 'Disease';  // starting entity name
+  my.USE_MOVE_BUTTONS = false; // when no drag/drop, display arrows for editing?
+  // INITIALISE
   my.cache = {};      // all the entities data that have been preloaded
   my.namecache = [];  // names of all entities (for autocomplete).
   my.bookmarks = [];  // list of bookmarked items
@@ -171,7 +173,6 @@ var  MedicineReader = function(){
         }
         if (e.keyCode == "C".codePointAt(0)){
           // clear clipboard and add selection.
-          my.clipboard_empty();
           my.edit_clipboard_click();
         }
         // no key captured
@@ -199,10 +200,12 @@ var  MedicineReader = function(){
       //let listname = $(this).closest("h2").html().split(/[^ a-zA-z0-9]/)[0].trim();
       // 2019 version: find the nearest "section" parent, and get its id.
       // this should be the internal section name. 
-      let listname = $(this).closest("section").attr("id");
+      let listname = my.list_name_from_node(this);
       if(listname===undefined){console.log("can't find list name"); return;}
       var plus  = $("<a class='edit button edit-add'><i class='fas fa-plus'></i></a>");
-      plus.click(function(){ my.add_entity_clicked( listname );} );
+      plus.click(function(){
+         my.add_entity_clicked( listname );
+      } );
       $(x).append(plus);
     });
     // now uncheck the menu 
@@ -230,6 +233,14 @@ var  MedicineReader = function(){
     });
     $("#select-entity-dialog .button.button-cancel").click(function(){ // when "accept" is clicked
       my.select_entity_dialog_cancel();
+    });
+    // start listening for long-presses.
+    // when a list item is long-pressed, (handler added only in edit mode), select it.
+    my.longPressHandler = LongPressHandler(function(evt){
+      var element = evt.target.closest(".slist li");
+      var entity = $(element).find("h3").text();
+      var list = my.list_name_from_node(element);
+      my.edit_selection_select_entity(entity,list,element);
     });
 
 
@@ -299,7 +310,11 @@ var  MedicineReader = function(){
       if(my.is_edit_mode && my.is_entity_empty(entity)){
         i.find("h3").addClass("entity-empty")
       }
-      if(my.is_edit_mode){
+      /** 
+       * if we are using move buttons (i.e. no drag-and-drop)
+       * then display them 
+       * */
+      if(my.is_edit_mode && my.USE_MOVE_BUTTONS){
         li.append("<div class='list-move-buttons edit'>"+
                    "<i class='list-move-button-up button fa fa-angle-up'></i>"+
                    "<i class='list-move-button-down button fa fa-angle-down'></i>");
@@ -308,6 +323,16 @@ var  MedicineReader = function(){
         li.find("i.list-move-button-down").click(function(){my.edit_list_move( entity,listname, +1);});
       }
       i.appendTo(li);
+      // is it selected? check in the list of selected items
+      var is_selected=false;
+      for(e in my.selected_entities){
+        if(my.selected_entities[e].entity === entity ){ 
+          is_selected=true;
+        }
+      }
+      if(is_selected){ 
+        li.addClass("selected");  // add the css class.
+      }
       return i; 
       //"href='javascript:list_click(\""+jsEncode(value)+"\")'
     } ;     
@@ -399,6 +424,7 @@ var  MedicineReader = function(){
 
     if(my.is_edit_mode){   // irrespective of whether a zone is populated,
       my.show_all_areas(); // show it when we're in edit mode.
+      my.longPressHandler.initialise($(".slist li"));
     }
 
     // add wikipedia and google
@@ -479,6 +505,8 @@ var  MedicineReader = function(){
       my.edit_selection_select_entity(entity,listname,element); 
       return; // don't actually navigate
     }
+    // don't navigate on longpress
+    if(my.longPressHandler.longpress){ return; }
     navigateto(entity); 
   };
   /** called when a link is clicked. push state and call internal navigation */
@@ -1245,11 +1273,43 @@ var  MedicineReader = function(){
       $("#description").change(my.change_description);
       // toggle the settings box
       $(".edit-mode-checkbox").prop("checked",true);
-    }else{
+      var update_drag_item_handler = function(event, ui) {
+        // the list item that was moved
+        var item = $(ui.item);
+        var itemname = item.find("h3").text(); // get its text name
+        var list = $(event.target); // list where dropped 
+        // (note: we don't allow dragging across lists)
+        // list index where dropped
+        var finalpos = list.children().index(item);
+        // list name, starting with lower case
+        var listname = list.closest("section").attr("id");
+        // convert first letter to uppercase
+        listname = listname[0].toUpperCase() + listname.substring(1);
+        // get the starting position for that item, from the cache entity
+        var initpos = my.cache[my.entityname][listname].indexOf(item.find("h3").html());
+        // construct a command to actually move the item
+        var command = "move\t"+my.entityname+"\t"+listname+"\t"+itemname+"\t"+(finalpos-initpos);
+        invoke_edit_and_log(command);
+      };
+      // enable drag and drop within lists using jquery ui sortable
+      $("#l_causes, #l_effects, #l_treatments, #l_treats, #l_parents, #l_children").sortable({
+        placeholder:"edit-mode-drop-placeholder",
+        update: update_drag_item_handler
+      });
+    }else{ // Turn off edit mode
       $(".edit").hide();
       $("#synonyms li h3").attr("contenteditable",false);
       $(".edit-mode-checkbox").prop("checked",false);
     }
+  };
+  /**
+   *  Get the name in which a given node lies.
+   * It looks at ancestor section element, and finds its id.
+   */
+  my.list_name_from_node = function(element){
+    if(!element){return;}
+    var sec_id = $(element).closest("section").attr("id");
+    return sec_id[0].toUpperCase() + sec_id.substring(1);
   };
   /** Add an item - called when + is clicked */
   my.add_entity_clicked = function( listName ){
@@ -1265,14 +1325,20 @@ var  MedicineReader = function(){
       }
     }
     my.editing_list = listname;
+    // paste button: adds the selection to a list
     $(".select-dialog-title").html("Add "+listname);
     // create the "add selection" button (only for non-synonym lists)
+    // find the element
     var button = $(".select-entity-dialog-paste-button"); // find button
+    // if we have something on the clipboard,
     if(my.selected_entities.length>0 && my.editing_list!=="Synonyms"){
-      button.show()
-      button.
-      button.click(my.add_selection_done())
-      $(".select-entity-dialog-paste-text").html(""+my.selected_entities);
+      button.show();
+      button.click(my.add_selection_done);
+      var clip_repr=$("<ul class='clipboard-entities-paste-preview-list'></ul>");
+      for(s in my.selected_entities){
+        clip_repr.append($("<li>"+my.selected_entities[s].entity+"</li>"));
+      }
+      $(".select-entity-dialog-paste-text").empty().append(clip_repr);
     }else{
       button.hide();
     }
@@ -1289,8 +1355,8 @@ var  MedicineReader = function(){
     }else if(my.editing_list.length==0){
       console.log("cannot paste empty selection");
     }else{
-      my.selected_entities.forEach(function(e){
-        my.invoke_edit_and_log("add\t"+my.entityname+"\t"+my.editing_list+"\t"+e);
+      my.selected_entities.forEach(function(sel){
+        my.invoke_edit_and_log("add\t"+my.entityname+"\t"+my.editing_list+"\t"+sel.entity);
       });
       success=true;
     }
@@ -1342,6 +1408,40 @@ var  MedicineReader = function(){
     my.editing_list=""; // clear the adding list
   };
 
+  /** 
+   * called when the rename button is clicked.
+   * displays rename dialog
+   */
+  my.edit_rename = function(){
+    var dlg = $("#rename-dialog");
+    dlg.addClass("show");
+    // start with the current name in the text field
+    dlg.find("input.rename-input").val(my.entityname);
+    // create button handlers (remove any previous)
+    dlg.find(".button-ok").off().click( my.invoke_rename );
+    dlg.find(".button-cancel").off().click( function(){
+      dlg.removeClass("show");
+    });
+  };
+  /** called when OK is pressed in the rename dialog */
+  my.invoke_rename = function(){
+    var dlg = $("#rename-dialog");
+    var new_name = dlg.find("input").val();
+    // is the name different and not empty
+    if(new_name.length>0 && new_name !== my.entityname){
+      // has the name already been used?
+      if(medicine.namecache.indexOf( new_name )>=0){
+        dlg.find("h1").html("Name already in use!");
+        return; // and keep dialog open
+      } 
+      var command = "rename\t"+my.entityname+"\t"+new_name;
+      my.invoke_edit_and_log(command);
+    }
+    // close dialog after success, or if name was null or identical.
+    dlg.removeClass("show");
+  };
+
+
   /** When the selection mode button is clicked */
   my.select_mode_clicked = function(listName){ // list name as shown in html
     // have we re-clicked an already-selected minus sign?
@@ -1360,6 +1460,10 @@ var  MedicineReader = function(){
    * element: the html that was clicked
    */
   my.edit_selection_select_entity = function(entity,listname,element){
+    if(entity.length==0){
+      console.log("abnormal selection");
+      return;
+    }
     var already_selected = false;
     // check if the item is already selected
     var len = my.selected_entities.length;
@@ -1400,6 +1504,7 @@ var  MedicineReader = function(){
    * clipboard icon clicked - copy selection to clipboard
    */
   my.edit_clipboard_click = function(){
+    my.clipboard_empty();
     my.selected_entities.forEach(function(e){
       var already_copied = my.clipboard_list.indexOf(e.entity);
       if(already_copied<0){
@@ -1714,9 +1819,12 @@ var  MedicineReader = function(){
    * when an entity is copied or cut - store name on clipboard
    */
   my.clipboard_add = function(ename){
-    my.clipboard_list.push(ename);
-    $(".clipboard-entities-list").append("<li>"+ename+"</li>");
-    my.update_clipboard_count();
+    // check it's already there
+    if(my.clipboard_list.indexOf(ename)<0){
+      my.clipboard_list.push(ename);
+      $(".clipboard-entities-list").append("<li>"+ename+"</li>");
+      my.update_clipboard_count();
+    };
   }
 
   /**
@@ -2267,6 +2375,69 @@ function nthIndex(str, pat, n){
   return i;
 }
 
+/**
+ * Create a long press handler for a given set of nodes.
+ * syntax:
+ * var handler = LongPressHandler( function(){  ...  });
+ * handler.initialise( $("a") );
+ */
+var LongPressHandler = function(handler){
+  var my = {}; 
+  nodes = []; // readonly property, set using initialise()
+  my.TIMEOUT = 500; // can be adjusted
+  my.longpress = false; // is the press more than the TIMEOUT, yet?
+  presstimer = null; // keep hold of the timer so we can cancel it
+  my.long_press_handler = handler; // the function to call (can be changed)
+  var cancel = function(e) { // end of press
+    if (presstimer !== null) { // if there's a timer, cancel it
+      clearTimeout(presstimer);
+      presstimer = null;
+    }
+    this.classList.remove("longpress");
+  };
+  var click = function(e) { // end of press: click event generated
+    if (presstimer !== null) { // cancel timer
+      clearTimeout(presstimer);
+      presstimer = null;
+    }
+    this.classList.remove("longpress");
+    if (my.longpress) { // is it after the TIMEOUT?
+      e.stopImmediatePropagation();
+      return false; // don't propagate
+    }
+    // normal click...
+  };
+  var start = function(e) { // start counting
+    if (e.type === "click" && e.button !== 0) {
+      return; // ignore right clicks or end-of-press
+    }
+    my.longpress = false; // initialise
+    this.classList.add("longpress");
+    if (presstimer === null) { // create timer
+      presstimer = setTimeout(function() {
+        my.long_press_handler(e);
+        my.longpress = true;
+      }, my.TIMEOUT);
+    }  
+    return false;
+  };  
+  my.initialise = function(new_nodes){
+    if(nodes.length>0){
+      nodes.off(); // remove any old listeners
+    }
+    nodes = new_nodes;
+    // add new listeners
+    // was addEventListener().
+    nodes.on("mousedown", start);
+    nodes.on("touchstart", start);
+    nodes.on("click", click);
+    nodes.on("mouseout", cancel);
+    nodes.on("touchend", cancel);
+    nodes.on("touchleave", cancel);
+    nodes.on("touchcancel", cancel);
+  }
+  return my;
+};
 
 var medicine = MedicineReader();
 // callback function that is requested externally by the HTML

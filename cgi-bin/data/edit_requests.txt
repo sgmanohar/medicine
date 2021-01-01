@@ -1,2 +1,14 @@
 2020-12-31 14:54:01	::1	comment 	 Hypoxic respiratory failure 	 test
 2020-12-31 15:07:47	::1	comment 	 Hypoxic respiratory failure 	 test
+2020-12-31 18:51:19	::1	add 	 Valvotomy 	 Treats 	 Aortic stenosis
+2020-12-31 18:53:07	::1	add 	 Pulmonary stenosis 	 Causes 	 Noonan syndrome
+2020-12-31 21:06:44	::1	add 	 Down syndrome 	 Causes 	 [object Object]
+2021-01-01 00:16:14	::1	remove 	 Down syndrome 	 Effects 	 Mental retardation
+2021-01-01 00:16:14	::1	remove 	 Down syndrome 	 Effects 	 Hypertelorism
+2021-01-01 00:20:59	::1	edit 	 Down syndrome 	 Description 	 "6% are translocations<br>2% are mosaics<br>Named after John Langdon Down, British physician  1866"
+2021-01-01 00:23:53	::1	add 	 Ascites 	 Causes 	 Abdominal striae
+2021-01-01 00:23:53	::1	add 	 Ascites 	 Causes 	 Shifting dullness
+2021-01-01 00:23:54	::1	add 	 Ascites 	 Causes 	 Abdominal distension
+2021-01-01 00:24:33	::1	remove 	 Ascites 	 Causes 	 Abdominal striae
+2021-01-01 00:24:33	::1	remove 	 Ascites 	 Causes 	 Shifting dullness
+2021-01-01 00:24:33	::1	remove 	 Ascites 	 Causes 	 Abdominal distension
