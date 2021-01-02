@@ -1337,7 +1337,8 @@ var  MedicineReader = function(){
         // get the starting position for that item, from the cache entity
         var initpos = my.cache[my.entityname][listname].indexOf(item.find("h3").html());
         // construct a command to actually move the item
-        var command = "move\t"+my.entityname+"\t"+listname+"\t"+itemname+"\t"+(finalpos-initpos);
+        // 2021-01 changed last parameter to absolute location
+        var command = "move\t"+my.entityname+"\t"+listname+"\t"+itemname+"\t"+finalpos;
         my.invoke_edit_and_log(command);
       };
       if(my.USE_DRAG_ORDER){
@@ -1620,7 +1621,8 @@ var  MedicineReader = function(){
     }
     var text = validate_entity_name(text);
     if(my.cache[text] !== undefined){ // is the new name already in use?
-      // todo message - duplicate name
+      
+      // todo display error message - duplicate name
     }else{ // not in use: can replace.
       // send a remove command, with the old synonym, then an 'add' command, 
       // with the new name. Note this doesn't preserve the order.
@@ -1640,9 +1642,16 @@ var  MedicineReader = function(){
   /**
    * Called when "i.list-move-button-up" or "-down" is clicked.
    * invokes an edit command 
+   *  2021-01 changed to send an absolute command value
    */
   my.edit_list_move = function(entity,listname,movement){
-    my.invoke_edit_and_log("move\t"+my.entityname+"\t"+listname+"\t"+entity+"\t"+movement);
+    var intialpos = my.cache[my.entityname][listname].indexOf( entity );
+    var movement = initialpos + movement;
+    if(movement===undefined || movement==0){
+      console.log("could not compute movement for "+listname+":"+entity+"->"+movement);
+      return;
+    }
+    my.invoke_edit_and_log("move\t"+my.entityname+"\t"+listname+"\t"+entity+"\t"+dest);
   };
 
 
@@ -1669,7 +1678,7 @@ var  MedicineReader = function(){
           +"&listitem="+encodeURIComponent(cmd[3])
           +"&verified=true";
       if(cmd[0]==="move"){
-        editurl += "&direction="+encodeURIComponent(cmd[4]);
+        editurl += "&destination="+encodeURIComponent(cmd[4]);
       }
       console.log(editurl);
       // if we can't write the edit to the server, keep it for later.
@@ -1840,11 +1849,21 @@ var  MedicineReader = function(){
         console.log("moving nonexisting item "+command);
         return false;
       }
-      var movement = parseInt(cmd[4]);
-      if(isNaN(movement) || movement===0){
+      var dest = parseInt(cmd[4]);
+      if(isNaN(dest) || dest===0){
         console.log("bad move number "+command);
         return false;
       }
+
+      /* new code for absolute movement */
+      if(dest<0){
+        console.log("cannot move to negative position");
+        return false
+      }
+      movement=dest-idx; // convert to relative value
+      /* end new code for absolute movement */
+
+
       if(movement>0){ // move it down the list
         var newlist = list.slice(0,idx).concat(
             list.slice(idx+1,idx+1+movement)).concat(
@@ -1857,7 +1876,11 @@ var  MedicineReader = function(){
             list.slice(idx+movement, idx) ).concat(
             list.slice(idx+1));
         success = true;
+      }else{ // the destination is the same as the initial position!
+        console.log("received movement of zero for"+command);
+        success = false;
       }
+      
       e[cmd[2]] = newlist; // store the re-ordered list in the entity
     } // end move
 

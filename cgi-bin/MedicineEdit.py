@@ -89,7 +89,7 @@ if "verified" in params:
                   "edit":          "%(command)s \t %(entity)s \t %(section)s \t %(listitem)s", # only used for description
                   "updatepercent": "%(command)s \t %(entity)s \t %(section)s \t %(listitem)s \t %(value)s", 
                   "comment":       "%(command)s \t %(entity)s \t %(comment)s" ,
-                  "move":          "%(command)s \t %(entity)s \t %(section)s \t %(listitem)s \t %(direction)s" 
+                  "move":          "%(command)s \t %(entity)s \t %(section)s \t %(listitem)s \t %(destination)s" 
                   }
         # form a command string from the parameters
         d = dict((k,params[k].value) for k in params.keys())
