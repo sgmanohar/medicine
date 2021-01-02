@@ -189,6 +189,12 @@ var  MedicineReader = function(){
         if (e.keyCode == "C".codePointAt(0)){
           // clear clipboard and add selection.
           my.edit_clipboard_click();
+          return false;
+        }
+        if (e.keyCode == "I".codePointAt(0)){
+          // clear clipboard and add selection.
+          my.show_index();
+          return false;
         }
         // no key captured
         return true;
@@ -209,7 +215,7 @@ var  MedicineReader = function(){
     });
 
     /** add "add" / "remove" buttons for editing */
-    $("h2").each(function(i,x){
+    $(".listarea h2").each(function(i,x){
       // list name is the contents of <h2> tag, but take the first part
       // until a symbol is found
       //let listname = $(this).closest("h2").html().split(/[^ a-zA-z0-9]/)[0].trim();
@@ -670,6 +676,7 @@ var  MedicineReader = function(){
   my.menu_list = function(rel,parent){
     var MIN_ITEMS = 7; // increase depth until we get this many items
     var MAX_DEPTH = 10; // stop search at this depth
+    var CHECK_VERTICALLY = true; // look at parents and children too?
     // ensure parent is an array of strings
     if(!(parent instanceof Array)){ parent = [parent]; }
     for(var i=0; i<parent.length;i++){
@@ -677,21 +684,7 @@ var  MedicineReader = function(){
         console.log("no parent found: "+parent[i]); return;
       }
     }
-    var list;
-    var list_depth = 0; // initial list depth for search 
-    var list_len = 0, iterations = 0;
-    // gradually increase the list depth, until we have a list 
-    // of at least MIN_ITEMS 
-    while( list_len < MIN_ITEMS && list_depth++ < MAX_DEPTH){
-      if(true){ // traverse up and down as well?
-        list =             my.listAllRel(my.entityname,[rel,"Parents" ],parent, list_depth ); 
-        list = list.concat(my.listAllRel(my.entityname,[rel,"Children"],parent, list_depth )); 
-        list = [...new Set(list)];
-      }else{ // traverse only in the specified direction
-        list = my.listAllRel(my.entityname,rel,parent,6); 
-      }
-      list_len=list.length;
-    }
+    var list = my.get_list_of_relations(parent, rel, MIN_ITEMS, MAX_DEPTH, CHECK_VERTICALLY);
     $(".select-dialog-title").html("Results: "+rel+" of "+my.entityname);
     var result_list = $("<ul class='result-path'></ul>");
     for(var i=0;i<list.length;i++){
@@ -704,6 +697,7 @@ var  MedicineReader = function(){
     $(".select-entity-dialog-results").append(result_list); // add results to dialog
     $("#select-dialog-searchtext").hide(); // hide the search input
     $("#select-entity-dialog").addClass("show"); // show results dialog
+    my.menu.close(); // hide the sidebar
   };
   /** Show the "Find path" dialog  */
   my.menu_find_path =function(){
@@ -961,6 +955,38 @@ var  MedicineReader = function(){
     return false;
   };
   
+  /**
+   * Get a list of all relatives of the current entity, which are of a given type.
+   * parent: a list of top-level categories, which the items must be descended from.
+   * rel: "Causes" or "Effects".
+   */
+  my.get_list_of_relations = function(parent, rel, MIN_ITEMS, MAX_DEPTH, CHECK_VERTICALLY) {
+    var list;
+    var list_depth = 0; // initial list depth for search 
+    var list_len = 0;
+    var e = my.cache[my.entityname];
+    // gradually increase the list depth, until we have a list 
+    // of at least MIN_ITEMS 
+    while (list_len < MIN_ITEMS || list_depth++ < MAX_DEPTH) {
+      if (CHECK_VERTICALLY) { // traverse up and down as well?
+        list = my.listAllRel(my.entityname, [rel, "Parents"], parent, list_depth);
+        list = list.concat(my.listAllRel(my.entityname, [rel, "Children"], parent, list_depth));
+        var set = new Set(list);
+        if(e.Parents){
+          removeAllFromSet(set, new Set(e.Parents));
+        }
+        if(e.Children){
+          removeAllFromSet(set, new Set(e.Children));
+        }
+        list = [...set];
+      } else { // traverse only in the specified direction
+        list = my.listAllRel(my.entityname, rel, parent, 6);
+      }
+      list_len = list.length;
+    }
+    return list;
+  };
+
   // for findRel:
   // don't allow routes which contain the same item in 
   // (i.e. routes must never overlap)
@@ -1039,6 +1065,9 @@ var  MedicineReader = function(){
       if(r===undefined){continue;} 
       for(var i=0;i<r.length;i++){ // for each relative:
         var hasparent=false; // check if it has any of the appropriate parents
+        if(parent.length==0){ // if 'parent' is empty, don't check the parents.
+          hasparent = true;
+        }
         if(parent instanceof Array){ // parent is a list:
           for(var k=0;k<parent.length;k++){  // for each possible parent
             if(my.hasRel(r[i],"Parents",parent[k])){ // does it have that parent?
@@ -1357,7 +1386,10 @@ var  MedicineReader = function(){
       $(".edit").hide();
       $("#synonyms li h3").attr("contenteditable",false);
       $(".edit-mode-checkbox").prop("checked",false);
-      $("#l_causes, #l_effects, #l_treatments, #l_treats, #l_parents, #l_children").sortable("disable");
+      try{ // disable dragging 
+        $("#l_causes, #l_effects, #l_treatments, #l_treats, #l_parents, #l_children")
+          .sortable("disable");
+      }catch(err){} // this throws an error if the items are not already sortable.
     }
   };
   /**
@@ -1445,6 +1477,7 @@ var  MedicineReader = function(){
           var success = my.invoke_edit_and_log(
             "add\t"+main_entity+"\t"+list+"\t"+e_name);
         });
+        confirm.find(".confirm-create-dialog-entity-name").html(e_name);
         confirm.addClass("show");
       }
     }else{ // it is in the cache
@@ -1455,9 +1488,14 @@ var  MedicineReader = function(){
         if( my.editing_list==="" ) { console.log("cmd: no list selcted"); return; }
         // create add command, e.g.
         // add  signs  children  tachycardia
-        var success = my.invoke_edit_and_log(
-          "add\t"+my.entityname+"\t"+my.editing_list+"\t"+e
-        )
+        var command = "add\t"+my.entityname+"\t"+my.editing_list+"\t"+e;
+        // check if there's distant link to this item already?
+        var all_rels = my.get_list_of_relations([], my.editing_list, 7, 10, true);
+        if( all_rels.indexOf( e )  >= 0 ){
+          my.show_warning("There is already a route from "+my.entityname+"["+my.editing_list+"] to "+e);
+        }else{
+          var success = my.invoke_edit_and_log( command ); // actually add it
+        }
       }
     }
     my.editing_list=""; // clear the adding list
@@ -2393,11 +2431,20 @@ var  MedicineReader = function(){
       li.click(update_index);
       button_bar.append(li); // add a button with that letter
     }
+    // TODO this doesn't handle 'enter' or 'escape' key press to close the dialog
     dlg.find(".button-ok").off().click(function(){
       dlg.removeClass("show");
     });
     dlg.addClass("show");
   };
+  /**
+   * Warn the user of a problem
+   */
+  my.show_warning = function(str){
+    // TODO - make a dialog?
+    alert(str);
+  }
+
 
 
   /**
@@ -2450,6 +2497,7 @@ var  MedicineReader = function(){
   return my;
 }
 
+
 function asyncForEach(array, done, iterator) {
   var i = 0;
   next();
@@ -2497,6 +2545,12 @@ function nthIndex(str, pat, n){
   }
   return i;
 }
+/**
+ * Removes items from a set
+ */
+function removeAllFromSet(originalSet, toBeRemovedSet) {
+  toBeRemovedSet.forEach(Set.prototype.delete, originalSet);
+};
 
 /**
  * Create a long press handler for a given set of nodes.

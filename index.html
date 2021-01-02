@@ -330,11 +330,16 @@
     <h1>
       Are you sure you want to create a new entity?
     </h1>
+    <h2 class="confirm-create-dialog-entity-name"> </h2>
     <ul><li>
       Please ensure you go into the new item
       and fill out synonyms, parents, description, and any causes or effects.
     </li><li>
       Please check if this entry is better described by an existing entity.
+    </li><li>
+      Capitalise the first letter, but not subsequent words
+    </li><li>
+      Avoid apostrophes and plurals. Use singular where possible. 
     </li></ul>
     <input type="button" class="button button-cancel" value="Cancel">
     <input type="button" class="button button-ok" value="Yes">
@@ -376,7 +381,9 @@
     </h1>
     <ul class="button-bar">    </ul>
     <ul class="index-list">  </ul>
-    <input type="button" class="button button-ok" value="Close">
+    <form class="index-dialog-form">
+      <input type="button" class="button button-ok" value="Close">
+    </form>
   </div>
 
 </body>

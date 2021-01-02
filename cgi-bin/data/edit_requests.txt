@@ -18,3 +18,10 @@
 2021-01-01 19:20:32	::1	add 	 X-linked recessive disorder 	 Causes 	 Male Gender
 2021-01-02 14:18:07	::1	move 	 Polycythaemia rubra vera 	 Effects 	 Myelofibrosis 	 4
 2021-01-02 14:21:01	::1	move 	 Polycythaemia rubra vera 	 Effects 	 Chronic headache 	 6
+2021-01-02 17:11:02	::1	add 	 Renal calculi 	 Effects 	 Anaemia
+2021-01-02 17:11:08	::1	remove 	 Renal calculi 	 Effects 	 Anaemia
+2021-01-02 17:11:34	::1	add 	 Renal calculi 	 Effects 	 Dark urine
+2021-01-02 17:11:40	::1	remove 	 Renal calculi 	 Effects 	 Dark urine
+2021-01-02 17:11:49	::1	add 	 Renal calculi 	 Effects 	 Dark urine
+2021-01-02 17:11:56	::1	remove 	 Renal calculi 	 Effects 	 Dark urine
+2021-01-02 17:20:32	::1	add 	 Renal calculi 	 Effects 	 Dark urine

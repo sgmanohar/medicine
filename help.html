@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head >
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    
+    <!--[if lt IE 9]>  
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>  
+    <![endif]-->  
+    <!--[if (gte IE 9) | (!IE)]><!-->  
+      <script src="lib/jquery-3.2.1.min.js"></script>  
+        <!--<![endif]-->
+    <!--
+      <script src="jquery.history.js"></script>
+    -->
+
+    <script src="lib/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="lib/jquery-ui.min.css">
+    <link rel="stylesheet" href="lib/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="lib/jquery.mmenu.all.css">
+    <script src="lib/jquery.mmenu.all.js"></script>
+    <script src="lib/jquery.ui.touch-punch.min.js"></script>
+
+    <link rel="stylesheet" href="lib/fontawesome.min.css">
+    <link rel="stylesheet" href="lib/fa-solid.min.css">
+    <script src="lib/react.development.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1> Medical Lists: Help </h1>
+
+<h2>
+    What is Medical Lists
+</h2>
+Medical lists is an open-source collaborative set of medical lists.
+It list causes and effects of medical terms, which fall under the top-level headings
+<ol>
+    <li>  Disease  </li>
+    <li>  Pathology  </li>
+    <li>  Symptom  </li>
+    <li>  Sign  </li>
+    <li>  Substance  </li>
+    <li>  Procedure  </li>
+    <li>  Lifestyle  </li>
+</ol>
+The connetions aim to be dense and causally relevant. 
+<h2>
+    How to contribute
+</h2>
+The web application has an "edit mode". When enabled, you will be able to add and remove items from lists and re-order them.
+(see edit mode below). 
+Each edit you make is transmitted to my server. 
+These are stored separately to the original database.
+When you load the application, the edits that people have made on the server are downloaded, and used to update the lists in your browser. 
+If you don't want to see these "community" edits, you can turn them off in the menu.
+
+From time to time, I will update the database using the edits, to consolidate and curate them.
+
+
+You can also contribute to the code, which is on GitHub.
+
+<h2>
+    Interface
+</h2>
+Keyboard shortcuts
+<ol>
+    <li>  ctrl+F: find (highlights search bar)  </li>
+    <li>  ctrl+E: enter/leave edit mode </li>
+    <li>  ctrl+C: copy selection (in edit mode) </li>
+    <li>  ctrl+I: show index </li>
+</ol>
+<h2>
+    Editing interface
+</h2>
+You can 
+<ol>
+    <li>  add existing items to a list by pressing '+'.
+        This will open a box which will allow you to type a name.
+        As you start typing, a list of options appears. 
+        You can select one with the mouse or keyboard.
+        Press OK to add it.
+    </li>
+    <li> create a new item, from within the Add dialog.
+        If the item you wish to add to a list does not exist in the database, please 
+        consider whether it falls under one of the existing items.
+        Also make sure the item you want to add is a unique pathological entity.
+        
+        If you are sure it does not exist, but should exist, you can create a new item.
+        Please ensure to populate the new item with as many other causes and effects.
+        Ideally it should also have a parent item.
+
+    </li>
+    <li>  re-order items in a list by dragging the handle on the right.
+        Lists are supposed to be ordered by the most-likely-first.
+        Mathematically, I intend this to be "highest conditional probability given the current entity".
+        But in practice this isn't always how lists turn out.    
+    </li>
+    <li>
+        select items.
+        To select items, either long-press on them, or 
+        press the "selection mode" icon, and then tap the items.
+        You can select items across many screens, and the number of 
+        currently selected items is displayed on the icon.
+    </li>
+    <li>
+        unselect items.
+        Unselect a selected item by doing the same thing again.
+        Alternatively you can unselect <b>all</b> items by clicking the select mode button a second time.
+    </li>
+    <li>
+        remove items from a list.
+        To do this, select an item then press the dustbin.
+        The item is also copied to the clipboard. 
+    </li>
+    <li>
+        copy items to the clipboard.
+        After selecting items, press the clipboard icon.
+        This will replace items on the clipboard with the selection.
+        The clipboard contents are visible in a small drop-down near the icon.
+        You can click on these items to navigate to them.
+    </li>
+
+</ol>
+
+
+</body>
+</html>

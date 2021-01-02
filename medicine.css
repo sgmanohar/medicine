@@ -312,6 +312,9 @@ ul.slist li:only-child .list-move-buttons{
 .clipboard-entities-paste-preview-list { 
   
 }
+#select-entity-dialog .select-entity-dialog-paste-button {
+  display:none;
+}
 
 .editor-bar .selected {
   color:#f83;
